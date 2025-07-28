@@ -1,0 +1,23 @@
+---
+title: "About"
+image: perfil_foto.jpg
+about:
+  template: jolla
+  links:
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/mikael.ssilva20/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/mikaelssilva
+    - icon: github
+      text: Github
+      href: https://github.com/Mikaelssilva
+
+---
+
+Sobre o autor
+
+Mikael Silva é estudante de Engenharia da Computação na UPE.
+Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machile Learning de uma forma descomplicada. 
+
