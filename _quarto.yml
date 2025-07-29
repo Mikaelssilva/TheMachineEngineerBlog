@@ -14,7 +14,6 @@ website:
 
 format:
   html:
-    margin-header: subscribe.html
     theme:
       - solar
       - brand

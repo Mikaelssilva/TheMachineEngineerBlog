@@ -190,67 +190,7 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<span style="font-weight: 600;">Subscribe</span>
-
-<link href="https://cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-    #mc_embed_signup {background: #fff; clear: left; font: 14px Helvetica, Arial, sans-serif; width: 170px;}
-    #mc-embedded-subscribe-form {margin-left: -5px;}
-</style>
-
-<div id="mc_embed_signup">
-  <form action="https://us21.list-manage.com/subscribe/post?u=ab0494b43d907bf4173d546af&amp;id=d7db4aad7c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-    <div id="mc_embed_signup_scroll">
-      
-      <div class="mc-field-group">
-      <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Seu nome">
-      </div>
-      <input type="email" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Seu e-mail" required="">
-      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="b_f718424fc5df77c22533bdaa6_a3c37fb57b" tabindex="-1" value="">
-      </div>
-      <div class="optionalParent">
-        <div class="clear foot" style="margin-top: 10px;">
-          <input type="submit" value="Inscrever" name="subscribe" id="mc-embedded-subscribe" class="button">
-          <p class="brandingLogo"></p>
-        </div>
-      </div>
-    </div>
-  </form>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const subscribeContainer = document.getElementById('mc_embed_signup');
-    const subscribeTitle = document.querySelector('span[style="font-weight: 600;"]'); // O título "Se inscreva"
-
-    if (subscribeContainer) {
-        const path = window.location.pathname;
-        // ATENÇÃO: Substitua 'TheMachineLearningBlog2' pelo nome EXATO do seu repositório GitHub,
-        // se o seu site for publicado em https://<seu-usuario>.github.io/TheMachineLearningBlog2/
-        const repoName = 'TheMachineLearningBlog'; 
-
-        let isHomePage = false;
-        
-        // Verifica se a URL é a raiz do domínio, ou a raiz do repositório, ou a página index.html
-        if (path === '/' || path === '/index.html') { // Para sites publicados na raiz do domínio (ex: usuario.github.io)
-            isHomePage = true;
-        } else if (path === `/${repoName}/` || path === `/${repoName}` || path === `/${repoName}/index.html`) {
-            // Para sites publicados em subdiretórios de repositório (ex: usuario.github.io/meu-repo/)
-            isHomePage = true;
-        }
-
-        // Se a página NÃO for a homepage, esconde o formulário e o título
-        if (!isHomePage) {
-            subscribeContainer.style.display = 'none';
-            if (subscribeTitle) { 
-                subscribeTitle.style.display = 'none';
-            }
-        }
-    }
-});
-</script>
-</div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YSUyMHNjaWVuY2U=">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZSUyMGxlYXJuaW5n">machine learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
@@ -260,6 +200,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Aguarda um pouco para garantir que o listing foi renderizado
+    setTimeout(function() {
+        // Tenta encontrar diferentes possíveis containers do listing
+        const listingDiv = document.querySelector('.quarto-listing') || 
+                          document.querySelector('#listing-posts') || 
+                          document.querySelector('.listing') ||
+                          document.querySelector('[data-listing]') ||
+                          document.querySelector('.quarto-listing-container') ||
+                          document.querySelector('main .column-body');
+        
+        if (listingDiv) {
+            // Cria o HTML do newsletter
+            const newsletterHTML = `
+                <div class="newsletter-section" style="text-align: center; margin: 40px 0; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: #f0f0f0; font-size: 1.3em; font-weight: 600; margin-bottom: 10px;">
+                        📧 Inscreva-se na Newsletter!
+                    </p>
+                    <p style="color: #cccccc; font-size: 0.95em; margin-bottom: 20px;">
+                        Receba notificações sobre novos posts diretamente no seu email!
+                    </p>
+                    <a href="http://eepurl.com/jj-mXo" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="mailchimp-button">
+                        Inscrever-se
+                    </a>
+                </div>
+            `;
+            
+            // Adiciona depois do listing
+            listingDiv.insertAdjacentHTML('afterend', newsletterHTML);
+            console.log('Newsletter adicionado com sucesso!');
+        } else {
+            console.log('Container do listing não encontrado');
+            // Fallback: adiciona no final do main content
+            const mainContent = document.querySelector('main') || document.querySelector('.page-columns');
+            if (mainContent) {
+                const newsletterHTML = `
+                    <div class="newsletter-section" style="text-align: center; margin: 40px 0; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                        <p style="color: #f0f0f0; font-size: 1.3em; font-weight: 600; margin-bottom: 10px;">
+                            📧 Inscreva-se na nossa Newsletter!
+                        </p>
+                        <p style="color: #cccccc; font-size: 0.95em; margin-bottom: 20px;">
+                            Receba as últimas novidades sobre Machine Learning e Data Science.
+                        </p>
+                        <a href="http://eepurl.com/jj-mXo" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="mailchimp-button">
+                            Inscrever-se
+                        </a>
+                    </div>
+                `;
+                mainContent.insertAdjacentHTML('beforeend', newsletterHTML);
+                console.log('Newsletter adicionado no fallback!');
+            }
+        }
+    }, 500); // Aguarda 500ms para garantir que tudo foi carregado
+});
+</script>
 
 
 
