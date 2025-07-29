@@ -1,0 +1,32 @@
+---
+title: "Código de Conduta"
+description: "Regras para comentários no blog"
+comments: false
+---
+
+## 🤝 Nosso Pacto
+
+O objetivo é ter um ambiente inclusivo para todos, independentemente de:
+
+- Nível técnico  
+- Origem ou identidade  
+- Orientação sexual  
+- Deficiências  
+
+## 👍 Comportamento Esperado  
+- Debates de ideias, dúvidas, feedback, etc
+- Sempre cite fontes técnicas  
+- Ajude iniciantes com paciência  
+
+## 🚫 Proibido  
+- Discursos de ódio (racismo, homofobia, etc.)  
+- Spam ou autopromoção   
+
+## 🚨 Consequências  
+1️⃣ Primeira violação: Comentário removido  
+2️⃣ Reincidência: Banimento temporário  
+3️⃣ Casos graves: Banimento permanente + reporte ao GitHub  
+
+---
+
+*Inspirado no [Contributor Covenant](https://www.contributor-covenant.org/).*

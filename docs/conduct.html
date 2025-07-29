@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mikael Silva">
+<meta name="description" content="Regras para comentários no blog">
 
-<title>The Machine Learning Engineer</title>
+<title>Código de Conduta – The Machine Learning Engineer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -70,66 +68,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -152,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -177,7 +117,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./conduct.html"> 
+    <a class="nav-link active" href="./conduct.html" aria-current="page"> 
 <span class="menu-text">Código conduta</span></a>
   </li>  
 </ul>
@@ -191,20 +131,18 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">The Machine Learning Engineer</h1>
-            <p class="subtitle lead">Explorando o mundo da IA e Machine Learning</p>
-                      </div>
+      <h1 class="title">Código de Conduta</h1>
+                  <div>
+        <div class="description">
+          Regras para comentários no blog
+        </div>
+      </div>
+                </div>
   </div>
     
   
   <div class="quarto-title-meta column-page-left">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Mikael Silva </p>
-            </div>
-    </div>
       
     
       
@@ -215,8 +153,17 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YSUyMHNjaWVuY2U=">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW50cm9kdSVDMyVBNyVDMyVBM28=">Introdução <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZSUyMGxlYXJuaW5n">machine learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#nosso-pacto" id="toc-nosso-pacto" class="nav-link active" data-scroll-target="#nosso-pacto">🤝 Nosso Pacto</a></li>
+  <li><a href="#comportamento-esperado" id="toc-comportamento-esperado" class="nav-link" data-scroll-target="#comportamento-esperado">👍 Comportamento Esperado</a></li>
+  <li><a href="#proibido" id="toc-proibido" class="nav-link" data-scroll-target="#proibido">🚫 Proibido</a></li>
+  <li><a href="#consequências" id="toc-consequências" class="nav-link" data-scroll-target="#consequências">🚨 Consequências</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -224,198 +171,48 @@ window.Quarto = {
 
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Aguarda um pouco para garantir que o listing foi renderizado
-    setTimeout(function() {
-        // Tenta encontrar diferentes possíveis containers do listing
-        const listingDiv = document.querySelector('.quarto-listing') || 
-                          document.querySelector('#listing-posts') || 
-                          document.querySelector('.listing') ||
-                          document.querySelector('[data-listing]') ||
-                          document.querySelector('.quarto-listing-container') ||
-                          document.querySelector('main .column-body');
-        
-        if (listingDiv) {
-            // Cria o HTML do newsletter
-            const newsletterHTML = `
-                <div class="newsletter-section" style="text-align: center; margin: 40px 0; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
-                    <p style="color: #f0f0f0; font-size: 1.3em; font-weight: 600; margin-bottom: 10px;">
-                        📧 Inscreva-se na Newsletter!
-                    </p>
-                    <p style="color: #cccccc; font-size: 0.95em; margin-bottom: 20px;">
-                        Receba notificações sobre novos posts diretamente no seu email!
-                    </p>
-                    <a href="http://eepurl.com/jj-mXo" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       class="mailchimp-button">
-                        Inscrever-se
-                    </a>
-                </div>
-            `;
-            
-            // Adiciona depois do listing
-            listingDiv.insertAdjacentHTML('afterend', newsletterHTML);
-            console.log('Newsletter adicionado com sucesso!');
-        } else {
-            console.log('Container do listing não encontrado');
-            // Fallback: adiciona no final do main content
-            const mainContent = document.querySelector('main') || document.querySelector('.page-columns');
-            if (mainContent) {
-                const newsletterHTML = `
-                    <div class="newsletter-section" style="text-align: center; margin: 40px 0; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
-                        <p style="color: #f0f0f0; font-size: 1.3em; font-weight: 600; margin-bottom: 10px;">
-                            📧 Inscreva-se Newsletter!
-                        </p>
-                        <p style="color: #cccccc; font-size: 0.95em; margin-bottom: 20px;">
-                            Receba notificações sobre novos posts diretamente no seu email!
-                        </p>
-                        <a href="http://eepurl.com/jj-mXo" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="mailchimp-button">
-                            Inscrever-se
-                        </a>
-                    </div>
-                `;
-                mainContent.insertAdjacentHTML('beforeend', newsletterHTML);
-                console.log('Newsletter adicionado no fallback!');
-            }
-        }
-    }, 500); // Aguarda 500ms para garantir que tudo foi carregado
-});
-</script>
+<section id="nosso-pacto" class="level2">
+<h2 class="anchored" data-anchor-id="nosso-pacto">🤝 Nosso Pacto</h2>
+<p>O objetivo é ter um ambiente inclusivo para todos, independentemente de:</p>
+<ul>
+<li>Nível técnico<br>
+</li>
+<li>Origem ou identidade<br>
+</li>
+<li>Orientação sexual<br>
+</li>
+<li>Deficiências</li>
+</ul>
+</section>
+<section id="comportamento-esperado" class="level2">
+<h2 class="anchored" data-anchor-id="comportamento-esperado">👍 Comportamento Esperado</h2>
+<ul>
+<li>Debates de ideias, dúvidas, feedback, etc</li>
+<li>Sempre cite fontes técnicas<br>
+</li>
+<li>Ajude iniciantes com paciência</li>
+</ul>
+</section>
+<section id="proibido" class="level2">
+<h2 class="anchored" data-anchor-id="proibido">🚫 Proibido</h2>
+<ul>
+<li>Discursos de ódio (racismo, homofobia, etc.)<br>
+</li>
+<li>Spam ou autopromoção</li>
+</ul>
+</section>
+<section id="consequências" class="level2">
+<h2 class="anchored" data-anchor-id="consequências">🚨 Consequências</h2>
+<p>1️⃣ Primeira violação: Comentário removido<br>
+2️⃣ Reincidência: Banimento temporário<br>
+3️⃣ Casos graves: Banimento permanente + reporte ao GitHub</p>
+<hr>
+<p><em>Inspirado no <a href="https://www.contributor-covenant.org/">Contributor Covenant</a>.</em></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="SW50cm9kdSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1753758000000" data-listing-file-modified-sort="1753817352676" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/welcome/tme.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Perdido? Comece por aqui!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50cm9kdSVDMyVBNyVDMyVBM28='); return false;">Introdução</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-<p>Bem vindos ao Blog!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jul 29, 2025
-</div>
-<div class="listing-author">
-Mikael Silva
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1753671600000" data-listing-file-modified-sort="1753728908659" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
-This is a post with executable code.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Jul 28, 2025
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDZGF0YSUyMHNjaWVuY2U=" data-listing-date-sort="1753585200000" data-listing-file-modified-sort="1753731609233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
-<div class="thumbnail"><a href="./posts/mapeamento/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts\mapeamento\mapeamento.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/mapeamento/index.html" class="no-external">Mapeamento de Dados</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YSUyMHNjaWVuY2U='); return false;">data science</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/mapeamento/index.html" class="no-external">
-<p>O que é mapeamento? Vem comigo entender!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/mapeamento/index.html" class="no-external">
-<div class="listing-date">
-Jul 27, 2025
-</div>
-<div class="listing-author">
-Mikael Silva
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
