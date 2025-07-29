@@ -1,0 +1,51 @@
+name: Moderate Giscus Comments
+on:
+  discussion_comment:
+    types: [created]
+
+jobs:
+  moderate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for bad words
+        uses: actions/github-script@v6
+        with:
+          script: |
+            // Palavras proibidas (adicione as suas)
+            const badWords = [
+                    // Racismo
+                    'macaco', 'negrinho', 'branquelo', 'judeu doente', 'cabelo de bombril', 'serviço de preto',
+                    
+                    // LGBTfobia
+                    'veado', 'bicha', 'sapatão', 'viadinho', 'aidético', 'frutinha', 'boiola',
+                    
+                    // Machismo
+                    'vai lavar louça', 'lugar de mulher é', 'feminazi', 'puta', 'cadê o sanduíche',
+                    
+                    // Outros
+                    'deficiente mental', 'retardado', 'vai se matar', 'corno', 'gordo nojento',
+                    
+                    // Termos disfarçados (regex)
+                    'v3@d0', 'b1ch4', 'm@c4c0', /n[e3]gr[o0]/i, /[ck]retin[o0]/i];
+            
+            // Converte comentário para minúsculas para checagem
+            const commentText = context.payload.comment.body.toLowerCase();
+            
+            // Verifica palavras proibidas
+            if (badWords.some(word => commentText.includes(word.toLowerCase()))) {
+              // Deleta o comentário
+              await github.rest.discussions.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                discussion_number: context.payload.discussion.number,
+                comment_number: context.payload.comment.number
+              });
+              
+              // Opcional: Notifica no GitHub
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.discussion.number,
+                body: '🚨 Comentário removido por violar as regras.'
+              });
+            }
