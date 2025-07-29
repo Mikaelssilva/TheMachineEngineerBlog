@@ -1,12 +1,33 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2025-07-25"
-categories: [news]
+title: "Perdido? Comece por aqui!"
+author: "Mikael Silva"
+date: "2025-07-29"
+categories: [Introdução]
+description: "Bem vindos ao Blog!"
+image: "tme.png"
 ---
 
-This is the first post in a Quarto blog. Welcome!
+# Bem-vindos ao The **Machine Learning Engineer!**
 
-![](thumbnail.jpg)
+![](tme.png)
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+Olá, pessoal! Me chamo Mikael Silva e estou super animado para te boas-vindas ao meu blog.
+Como Engenheiro da Computação apaixonado por Machine Learning, crei esse espaço para compartilhar meus projetos
+como Engenheiro e te ajudar a entender conceitos complexos de de ML e IA de forma prática, com projetos reais.
+
+## Propósito do blog
+
+Decidi criar esse blog para ajudar futuros engenheiros de Machine Learning, ciêntistas de dados e demais curiosos
+que gostam do tema. Como vocês sabem, é difícil achar conteúdo de qualidade e gratuito por aí tudo num só lugar.
+Por isso decidi escrever sobre o que você precisa fazer para começar nesse mundo.
+
+## O que você vai encontrar aqui
+
+* **Tutorias práticos**
+* **Códigos comentados**
+* **Análise de casos reais**
+
+Agora que você chegou, que tal explorar nossos primeiros artigos?
+E para não perder nenhuma atualização e receber notificações sobre novos posts, não deixe de se inscrever na [newsletter](http://eepurl.com/jj-mXo)!
+
+Deixe suas dúvidas e sugestões nos comentários abaixo! Abraço!
