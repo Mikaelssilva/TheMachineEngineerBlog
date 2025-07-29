@@ -50,9 +50,9 @@ search: true
 comments:
   giscus:
     repo: Mikaelssilva/TheMachineEngineerBlog
-    repo-id: '1027959386'    
+    repo-id: "R_kgDOPUVqWg"    
     category: "Comments"
-    category-id: "DIC_kwDOF-5fGM4CbQw9"
+    category-id: "DIC_kwDOPUVqWs4Ctjjy"
     mapping: pathname
     reactions-enabled: true
     theme: transparent_dark
