@@ -11,12 +11,12 @@ website:
         href: https://github.com/Mikaelssilva
       - icon: instagram
         href: https://www.instagram.com/mikael.ssilva20/
+
 format:
   html:
     theme:
       - solar
       - brand
     css: styles.css
-
-
-
+    includes:
+      after-body: subscribe.html

@@ -19,5 +19,5 @@ about:
 Sobre o autor
 
 Mikael Silva é estudante de Engenharia da Computação na UPE.
-Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machile Learning de uma forma descomplicada. 
+Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada. 
 
