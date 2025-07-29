@@ -1,12 +1,14 @@
 ---
 title: "The Machine Learning Engineer"
+subtitle: "Explorando o mundo da IA e Machine Learning"
+author: "Mikael Silva"
 listing:
   contents: posts
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: false
-  filter-ui: false
+  sort-ui: true
+  filter-ui: true
 page-layout: full
 title-block-banner: true
 ---
@@ -54,10 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const newsletterHTML = `
                     <div class="newsletter-section" style="text-align: center; margin: 40px 0; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
                         <p style="color: #f0f0f0; font-size: 1.3em; font-weight: 600; margin-bottom: 10px;">
-                            📧 Inscreva-se na nossa Newsletter!
+                            📧 Inscreva-se Newsletter!
                         </p>
                         <p style="color: #cccccc; font-size: 0.95em; margin-bottom: 20px;">
-                            Receba as últimas novidades sobre Machine Learning e Data Science.
+                            Receba notificações sobre novos posts diretamente no seu email!
                         </p>
                         <a href="http://eepurl.com/jj-mXo" 
                            target="_blank" 

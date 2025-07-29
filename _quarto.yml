@@ -4,17 +4,49 @@ project:
 
 website:
   title: "The Machine Learning Engineer"
+  
   navbar:
+    background: dark
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/Mikaelssilva
+        href: https://github.com/Mikaelssilva/TheMachineEngineerBlog
       - icon: instagram
         href: https://www.instagram.com/mikael.ssilva20/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/mikaelssilva
+
+  page-footer:
+    background: dark
+    left: |
+      © 2025 The Machine Learning Engineer. Todos os direitos reservados.
+    right: |
+      Feito com ❤️ usando [Quarto](https://quarto.org)
 
 format:
   html:
-    theme:
+    theme: 
       - solar
-      - brand
     css: styles.css
+    toc: true
+    toc-location: right
+    code-fold: false
+    code-tools: false
+    highlight-style: github-dark
+    smooth-scroll: true
+    page-layout: full
+    title-block-banner: true
+
+# Configurações de busca
+search: true
+
+# Comentários
+comments:
+  giscus:
+    repo: Mikaelssilva/TheMachineEngineerBlog
