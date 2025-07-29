@@ -2,6 +2,7 @@
 title: "The Machine Learning Engineer"
 subtitle: "Explorando o mundo da IA e Machine Learning"
 author: "Mikael Silva"
+comments: false
 listing:
   contents: posts
   sort: "date desc"

@@ -1,5 +1,6 @@
 ---
 title: "About"
+comments: false
 title-block-banner: false
 image: perfil_foto.jpg
 about:
