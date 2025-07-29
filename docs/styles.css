@@ -1,1 +1,65 @@
-/* css styles */
+/* Estilos para o widget principal do Mailchimp */
+#mc_embed_signup {
+  background-color: #062847; /* Cor de fundo azul escuro para combinar com o tema */
+  border: 1px solid #44607a; /* Borda um pouco mais escura para contraste sutil */
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 170px; /* Mantém a largura compacta */
+  margin: 0 auto; /* Centraliza o widget */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra um pouco mais proeminente */
+}
+
+/* Estilos para o campo de nome e e-mail */
+#mc_embed_signup input[type="text"],
+#mc_embed_signup input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fundo das entradas em branco */
+  color: #333; /* Cor do texto dentro das entradas */
+  box-sizing: border-box;
+}
+
+/* Estilos para as labels (Nome, E-mail) */
+#mc_embed_signup label {
+  display: block; /* Garante que o label fique em sua própria linha */
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #e0e0e0; /* Cor do texto do label para contraste com o fundo escuro */
+}
+
+/* Estilos para o botão "Inscrever" */
+#mc_embed_signup input.button {
+  background-color: #062847; /* Mantido o azul vibrante, que parece ser a cor de destaque do tema */
+  color: white;
+  border: none;
+  padding: 2px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Botão para ocupar a largura total do widget */
+  box-sizing: border-box;
+  font-size: 1em; /* Tamanho da fonte do botão */
+  font-weight: bold;
+}
+
+#mc_embed_signup input.button:hover {
+  background-color: #005fa3; /* Tom de azul mais escuro ao passar o mouse */
+}
+
+/* Estilos para o título "Se inscreva" */
+/* Este é o <span> que está FORA da div #mc_embed_signup, ele precisa ser centralizado separadamente */
+span[style="font-weight: 600;"] {
+    display: block; /* Transforma em bloco para poder alinhar */
+    text-align: center; /* Centraliza o texto "Se inscreva" */
+    margin-bottom: 10px; /* Espaçamento entre o título e o widget */
+    font-size: 1.5em; /* Tamanho da fonte maior para o título */
+    color: #f0f0f0; /* Cor clara para o texto do título para contraste */
+}
+
+/* Regras de reset ou ajuste do Mailchimp - se necessário, podem ser ajustadas aqui */
+#mc-embedded-subscribe-form {
+    margin-left: 0 !important; /* Remove o margin-left negativo do Mailchimp para um melhor alinhamento */
+}

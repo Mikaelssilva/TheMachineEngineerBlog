@@ -14,9 +14,7 @@ website:
 
 format:
   html:
-    includes:
-      include-in-header: mailchimp-header.html
-      include-after-body: subscribe.html
+    margin-header: subscribe.html
     theme:
       - solar
       - brand
