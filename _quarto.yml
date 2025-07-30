@@ -4,7 +4,6 @@ project:
 
 website:
   title: "The Machine Learning Engineer"
-  back-to-top-navigation: true
   reader-mode: true
   
   navbar:
@@ -15,32 +14,38 @@ website:
         href: index.qmd
       - text: "About"
         href: about.qmd
+      - text: "Subscribe"
+        href: http://eepurl.com/jj-mXo
 
     right:
       - icon: book
         href: conduct.qmd
-        text: "Código de conduta"
+        text: "Conduta"
       - icon: github
         href: https://github.com/Mikaelssilva
-      - icon: instagram
-        href: https://www.instagram.com/mikael.ssilva20/
+        text: "Github"
       - icon: linkedin
         href: https://www.linkedin.com/in/mikaelssilva
+        text: "Linkedin"
       
 
   page-footer:
     background: dark
     left: "© 2025 The Machine Learning Engineer. Todos os direitos reservados."
-    right: 
+    right:
       - icon: linkedin
         href: https://www.linkedin.com/in/mikaelssilva
       - icon: instagram
         href: https://www.instagram.com/mikael.ssilva20/
+      - icon: github
+        href: https://github.com/Mikaelssilva
+      - icon: youtube
+        href: https://www.youtube.com/channel/UCTev7AuWd_45HArWkeEKf9w
 
 format:
   html:
     theme: 
-      - solar
+      - journal
     css: styles.css
     toc: true
     toc-location: right
@@ -63,4 +68,4 @@ comments:
     category-id: "DIC_kwDOPUVqWs4Ctjjy"
     mapping: pathname
     reactions-enabled: true
-    theme: transparent_dark
+    theme: prefered_theme

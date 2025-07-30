@@ -46,14 +46,14 @@
     "href": "index.html",
     "title": "The Machine Learning Engineer",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Sobre o autor",
     "section": "",
-    "text": "Sobre o autor\nMikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada.\n\n\n Back to top"
+    "text": "Mikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada."
   },
   {
     "objectID": "conduct.html",
@@ -73,35 +73,28 @@
     "objectID": "conduct.html#comportamento-esperado",
     "href": "conduct.html#comportamento-esperado",
     "title": "Código de Conduta",
-    "section": "👍 Comportamento Esperado",
-    "text": "👍 Comportamento Esperado\n\nDebates de ideias, dúvidas, feedback, etc\nSempre cite fontes técnicas\n\nAjude iniciantes com paciência"
+    "section": "Comportamento Esperado",
+    "text": "Comportamento Esperado\n\nDebates de ideias, dúvidas, feedback, etc\nSempre cite fontes técnicas\n\nAjude iniciantes com paciência"
   },
   {
     "objectID": "conduct.html#proibido",
     "href": "conduct.html#proibido",
     "title": "Código de Conduta",
-    "section": "🚫 Proibido",
-    "text": "🚫 Proibido\n\nDiscursos de ódio (racismo, homofobia, etc.)\n\nSpam ou autopromoção"
+    "section": "Proibido",
+    "text": "Proibido\n\nDiscursos de ódio (racismo, homofobia, etc.)\n\nSpam ou autopromoção"
   },
   {
     "objectID": "conduct.html#consequências",
     "href": "conduct.html#consequências",
     "title": "Código de Conduta",
-    "section": "🚨 Consequências",
-    "text": "🚨 Consequências\n1️⃣ Primeira violação: Comentário removido\n2️⃣ Reincidência: Banimento temporário\n3️⃣ Casos graves: Banimento permanente + reporte ao GitHub\n\nInspirado no Contributor Covenant."
-  },
-  {
-    "objectID": "myblog/index.html",
-    "href": "myblog/index.html",
-    "title": "The Machine Learning Engineer",
-    "section": "",
-    "text": "Back to top"
+    "section": "Consequências",
+    "text": "Consequências\n\nPrimeira violação: Comentário removido\n\nReincidência: Banimento temporário\n\nCasos graves: Banimento permanente + reporte ao GitHub\n\n\nInspirado no Contributor Covenant."
   },
   {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code.\n\n\n\n Back to top"
+    "text": "This is a post with executable code."
   }
 ]
