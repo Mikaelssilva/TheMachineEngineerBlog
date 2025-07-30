@@ -36,7 +36,7 @@ website:
 
   page-footer:
     background: dark
-    left: "© 2025 The Machine Learning Engineer. Todos os direitos reservados."
+    left: "© 2025 The Machine Learning Engineer - Todos os direitos reservados."
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/mikaelssilva
