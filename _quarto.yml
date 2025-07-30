@@ -15,14 +15,16 @@ website:
         href: about.qmd
 
     right:
+      - icon: book
+        href: conduct.qmd
+        text: "Código de conduta"
       - icon: github
         href: https://github.com/Mikaelssilva/TheMachineEngineerBlog
       - icon: instagram
         href: https://www.instagram.com/mikael.ssilva20/
       - icon: linkedin
         href: https://www.linkedin.com/in/mikaelssilva
-      - href: conduct.qmd
-        text: "Código conduta"
+      
 
   page-footer:
     background: dark
