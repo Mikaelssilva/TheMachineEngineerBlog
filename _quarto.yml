@@ -4,6 +4,8 @@ project:
 
 website:
   title: "The Machine Learning Engineer"
+  back-to-top-navigation: true
+  reader-mode: true
   
   navbar:
     background: dark
@@ -19,7 +21,7 @@ website:
         href: conduct.qmd
         text: "Código de conduta"
       - icon: github
-        href: https://github.com/Mikaelssilva/TheMachineEngineerBlog
+        href: https://github.com/Mikaelssilva
       - icon: instagram
         href: https://www.instagram.com/mikael.ssilva20/
       - icon: linkedin
@@ -28,10 +30,12 @@ website:
 
   page-footer:
     background: dark
-    left: |
-      © 2025 The Machine Learning Engineer. Todos os direitos reservados.
-    right: |
-      Feito com ❤️ usando [Quarto](https://quarto.org)
+    left: "© 2025 The Machine Learning Engineer. Todos os direitos reservados."
+    right: 
+      - icon: linkedin
+        href: https://www.linkedin.com/in/mikaelssilva
+      - icon: instagram
+        href: https://www.instagram.com/mikael.ssilva20/
 
 format:
   html:

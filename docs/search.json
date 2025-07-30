@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Perdido? Comece por aqui!",
-    "section": "",
-    "text": "Olá, pessoal! Me chamo Mikael Silva e estou super animado para te boas-vindas ao meu blog. Como Engenheiro da Computação apaixonado por Machine Learning, crei esse espaço para compartilhar meus projetos como Engenheiro e te ajudar a entender conceitos complexos de de ML e IA de forma prática, com projetos reais.\n\n\nDecidi criar esse blog para ajudar futuros engenheiros de Machine Learning, ciêntistas de dados e demais curiosos que gostam do tema. Como vocês sabem, é difícil achar conteúdo de qualidade e gratuito por aí tudo num só lugar. Por isso decidi escrever sobre o que você precisa fazer para começar nesse mundo.\n\n\n\n\nTutorias práticos\nCódigos comentados\nAnálise de casos reais\n\nAgora que você chegou, que tal explorar nossos primeiros artigos? E para não perder nenhuma atualização e receber notificações sobre novos posts, não deixe de se inscrever na newsletter!\nDeixe suas dúvidas e sugestões nos comentários abaixo! Abraço!"
-  },
-  {
     "objectID": "posts/welcome/index.html#propósito-do-blog",
     "href": "posts/welcome/index.html#propósito-do-blog",
     "title": "Perdido? Comece por aqui!",
-    "section": "",
-    "text": "Decidi criar esse blog para ajudar futuros engenheiros de Machine Learning, ciêntistas de dados e demais curiosos que gostam do tema. Como vocês sabem, é difícil achar conteúdo de qualidade e gratuito por aí tudo num só lugar. Por isso decidi escrever sobre o que você precisa fazer para começar nesse mundo."
+    "section": "Propósito do blog",
+    "text": "Propósito do blog\nDecidi criar esse blog para ajudar futuros engenheiros de Machine Learning, ciêntistas de dados e demais curiosos que gostam do tema. Como vocês sabem, é difícil achar conteúdo de qualidade e gratuito por aí tudo num só lugar. Por isso decidi escrever sobre o que você precisa fazer para começar nesse mundo."
   },
   {
     "objectID": "posts/welcome/index.html#o-que-você-vai-encontrar-aqui",
     "href": "posts/welcome/index.html#o-que-você-vai-encontrar-aqui",
     "title": "Perdido? Comece por aqui!",
-    "section": "",
-    "text": "Tutorias práticos\nCódigos comentados\nAnálise de casos reais\n\nAgora que você chegou, que tal explorar nossos primeiros artigos? E para não perder nenhuma atualização e receber notificações sobre novos posts, não deixe de se inscrever na newsletter!\nDeixe suas dúvidas e sugestões nos comentários abaixo! Abraço!"
+    "section": "O que você vai encontrar aqui",
+    "text": "O que você vai encontrar aqui\n\nTutorias práticos\nCódigos comentados\nAnálise de casos reais\n\nAgora que você chegou, que tal explorar nossos primeiros artigos? E para não perder nenhuma atualização e receber notificações sobre novos posts, não deixe de se inscrever na newsletter!\nDeixe suas dúvidas e sugestões nos comentários abaixo! Abraço!"
   },
   {
     "objectID": "posts/mapeamento/index.html",
@@ -53,14 +46,14 @@
     "href": "index.html",
     "title": "The Machine Learning Engineer",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Sobre o autor\nMikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada."
+    "text": "Sobre o autor\nMikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada.\n\n\n Back to top"
   },
   {
     "objectID": "conduct.html",
@@ -98,10 +91,17 @@
     "text": "🚨 Consequências\n1️⃣ Primeira violação: Comentário removido\n2️⃣ Reincidência: Banimento temporário\n3️⃣ Casos graves: Banimento permanente + reporte ao GitHub\n\nInspirado no Contributor Covenant."
   },
   {
+    "objectID": "myblog/index.html",
+    "href": "myblog/index.html",
+    "title": "The Machine Learning Engineer",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
     "objectID": "posts/post-with-code/index.html",
     "href": "posts/post-with-code/index.html",
     "title": "Post With Code",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "This is a post with executable code.\n\n\n\n Back to top"
   }
 ]

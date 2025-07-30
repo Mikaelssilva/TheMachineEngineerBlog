@@ -7,9 +7,9 @@ description: "Bem vindos ao Blog!"
 image: "tme.png"
 ---
 
-# Bem-vindos ao The **Machine Learning Engineer!**
-
 ![](tme.png)
+
+# Bem-vindos ao The **Machine Learning Engineer!**
 
 Olá, pessoal! Me chamo Mikael Silva e estou super animado para te boas-vindas ao meu blog.
 Como Engenheiro da Computação apaixonado por Machine Learning, crei esse espaço para compartilhar meus projetos
