@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "termo_de_uso.html",
+    "href": "termo_de_uso.html",
+    "title": "Termos de uso",
+    "section": "",
+    "text": "Ao acessar este site, você concorda com os termos abaixo:\n\n1. Uso do Conteúdo\nO conteúdo deste blog é fornecido para fins informativos e educacionais. O autor não garante que tudo esteja 100% atualizado ou isento de erros.\nVocê pode compartilhar os posts, desde que forneça créditos e o link para o blog. Não é permitido copiar o conteúdo integral sem autorização.\n\n\n2. Responsabilidade\nO autor não se responsabiliza por decisões tomadas com base nas informações deste blog. Use o conteúdo com senso crítico e, se necessário, consulte profissionais da área.\n\n\n3. Comentários e Interações\n\nComportamento Esperado\n\nParticipar com respeito, clareza e educação.\n\nCompartilhar ideias, dúvidas e feedback de forma construtiva.\n\nIncentivar e acolher iniciantes.\n\n\n\nNão é permitido\n\nComentários ofensivos, preconceituosos ou de ódio.\n\nSPAM, propagandas e links enganosos.\n\n\n\nConsequências\n\nComentários que violem estas diretrizes poderão ser removidos sem aviso prévio.\n\nReincidência pode resultar em bloqueio temporário ou permanente.\n\nCasos graves podem ser reportados às autoridades competentes e plataformas associadas.\n\n\n\n\n4. Modificações\nEstes termos podem ser atualizados sem aviso prévio. A data da última alteração será sempre exibida abaixo.\nÚltima atualização: 30 de julho de 2025."
+  },
+  {
     "objectID": "posts/welcome/index.html#propósito-do-blog",
     "href": "posts/welcome/index.html#propósito-do-blog",
     "title": "Perdido? Comece por aqui!",
@@ -56,39 +63,11 @@
     "text": "Mikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada."
   },
   {
-    "objectID": "conduct.html",
-    "href": "conduct.html",
-    "title": "Código de Conduta",
+    "objectID": "contato.html",
+    "href": "contato.html",
+    "title": "Contato",
     "section": "",
-    "text": "O objetivo é ter um ambiente inclusivo para todos, independentemente de:\n\nNível técnico\n\nOrigem ou identidade\n\nOrientação sexual\n\nDeficiências"
-  },
-  {
-    "objectID": "conduct.html#nosso-pacto",
-    "href": "conduct.html#nosso-pacto",
-    "title": "Código de Conduta",
-    "section": "",
-    "text": "O objetivo é ter um ambiente inclusivo para todos, independentemente de:\n\nNível técnico\n\nOrigem ou identidade\n\nOrientação sexual\n\nDeficiências"
-  },
-  {
-    "objectID": "conduct.html#comportamento-esperado",
-    "href": "conduct.html#comportamento-esperado",
-    "title": "Código de Conduta",
-    "section": "Comportamento Esperado",
-    "text": "Comportamento Esperado\n\nDebates de ideias, dúvidas, feedback, etc\nSempre cite fontes técnicas\n\nAjude iniciantes com paciência"
-  },
-  {
-    "objectID": "conduct.html#proibido",
-    "href": "conduct.html#proibido",
-    "title": "Código de Conduta",
-    "section": "Proibido",
-    "text": "Proibido\n\nDiscursos de ódio (racismo, homofobia, etc.)\n\nSpam ou autopromoção"
-  },
-  {
-    "objectID": "conduct.html#consequências",
-    "href": "conduct.html#consequências",
-    "title": "Código de Conduta",
-    "section": "Consequências",
-    "text": "Consequências\n\nPrimeira violação: Comentário removido\n\nReincidência: Banimento temporário\n\nCasos graves: Banimento permanente + reporte ao GitHub\n\n\nInspirado no Contributor Covenant."
+    "text": "Você pode entrar em contato com o autor pelos seguintes meios:\nEmail: mikael38225@gmail.com\nInstagram: @mikael.ssilva20\nFico feliz em receber sugestões, dúvidas ou propostas de colaboração!"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -96,5 +75,12 @@
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "privacidade.html",
+    "href": "privacidade.html",
+    "title": "Política de Privacidade",
+    "section": "",
+    "text": "Sua privacidade é importante. Esta política explica como informações pessoais são coletadas, usadas e protegidas neste blog.\n\nColeta de Informações\nEste site pode coletar as seguintes informações:\n\nEndereço de e-mail, nome e data de nascimento se você se inscrever na newsletter. Do contrário, nenhuma informação pessoal é coletada.\n\n\n\nUso das Informações\nAs informações coletadas são utilizadas para:\n\nEnviar atualizações sobre novos posts (newsletter);\n\n\n\nCompartilhamento\nSeus dados não são vendidos ou compartilhados com terceiros, exceto quando necessário para serviços como a newsletter (Mailchimp).\n\n\nConsentimento\nAo navegar neste site, você concorda com esta política de privacidade."
   }
 ]

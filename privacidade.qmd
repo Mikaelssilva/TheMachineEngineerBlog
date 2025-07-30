@@ -1,0 +1,27 @@
+---
+title: "Política de Privacidade"
+comments: false
+page-layout: full
+---
+
+Sua privacidade é importante. Esta política explica como informações pessoais são coletadas, usadas e protegidas neste blog.
+
+### Coleta de Informações
+
+Este site pode coletar as seguintes informações:
+
+- Endereço de e-mail, nome e data de nascimento se você se inscrever na newsletter. Do contrário, nenhuma informação pessoal é coletada.
+
+### Uso das Informações
+
+As informações coletadas são utilizadas para:
+
+- Enviar atualizações sobre novos posts (newsletter);
+
+### Compartilhamento
+
+Seus dados **não são vendidos ou compartilhados** com terceiros, exceto quando necessário para serviços como a newsletter (Mailchimp).
+
+### Consentimento
+
+Ao navegar neste site, você concorda com esta política de privacidade.

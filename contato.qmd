@@ -1,0 +1,13 @@
+---
+title: "Contato"
+comments: false
+page-layout: full
+---
+
+### Você pode entrar em contato com o autor pelos seguintes meios:
+
+Email: mikael38225@gmail.com
+
+Instagram: [@mikael.ssilva20](https://www.instagram.com/mikael.ssilva20/)
+
+Fico feliz em receber sugestões, dúvidas ou propostas de colaboração!
