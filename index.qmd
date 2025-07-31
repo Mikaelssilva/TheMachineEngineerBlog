@@ -17,6 +17,7 @@ listing:
     - author
     - date
     - description
+    - reading-time
   exclude: 
     author: "{Harlow,Tristan}*"
 page-layout: full

@@ -1,16 +1,18 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/all_posts.html",
     "items": [
+      "/posts/intro-to-ml/index.html",
       "/posts/welcome/index.html",
+      "/posts/post-with-code/index.html",
       "/posts/mapeamento/index.html"
     ]
   },
   {
-    "listing": "/all_posts.html",
+    "listing": "/index.html",
     "items": [
+      "/posts/intro-to-ml/index.html",
       "/posts/welcome/index.html",
-      "/posts/post-with-code/index.html",
       "/posts/mapeamento/index.html"
     ]
   }

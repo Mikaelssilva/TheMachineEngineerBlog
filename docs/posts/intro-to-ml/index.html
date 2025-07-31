@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mikael Silva">
+<meta name="dcterms.date" content="2027-07-07">
+<meta name="description" content="Introdução ao aprendizado de máquina">
 
-<title>Todos os Posts – The Machine Learning Engineer</title>
+<title>O que é Machine Learning? – The Machine Learning Engineer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +26,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favcon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0348920b7671f696dc9078d39bff215e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c26578f7e82ea8d173fda0e8e3c042bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favcon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0348920b7671f696dc9078d39bff215e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c26578f7e82ea8d173fda0e8e3c042bb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-all-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-author','listing-date','listing-description','listing-reading-time','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-all-posts'] = new List('listing-all-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GQLHV05X7L"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -130,37 +102,8 @@ cookieconsent.run({
   
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -170,7 +113,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">The Machine Learning Engineer</span>
     </a>
   </div>
@@ -181,11 +124,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -194,18 +137,18 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-menu">    
         <li>
-    <a class="dropdown-item" href="./all_posts.html"><i class="bi bi-archive" role="img">
+    <a class="dropdown-item" href="../../all_posts.html"><i class="bi bi-archive" role="img">
 </i> 
  <span class="dropdown-text">Todos os posts</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li>
-    <a class="dropdown-item" href="./projects.html"><i class="bi bi-box-seam" role="img">
+    <a class="dropdown-item" href="../../projects.html"><i class="bi bi-box-seam" role="img">
 </i> 
  <span class="dropdown-text">Projetos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./resource.html"><i class="bi bi-tools" role="img">
+    <a class="dropdown-item" href="../../resource.html"><i class="bi bi-tools" role="img">
 </i> 
  <span class="dropdown-text">Recursos</span></a>
   </li>  
@@ -217,12 +160,12 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-help">    
         <li>
-    <a class="dropdown-item" href="./faq.html"><i class="bi bi-question-octagon" role="img">
+    <a class="dropdown-item" href="../../faq.html"><i class="bi bi-question-octagon" role="img">
 </i> 
  <span class="dropdown-text">FAQ</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./contato.html"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="../../contato.html"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Reportar problema</span></a>
   </li>  
@@ -261,15 +204,34 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Todos os Posts</h1>
-            <p class="subtitle lead">Todos os posts do blog</p>
-                      </div>
+      <h1 class="title">O que é Machine Learning?</h1>
+                  <div>
+        <div class="description">
+          Introdução ao aprendizado de máquina
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">machine learning</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta column-page-left">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Mikael Silva </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 7, 2027</p>
+      </div>
+    </div>
     
       
     </div>
@@ -283,10 +245,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning" id="toc-bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning" class="nav-link active" data-scroll-target="#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning">Bem-vindo à biblioteca de artigos sobre Machine Learning!</a></li>
+  <li><a href="#o-que-é-aprendizado-de-máquina" id="toc-o-que-é-aprendizado-de-máquina" class="nav-link active" data-scroll-target="#o-que-é-aprendizado-de-máquina">O que é aprendizado de máquina?</a></li>
+  <li><a href="#história-do-aprendizado-de-máquina" id="toc-história-do-aprendizado-de-máquina" class="nav-link" data-scroll-target="#história-do-aprendizado-de-máquina">História do Aprendizado de Máquina</a></li>
+  <li><a href="#por-que-utilizar" id="toc-por-que-utilizar" class="nav-link" data-scroll-target="#por-que-utilizar">Por que utilizar?</a></li>
+  <li><a href="#diferença-entre-machine-learning-deep-learning-e-inteligência-artificial." id="toc-diferença-entre-machine-learning-deep-learning-e-inteligência-artificial." class="nav-link" data-scroll-target="#diferença-entre-machine-learning-deep-learning-e-inteligência-artificial.">Diferença entre Machine Learning, deep learning e inteligência artificial.</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YSUyMHNjaWVuY2U=">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW50cm9kdSVDMyVBNyVDMyVBM28=">Introdução <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZSUyMGxlYXJuaW5n">machine learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -294,170 +259,43 @@ window.Quarto = {
 
 
 
-<section id="bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning">Bem-vindo à biblioteca de artigos sobre Machine Learning!</h2>
-<p>Explore nossos conteúdos abaixo:</p>
-<div id="listing-all-posts" class="quarto-listing quarto-listing-container-default">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-all-posts-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-all-posts'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<p><img src="intro-to-ml.jpg" class="img-fluid"></p>
+<section id="o-que-é-aprendizado-de-máquina" class="level2">
+<h2 class="anchored" data-anchor-id="o-que-é-aprendizado-de-máquina">O que é aprendizado de máquina?</h2>
+<p>Já se perguntou como o Youtube e a Netflix recomendam conteúdo personalizado para você? Como o chat gpt, google gemini, deep seek, claude e outros grandes modelos de linguagem funcionam? Como seu banco detecta fraudes e como carros autônomos dirigem sozinhos? Se sim, a resposta é simples: machine learning. Mas o que é machine learning? No post de hoje eu te conto mais sobre essa tecnologia!</p>
+<p>Machine learning (ML), ou aprendizado de máquina em português, é o ramo da inteligência artificial focado em desenvolver sistemas e algoritmos capazes de aprender com dados e usar o que aprendeu para fazer previsões em dados ainda não vistos. Confuso? Bom, em vez de programar o computador para tarefas específicas, você pode utilizar um algoritmo de ML e treiná-lo com dados.</p>
+<p>Por exemplo, imagine que você quer que um programa reconheça fotos de gatos. Em vez de escrever regras como “se tiver orelhas pontudas e bigodes, então é um gato”, você mostra milhares de imagens rotuladas de gatos e não-gatos. O algoritmo, então, aprende padrões por conta própria — como formato, cores, e texturas — e começa a prever se novas imagens mostram ou não um gato. Essa capacidade é essencial para aplicações que vão desde algoritmos de recomendação até veículos autônomos.</p>
+</section>
+<section id="história-do-aprendizado-de-máquina" class="level2">
+<h2 class="anchored" data-anchor-id="história-do-aprendizado-de-máquina">História do Aprendizado de Máquina</h2>
+<p>Citar Geoffrey Hinton</p>
+</section>
+<section id="por-que-utilizar" class="level2">
+<h2 class="anchored" data-anchor-id="por-que-utilizar">Por que utilizar?</h2>
+<p>Uma das maiores vantagens do aprendizado de máquina é que ele é excelente para tarefas onde regras explícitas são difíceis de definir, como por exemplo, reconhecimento facial, recomendação de conteúdo e detecção de fraudes. Já pensou em escrever um programa para reconhecer o seu rosto? Quais regras você usaria? Bem difícil, né? Outra vantagem é a adaptação automática. Imagine o seguinte cenário, você programou o seu programa para reconhecer seu rosto, mas e se você precisasse reconhecer o rosto de outra pessoa? Você teria, então, que reescrever todo o seu programa do zero com novas regras. Com um sistema de ML, por outro lado, você só precisaria retreinar seu modelo para reconhecer essa outra pessoa e não reprogramar todo o sistema, economizando muito tempo.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Nota">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWFjaGluZSUyMGxlYXJuaW5n" data-listing-date-sort="1814929200000" data-listing-file-modified-sort="1753997168759" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="661">
-<div class="thumbnail"><a href="./posts/intro-to-ml/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts\intro-to-ml\intro-to-ml.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/intro-to-ml/index.html" class="no-external">O que é Machine Learning?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/intro-to-ml/index.html" class="no-external">
-<p>Introdução ao aprendizado de máquina</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/intro-to-ml/index.html" class="no-external">
-<div class="listing-date">
-Jul 7, 2027
-</div>
-<div class="listing-author">
-Mikael Silva
-</div>
-<div class="listing-reading-time">4 min</div>
-</a>
+<div class="callout-title-container flex-fill">
+Nota
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="SW50cm9kdSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1753758000000" data-listing-file-modified-sort="1753890726839" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/welcome/tme.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Perdido? Comece por aqui!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50cm9kdSVDMyVBNyVDMyVBM28='); return false;">Introdução</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-<p>Bem vindos ao Blog!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jul 29, 2025
-</div>
-<div class="listing-author">
-Mikael Silva
-</div>
-<div class="listing-reading-time">1 min</div>
-</a>
+<div class="callout-body-container callout-body">
+<p>Apesar das vantagens, Ml não é a melhor solução para tudo. A programação tradicional pode ser mais eficiente quando o problema é bem <strong>definido com regras claras</strong>, ou você precisa de <strong>controle total do comportamento</strong>(ex. sistemas embarcados) ou então quando o sistema <strong>não precisa se adaptar</strong> ao longo do tempo.</p>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1753671600000" data-listing-file-modified-sort="1753985227643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
-<p>Code example</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Jul 28, 2025
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-<div class="listing-reading-time">1 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDZGF0YSUyMHNjaWVuY2U=" data-listing-date-sort="1753585200000" data-listing-file-modified-sort="1753731609233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
-<div class="thumbnail"><a href="./posts/mapeamento/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts\mapeamento\mapeamento.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/mapeamento/index.html" class="no-external">Mapeamento de Dados</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YSUyMHNjaWVuY2U='); return false;">data science</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/mapeamento/index.html" class="no-external">
-<p>O que é mapeamento? Vem comigo entender!</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/mapeamento/index.html" class="no-external">
-<div class="listing-date">
-Jul 27, 2025
-</div>
-<div class="listing-author">
-Mikael Silva
-</div>
-<div class="listing-reading-time">2 min</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
+</section>
+<section id="diferença-entre-machine-learning-deep-learning-e-inteligência-artificial." class="level2">
+<h2 class="anchored" data-anchor-id="diferença-entre-machine-learning-deep-learning-e-inteligência-artificial.">Diferença entre Machine Learning, deep learning e inteligência artificial.</h2>
+<p>// incluir diagrama</p>
+<p>Primeiro, vamos começar com a definição de inteligência artificial(IA). Segundo Ribeiro (2010, p.8), “a inteligência artificial é uma ciência multidisciplinar que busca desenvolver e aplicar técnicas computacionais que simulem o comportamento humano em atividades específicas”. Ou seja, IA é um campo mais amplo da computação que tenta fazer com que máquinas imitem a inteligência humana. Machine learning e deep learning (teremos posts sobre) são apenas algumas das técnicas usadas para conseguir simular a inteligência humana.</p>
+<p>Um exemplo prático: você consegue distinguir com certa facilidade um gato de uma onça, mesmo que nunca tenha visto uma onça de perto, computadores não. Computadores precisam usar certas estratégias para conseguir simular sua inteligência, como machine learning e deep learning. ## Recursos</p>
+<p><a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a></p>
+<p>O Teachable Machine é uma ferramenta gratuita criada pelo Google que permite treinar modelos de machine learning de forma simples e intuitiva, sem precisar saber programar. Você pode usar sua câmera, microfone ou imagens para ensinar o computador a reconhecer sons, imagens ou poses, sim poses. É ideal para quem está começando e quer entender na prática como o aprendizado de máquina funciona.</p>
+<p><a href="https://ml-playground.com/">Machine Learning Playground</a></p>
+<p>O Machine Learning Playground é uma plataforma interativa desenvolvida pelo TensorFlow para visualizar como redes neurais funcionam( teremos posts sobre redes neurais também). Nele, você pode ajustar parâmetros (como número de camadas e neurônios), escolher tipos de dados e ver em tempo real como o modelo aprende a separar ou classificar os dados. É um recurso excelente para quem já tem alguma noção de ML e quer entender melhor o que acontece “por dentro” de uma rede neural.</p>
 
 
 </section>
@@ -862,6 +700,35 @@ Mikael Silva
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_theme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_theme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Mikaelssilva/TheMachineEngineerBlog";
+    script.dataset.repoId = "R_kgDOPUVqWg";
+    script.dataset.category = "Comments";
+    script.dataset.categoryId = "DIC_kwDOPUVqWs4Ctjjy";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -874,17 +741,17 @@ Mikael Silva
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./contato.html">
+    <a class="nav-link" href="../../contato.html">
 <p>Contato</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./privacidade.html">
+    <a class="nav-link" href="../../privacidade.html">
 <p>Política de Privacidade</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./termo_de_uso.html">
+    <a class="nav-link" href="../../termo_de_uso.html">
 <p>Termos de uso</p>
 </a>
   </li>  
@@ -914,5 +781,5 @@ Mikael Silva
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
