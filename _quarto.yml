@@ -5,8 +5,10 @@ project:
 website:
   title: "The Machine Learning Engineer"
   reader-mode: true
+  favicon: favcon.png
   
   navbar:
+    logo: favcon.png
     background: dark
     search: true
     left:
@@ -14,12 +16,20 @@ website:
         href: index.qmd
       - text: "About"
         href: about.qmd
-      - text: "Termos de uso"
-        href: termo_de_uso.qmd
-      - text: "Política de Privacidade"
-        href: privacidade.qmd
-      - text: "Contato"
-        href: contato.qmd
+      - text: 'Menu'
+        menu:
+          - text: 'Todos os posts'
+            href: 404.qmd
+          - text: "-"
+          - text: 'Projetos'
+            href: 404.qmd
+          - text: 'Recursos'
+            href: 404.qmd
+      - text: "Help"
+        menu:
+          - text: "FAQ"
+            href: 404.qmd
+
     right:
       - icon: envelope
         href: http://eepurl.com/jj-mXo
@@ -46,12 +56,16 @@ website:
     background: dark
     left: "© 2025 The Machine Learning Engineer - Todos os direitos reservados."
     right:
+      - text: 'Contato'
+        href: contato.qmd
+      - text: 'Política de Privacidade'
+        href: privacidade.qmd
+      - text: 'Termos de uso'
+        href: termo_de_uso.qmd
       - icon: linkedin
         href: https://www.linkedin.com/in/mikaelssilva
       - icon: instagram
         href: https://www.instagram.com/mikael.ssilva20/
-      - icon: github
-        href: https://github.com/Mikaelssilva
       - icon: youtube
         href: https://www.youtube.com/channel/UCTev7AuWd_45HArWkeEKf9w
 

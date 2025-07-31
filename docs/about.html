@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./favcon.png" rel="icon" type="image/png">
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -108,6 +109,9 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./favcon.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">The Machine Learning Engineer</span>
     </a>
@@ -126,18 +130,37 @@ cookieconsent.run({
     <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./termo_de_uso.html"> 
-<span class="menu-text">Termos de uso</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-menu" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Menu</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-menu">    
+        <li>
+    <a class="dropdown-item" href="./404.html">
+ <span class="dropdown-text">Todos os posts</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./privacidade.html"> 
-<span class="menu-text">Privacidade</span></a>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="./404.html">
+ <span class="dropdown-text">Projetos</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./contato.html"> 
-<span class="menu-text">Contato</span></a>
+        <li>
+    <a class="dropdown-item" href="./404.html">
+ <span class="dropdown-text">Recursos</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">    
+        <li>
+    <a class="dropdown-item" href="./404.html">
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -607,6 +630,21 @@ cookieconsent.run({
 <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./contato.html">
+<p>Contato</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./privacidade.html">
+<p>Política de Privacidade</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./termo_de_uso.html">
+<p>Termos de uso</p>
+</a>
+  </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/mikaelssilva">
       <i class="bi bi-linkedin" role="img">
@@ -616,12 +654,6 @@ cookieconsent.run({
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.instagram.com/mikael.ssilva20/">
       <i class="bi bi-instagram" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/Mikaelssilva">
-      <i class="bi bi-github" role="img">
 </i> 
     </a>
   </li>  
