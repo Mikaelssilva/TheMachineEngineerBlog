@@ -76,20 +76,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-recent-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-author','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-recent-posts'] = new List('listing-recent-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -195,7 +195,7 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-menu">    
         <li>
-    <a class="dropdown-item" href="./404.html"><i class="bi bi-archive" role="img">
+    <a class="dropdown-item" href="./all_posts.html"><i class="bi bi-archive" role="img">
 </i> 
  <span class="dropdown-text">Todos os posts</span></a>
   </li>  
@@ -286,8 +286,16 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGF0YSUyMHNjaWVuY2U=">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW50cm9kdSVDMyVBNyVDMyVBM28=">Introdução <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZSUyMGxlYXJuaW5n">machine learning <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bem-vindo-ao-mundo-da-inteligência-artificial" id="toc-bem-vindo-ao-mundo-da-inteligência-artificial" class="nav-link active" data-scroll-target="#bem-vindo-ao-mundo-da-inteligência-artificial">Bem-vindo ao mundo da Inteligência Artificial!</a></li>
+  <li><a href="#posts-recentes" id="toc-posts-recentes" class="nav-link" data-scroll-target="#posts-recentes">Posts recentes</a></li>
+  <li><a href="#tecnologias-que-exploramos" id="toc-tecnologias-que-exploramos" class="nav-link" data-scroll-target="#tecnologias-que-exploramos">Tecnologias que Exploramos</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -295,36 +303,13 @@ window.Quarto = {
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-author" data-direction="asc">
-        Author
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
+<section id="bem-vindo-ao-mundo-da-inteligência-artificial" class="level2 hero-section">
+<h2 class="anchored" data-anchor-id="bem-vindo-ao-mundo-da-inteligência-artificial">Bem-vindo ao mundo da Inteligência Artificial!</h2>
+<p>Olá! Sou <strong>Mikael</strong>, engenheiro da computação e entusiasta de Machine Learning. Aqui você encontrará tutoriais práticos, análises de dados reais, projetos e insights sobre as tecnologias que estão transformando o mundo.</p>
+</section>
+<section id="posts-recentes" class="level2">
+<h2 class="anchored" data-anchor-id="posts-recentes">Posts recentes</h2>
+<div id="listing-recent-posts" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="SW50cm9kdSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1753758000000" data-listing-file-modified-sort="1753890726839" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
 <div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
@@ -336,11 +321,6 @@ window.Quarto = {
 <h3 class="no-anchor listing-title">
 <a href="./posts/welcome/index.html" class="no-external">Perdido? Comece por aqui!</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50cm9kdSVDMyVBNyVDMyVBM28='); return false;">Introdução</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
 <p>Bem vindos ao Blog!</p>
 </a></div>
@@ -366,13 +346,6 @@ Mikael Silva
 <h3 class="no-anchor listing-title">
 <a href="./posts/mapeamento/index.html" class="no-external">Mapeamento de Dados</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YSUyMHNjaWVuY2U='); return false;">data science</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/mapeamento/index.html" class="no-external">
 <p>O que é mapeamento? Vem comigo entender!</p>
 </a></div>
@@ -390,7 +363,69 @@ Mikael Silva
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+<div class="text-center">
+<p><strong><a href="./all_posts.html">Todos os posts</a></strong></p>
+</div>
+</section>
+<section id="tecnologias-que-exploramos" class="level2">
+<h2 class="anchored" data-anchor-id="tecnologias-que-exploramos">Tecnologias que Exploramos</h2>
+<div class="grid">
+<div class="g-col-md-2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white.png" class="img-fluid figure-img"></p>
+<figcaption>Python</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-md-2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&amp;logo=tensorflow&amp;logoColor=white.png" class="img-fluid figure-img"></p>
+<figcaption>TensorFlow</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-md-2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&amp;logo=pytorch&amp;logoColor=white.png" class="img-fluid figure-img"></p>
+<figcaption>PyTorch</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-md-2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white.png" class="img-fluid figure-img"></p>
+<figcaption>Pandas</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-md-2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.shields.io/badge/-Scikit_Learn-F7931E?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white.png" class="img-fluid figure-img"></p>
+<figcaption>Scikit Learn</figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-md-2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.shields.io/badge/-Jupyter-F37626?style=for-the-badge&amp;logo=jupyter&amp;logoColor=white.png" class="img-fluid figure-img"></p>
+<figcaption>Jupyter</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -829,7 +864,7 @@ Mikael Silva
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/channel/UCTev7AuWd_45HArWkeEKf9w">
+    <a class="nav-link" href="https://www.youtube.com/@Engmikaelsilva">
       <i class="bi bi-youtube" role="img">
 </i> 
     </a>

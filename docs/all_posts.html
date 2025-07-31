@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contato – The Machine Learning Engineer</title>
+<title>Todos os Posts – The Machine Learning Engineer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favcon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -70,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-all-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-author','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-all-posts'] = new List('listing-all-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GQLHV05X7L"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -99,6 +130,35 @@ cookieconsent.run({
   
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -201,8 +261,8 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Contato</h1>
-            <p class="subtitle lead">Reporte problemas, deixe sugestões e dúvidas</p>
+      <h1 class="title">Todos os Posts</h1>
+            <p class="subtitle lead">Todos os posts do blog</p>
                       </div>
   </div>
     
@@ -223,10 +283,10 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#você-pode-entrar-em-contato-com-o-autor-pelos-seguintes-meios" id="toc-você-pode-entrar-em-contato-com-o-autor-pelos-seguintes-meios" class="nav-link active" data-scroll-target="#você-pode-entrar-em-contato-com-o-autor-pelos-seguintes-meios">Você pode entrar em contato com o autor pelos seguintes meios:</a></li>
+  <li><a href="#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning" id="toc-bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning" class="nav-link active" data-scroll-target="#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning">Bem-vindo à biblioteca de artigos sobre Machine Learning!</a></li>
   </ul>
 </nav>
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGF0YSUyMHNjaWVuY2U=">data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW50cm9kdSVDMyVBNyVDMyVBM28=">Introdução <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZSUyMGxlYXJuaW5n">machine learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -234,11 +294,136 @@ cookieconsent.run({
 
 
 
-<section id="você-pode-entrar-em-contato-com-o-autor-pelos-seguintes-meios" class="level3">
-<h3 class="anchored" data-anchor-id="você-pode-entrar-em-contato-com-o-autor-pelos-seguintes-meios">Você pode entrar em contato com o autor pelos seguintes meios:</h3>
-<p>Email: mikael38225@gmail.com</p>
-<p>Instagram: <a href="https://www.instagram.com/mikael.ssilva20/"><span class="citation" data-cites="mikael.ssilva20">@mikael.ssilva20</span></a></p>
-<p>Fico feliz em receber sugestões, dúvidas ou propostas de colaboração!</p>
+<section id="bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning">Bem-vindo à biblioteca de artigos sobre Machine Learning!</h2>
+<p>Explore nossos conteúdos abaixo:</p>
+<div id="listing-all-posts" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-all-posts-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-all-posts'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="SW50cm9kdSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1753758000000" data-listing-file-modified-sort="1753890726839" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="150">
+<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/welcome/tme.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/welcome/index.html" class="no-external">Perdido? Comece por aqui!</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW50cm9kdSVDMyVBNyVDMyVBM28='); return false;">Introdução</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
+<p>Bem vindos ao Blog!</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/welcome/index.html" class="no-external">
+<div class="listing-date">
+Jul 29, 2025
+</div>
+<div class="listing-author">
+Mikael Silva
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1753671600000" data-listing-file-modified-sort="1753985227643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
+<p>Code example</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/post-with-code/index.html" class="no-external">
+<div class="listing-date">
+Jul 28, 2025
+</div>
+<div class="listing-author">
+Harlow Malloc
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDZGF0YSUyMHNjaWVuY2U=" data-listing-date-sort="1753585200000" data-listing-file-modified-sort="1753731609233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
+<div class="thumbnail"><a href="./posts/mapeamento/index.html" class="no-external">
+
+<p class="card-img-top"><img src="posts\mapeamento\mapeamento.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/mapeamento/index.html" class="no-external">Mapeamento de Dados</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWFjaGluZSUyMGxlYXJuaW5n'); return false;">machine learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YSUyMHNjaWVuY2U='); return false;">data science</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/mapeamento/index.html" class="no-external">
+<p>O que é mapeamento? Vem comigo entender!</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/mapeamento/index.html" class="no-external">
+<div class="listing-date">
+Jul 27, 2025
+</div>
+<div class="listing-author">
+Mikael Silva
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
 
 
 </section>
@@ -655,7 +840,7 @@ cookieconsent.run({
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./contato.html" aria-current="page">
+    <a class="nav-link" href="./contato.html">
 <p>Contato</p>
 </a>
   </li>  

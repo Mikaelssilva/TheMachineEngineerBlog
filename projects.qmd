@@ -9,8 +9,8 @@ page-layout: article
 Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.
 
 :::{.callout-tip title="Dica"}
-Aproveita e já se inscreve no canal!
-[EngMikael](https://www.youtube.com/@Engmikaelsilva)
+Aproveita e já se inscreve no canal
+[EngMikael](https://www.youtube.com/@Engmikaelsilva)!
 :::
 
 {{< video https://www.youtube.com/watch?v=Sd6Qa6uKn3s >}}

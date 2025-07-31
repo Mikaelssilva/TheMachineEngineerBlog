@@ -1,0 +1,28 @@
+---
+title: "Todos os Posts"
+subtitle: "Todos os posts do blog" 
+comments: false                   
+listing: 
+    id: all-posts
+    contents: posts  # Exclui o arquivo index se existir
+    sort: "date desc"
+    type: default
+    fields:
+      - image
+      - title
+      - author
+      - date
+      - description
+      - categories
+    categories: true
+    sort-ui: true
+    filter-ui: true        
+page-layout: full
+title-block-banner: true
+---
+
+## Bem-vindo à biblioteca de artigos sobre Machine Learning!
+Explore nossos conteúdos abaixo:
+
+:::{#all-posts}
+:::

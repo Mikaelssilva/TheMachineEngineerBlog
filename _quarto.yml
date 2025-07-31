@@ -6,7 +6,7 @@ website:
   title: "The Machine Learning Engineer"
   reader-mode: true
   favicon: favcon.png
-  
+
   navbar:
     background: dark
     search: true
@@ -18,16 +18,16 @@ website:
       - text: 'Menu'
         menu:
           - icon: archive
-            href: 404.qmd
+            href: all_posts.qmd
             text: 'Todos os posts'
-          - text: "-"
+          - text: "---"
           - icon: box-seam
             href: projects.qmd
             text: 'Projetos'
           - icon: tools
             href: resource.qmd
             text: 'Recursos'
-          
+
       - text: "Help"
         menu:
           - icon: question-octagon
@@ -48,16 +48,14 @@ website:
         href: https://www.linkedin.com/in/mikaelssilva
         text: "Linkedin"
 
-  cookie-consent: 
+  cookie-consent:
     type: implied
     style: headline
     palette: dark
 
-  google-analytics: 
+  google-analytics:
     tracking-id: "G-GQLHV05X7L"
     anonymize-ip: false
-    
-      
 
   page-footer:
     background: dark
@@ -74,11 +72,11 @@ website:
       - icon: instagram
         href: https://www.instagram.com/mikael.ssilva20/
       - icon: youtube
-        href: https://www.youtube.com/channel/UCTev7AuWd_45HArWkeEKf9w
-
+        href: https://www.youtube.com/@Engmikaelsilva
+ 
 format:
   html:
-    theme: 
+    theme:
       - journal
     css: styles.css
     toc: true
@@ -90,16 +88,12 @@ format:
     page-layout: full
     title-block-banner: true
 
-# Configurações de busca
-search: true
-
-# Comentários
 comments:
   giscus:
     repo: Mikaelssilva/TheMachineEngineerBlog
-    repo-id: "R_kgDOPUVqWg"    
+    repo-id: "R_kgDOPUVqWg"
     category: "Comments"
     category-id: "DIC_kwDOPUVqWs4Ctjjy"
     mapping: pathname
     reactions-enabled: true
-    theme: prefered_theme
+    theme: preferred_theme

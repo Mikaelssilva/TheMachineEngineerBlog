@@ -11,14 +11,14 @@
     "href": "projects.html",
     "title": "Projetos",
     "section": "",
-    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal! EngMikael"
+    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal EngMikael!"
   },
   {
     "objectID": "projects.html#parabéns-para-você-com-arduino",
     "href": "projects.html#parabéns-para-você-com-arduino",
     "title": "Projetos",
     "section": "",
-    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal! EngMikael"
+    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal EngMikael!"
   },
   {
     "objectID": "posts/welcome/index.html#propósito-do-blog",
@@ -67,7 +67,28 @@
     "href": "index.html",
     "title": "The Machine Learning Engineer",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items"
+    "text": "Olá! Sou Mikael, engenheiro da computação e entusiasta de Machine Learning. Aqui você encontrará tutoriais práticos, análises de dados reais, projetos e insights sobre as tecnologias que estão transformando o mundo."
+  },
+  {
+    "objectID": "index.html#bem-vindo-ao-mundo-da-inteligência-artificial",
+    "href": "index.html#bem-vindo-ao-mundo-da-inteligência-artificial",
+    "title": "The Machine Learning Engineer",
+    "section": "",
+    "text": "Olá! Sou Mikael, engenheiro da computação e entusiasta de Machine Learning. Aqui você encontrará tutoriais práticos, análises de dados reais, projetos e insights sobre as tecnologias que estão transformando o mundo."
+  },
+  {
+    "objectID": "index.html#posts-recentes",
+    "href": "index.html#posts-recentes",
+    "title": "The Machine Learning Engineer",
+    "section": "Posts recentes",
+    "text": "Posts recentes\n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items\n\n\nTodos os posts"
+  },
+  {
+    "objectID": "index.html#tecnologias-que-exploramos",
+    "href": "index.html#tecnologias-que-exploramos",
+    "title": "The Machine Learning Engineer",
+    "section": "Tecnologias que Exploramos",
+    "text": "Tecnologias que Exploramos\n\n\n\n\n\nPython\n\n\n\n\n\n\n\nTensorFlow\n\n\n\n\n\n\n\nPyTorch\n\n\n\n\n\n\n\nPandas\n\n\n\n\n\n\n\nScikit Learn\n\n\n\n\n\n\n\nJupyter"
   },
   {
     "objectID": "contato.html",
@@ -84,11 +105,25 @@
     "text": "Mikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada."
   },
   {
+    "objectID": "all_posts.html",
+    "href": "all_posts.html",
+    "title": "Todos os Posts",
+    "section": "",
+    "text": "Explore nossos conteúdos abaixo:\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nCode example\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "all_posts.html#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning",
+    "href": "all_posts.html#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning",
+    "title": "Todos os Posts",
+    "section": "",
+    "text": "Explore nossos conteúdos abaixo:\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nCode example\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "faq.html",
     "href": "faq.html",
     "title": "Frequently Asked Questions",
     "section": "",
-    "text": "Note\n\n\n\nAinda estou trabalhando nisso"
+    "text": "Note\n\n\n\nAinda não temos perguntas. Envia a sua!"
   },
   {
     "objectID": "posts/post-with-code/index.html",

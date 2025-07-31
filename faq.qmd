@@ -4,5 +4,5 @@ comments: false
 ---
 
 :::{.callout-note}
-Ainda estou trabalhando nisso
+Ainda não temos perguntas. Envia a sua!
 :::
