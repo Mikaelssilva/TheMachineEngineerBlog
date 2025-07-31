@@ -12,7 +12,7 @@ Nesse projeto eu programei o arduino para tocar a clássica música parabéns pa
 O vídeo foi gravado com o celular na vertical.
 :::
 
-{{< video teste_quarto.mp4 >}}
+{{< video https://www.youtube.com/watch?v=Sd6Qa6uKn3s >}}
 
 
 :::{.callout-warning}
