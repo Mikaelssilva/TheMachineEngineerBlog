@@ -10,17 +10,23 @@ Sua privacidade é importante. Esta política explica como informações pessoai
 
 Este site pode coletar as seguintes informações:
 
-- Endereço de e-mail, nome e data de nascimento se você se inscrever na newsletter. Do contrário, nenhuma informação pessoal é coletada.
+- Endereço de e-mail, nome e data de nascimento se você se inscrever na newsletter.
+- Informações sobre o navegador e dispositivo, através do Google Analytics
 
 ### Uso das Informações
 
 As informações coletadas são utilizadas para:
 
 - Enviar atualizações sobre novos posts (newsletter);
+- Melhorar a navegação e experiência do usuário;
 
 ### Compartilhamento
 
 Seus dados **não são vendidos ou compartilhados** com terceiros, exceto quando necessário para serviços como a newsletter (Mailchimp).
+
+### Cookies
+
+Este site pode utilizar cookies para melhorar sua experiência. Você pode desativá-los nas configurações do seu navegador.
 
 ### Consentimento
 

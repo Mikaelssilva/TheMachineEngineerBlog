@@ -16,11 +16,10 @@ website:
         href: about.qmd
       - text: "Termos de uso"
         href: termo_de_uso.qmd
-      - text: "Privacidade"
+      - text: "Política de Privacidade"
         href: privacidade.qmd
       - text: "Contato"
         href: contato.qmd
-
     right:
       - icon: envelope
         href: http://eepurl.com/jj-mXo
@@ -32,6 +31,15 @@ website:
         href: https://www.linkedin.com/in/mikaelssilva
         text: "Linkedin"
 
+  cookie-consent: 
+    type: implied
+    style: headline
+    palette: dark
+
+  google-analytics: 
+    tracking-id: "G-GQLHV05X7L"
+    anonymize-ip: false
+    
       
 
   page-footer:
