@@ -41,27 +41,27 @@ Olá! Sou **Mikael**, engenheiro da computação e entusiasta de Machine Learnin
 ## Tecnologias que Exploramos
 
 ::: {.grid}
-::: {.g-col-md-2}
+::: {.g-col-md-1}
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 :::
 
-::: {.g-col-md-2}
+::: {.g-col-md-1}
 ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 :::
 
-::: {.g-col-md-2}
+::: {.g-col-md-1}
 ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 :::
 
-::: {.g-col-md-2}
+::: {.g-col-md-1}
 ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 :::
 
-::: {.g-col-md-2}
+::: {.g-col-md-1}
 ![Scikit Learn](https://img.shields.io/badge/-Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 :::
 
-::: {.g-col-md-2}
+::: {.g-col-md-1}
 ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 :::
 :::
