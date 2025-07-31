@@ -1,0 +1,20 @@
+---
+title: "Projetos"
+subtitle: "Aqui você encontra os projetos do autor"
+page-layout: article
+--- 
+
+## Parabéns para você com arduino
+
+Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.
+
+:::{.callout-note}
+O vídeo foi gravado com o celular na vertical.
+:::
+
+{{< video teste_quarto.mp4 >}}
+
+
+:::{.callout-warning}
+Essa é uma página teste!
+:::

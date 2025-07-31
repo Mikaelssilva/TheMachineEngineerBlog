@@ -8,7 +8,6 @@ website:
   favicon: favcon.png
   
   navbar:
-    logo: favcon.png
     background: dark
     search: true
     left:
@@ -18,17 +17,25 @@ website:
         href: about.qmd
       - text: 'Menu'
         menu:
-          - text: 'Todos os posts'
+          - icon: archive
             href: 404.qmd
+            text: 'Todos os posts'
           - text: "-"
-          - text: 'Projetos'
+          - icon: box-seam
+            href: projects.qmd
+            text: 'Projetos'
+          - icon: tools
             href: 404.qmd
-          - text: 'Recursos'
-            href: 404.qmd
+            text: 'Recursos'
+          
       - text: "Help"
         menu:
-          - text: "FAQ"
+          - icon: question-octagon
             href: 404.qmd
+            text: "FAQ"
+          - icon: bug
+            href: 404.qmd
+            text: "Reportar problema"
 
     right:
       - icon: envelope

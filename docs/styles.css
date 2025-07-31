@@ -167,3 +167,8 @@ html {
   background-color: rgba(0, 0, 0, 0.05);
   color: #000 !important;
 }
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+}
