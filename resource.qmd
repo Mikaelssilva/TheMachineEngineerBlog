@@ -1,0 +1,10 @@
+---
+title: "Recursos e Ferramentas"
+subtitle: "Aqui você encontra recursos e ferramentas para te ajudar"
+comments: false
+---
+
+:::{.callout-note}
+Já já você terá recursos e ferramentas para te
+ajudar na sua jornada
+:::

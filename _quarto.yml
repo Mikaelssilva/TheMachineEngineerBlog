@@ -25,16 +25,16 @@ website:
             href: projects.qmd
             text: 'Projetos'
           - icon: tools
-            href: 404.qmd
+            href: resource.qmd
             text: 'Recursos'
           
       - text: "Help"
         menu:
           - icon: question-octagon
-            href: 404.qmd
+            href: faq.qmd
             text: "FAQ"
           - icon: bug
-            href: 404.qmd
+            href: contato.qmd
             text: "Reportar problema"
 
     right:

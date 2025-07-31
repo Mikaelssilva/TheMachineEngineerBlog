@@ -1,5 +1,6 @@
 ---
 title: "Contato"
+subtitle: "Reporte problemas, deixe sugestões e dúvidas"
 comments: false
 page-layout: full
 ---
