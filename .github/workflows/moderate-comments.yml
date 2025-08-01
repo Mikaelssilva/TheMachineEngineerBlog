@@ -11,41 +11,92 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            // Palavras proibidas (adicione as suas)
+            // Palavras proibidas (strings simples)
             const badWords = [
-                    // Racismo
-                    'macaco', 'negrinho', 'branquelo', 'judeu doente', 'cabelo de bombril', 'serviço de preto',
-                    
-                    // LGBTfobia
-                    'veado', 'bicha', 'sapatão', 'viadinho', 'aidético', 'frutinha', 'boiola',
-                    
-                    // Machismo
-                    'vai lavar louça', 'lugar de mulher é', 'feminazi', 'puta', 'cadê o sanduíche',
-                    
-                    // Outros
-                    'deficiente mental', 'retardado', 'vai se matar', 'corno', 'gordo nojento',
-                    
-                    // Termos disfarçados (regex)
-                    'v3@d0', 'b1ch4', 'm@c4c0', /n[e3]gr[o0]/i, /[ck]retin[o0]/i];
-            
-            // Converte comentário para minúsculas para checagem
-            const commentText = context.payload.comment.body.toLowerCase();
-            
-            // Verifica palavras proibidas
-            if (badWords.some(word => commentText.includes(word.toLowerCase()))) {
-              // Deleta o comentário
-              await github.rest.discussions.deleteComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                discussion_number: context.payload.discussion.number,
-                comment_number: context.payload.comment.number
-              });
+              // Racismo
+              'macaco', 'negrinho', 'branquelo', 'judeu doente', 'cabelo de bombril', 'serviço de preto',
               
-              // Opcional: Notifica no GitHub
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.payload.discussion.number,
-                body: '🚨 Comentário removido por violar as regras.'
-              });
+              // LGBTfobia
+              'veado', 'bicha', 'sapatão', 'viadinho', 'aidético', 'frutinha', 'boiola',
+              
+              // Machismo
+              'vai lavar louça', 'lugar de mulher é', 'feminazi', 'puta', 'cadê o sanduíche',
+              
+              // Outros
+              'deficiente mental', 'retardado', 'vai se matar', 'corno', 'gordo nojento',
+              
+              // Termos disfarçados (como strings)
+              'v3@d0', 'b1ch4', 'm@c4c0'
+            ];
+            
+            // Padrões regex para termos mais complexos
+            const regexPatterns = [
+              /n[e3]gr[o0]/i,
+              /[ck]retin[o0]/i,
+              /v[i1][a@]d[o0]/i,
+              /b[i1]ch[a@]/i
+            ];
+            
+            // Obtém o texto do comentário
+            const commentText = context.payload.comment.body;
+            const commentTextLower = commentText.toLowerCase();
+            
+            console.log('Verificando comentário:', commentText);
+            
+            let hasProhibitedContent = false;
+            let matchedWord = '';
+            
+            // Verifica palavras proibidas (strings)
+            for (const word of badWords) {
+              if (commentTextLower.includes(word.toLowerCase())) {
+                hasProhibitedContent = true;
+                matchedWord = word;
+                break;
+              }
             }
+            
+            // Verifica padrões regex
+            if (!hasProhibitedContent) {
+              for (const pattern of regexPatterns) {
+                if (pattern.test(commentText)) {
+                  hasProhibitedContent = true;
+                  matchedWord = pattern.toString();
+                  break;
+                }
+              }
+            }
+            
+            if (hasProhibitedContent) {
+              console.log('Conteúdo proibido encontrado:', matchedWord);
+              
+              try {
+                // Deleta o comentário
+                await github.rest.discussions.deleteComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_number: context.payload.comment.number
+                });
+                
+                console.log('Comentário deletado com sucesso');
+                
+                // Opcional: Cria um novo comentário informativo
+                // (Note: isso criará um comentário que pode também ser moderado)
+                await github.rest.discussions.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  discussion_number: context.payload.discussion.number,
+                  body: '🚨 Um comentário foi removido automaticamente por violar nossas diretrizes da comunidade. Por favor, mantenha um ambiente respeitoso para todos.'
+                });
+                
+                console.log('Comentário de notificação criado');
+                
+              } catch (error) {
+                console.error('Erro ao moderar comentário:', error);
+                
+                // Se falhar, pelo menos registra o problema
+                core.setFailed(`Falha na moderação: ${error.message}`);
+              }
+            } else {
+              console.log('Comentário aprovado - nenhum conteúdo proibido encontrado');
+            }
+          github-token: ${{ secrets.GITHUB_TOKEN }}
