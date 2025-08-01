@@ -1,4 +1,4 @@
-name: Moderate Giscus Comments
+name: Simple Comment Moderation
 on:
   discussion_comment:
     types: [created]
@@ -7,144 +7,98 @@ jobs:
   moderate:
     runs-on: ubuntu-latest
     steps:
-      - name: Check for bad words
+      - name: Check and report bad comments
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            // Palavras proibidas (strings simples)
+            // Lista de palavras proibidas (adicione as suas)
             const badWords = [
-              // Racismo
-              'macaco', 'negrinho', 'branquelo', 'judeu doente', 'cabelo de bombril', 'serviço de preto',
-              
-              // LGBTfobia
-              'veado', 'bicha', 'sapatão', 'viadinho', 'aidético', 'frutinha', 'boiola',
-              
-              // Machismo
-              'vai lavar louça', 'lugar de mulher é', 'feminazi', 'puta', 'cadê o sanduíche',
-              
-              // Outros
-              'deficiente mental', 'retardado', 'vai se matar', 'corno', 'gordo nojento',
-              
-              // Termos disfarçados (como strings)
-              'v3@d0', 'b1ch4', 'm@c4c0'
+              'puta', 'merda', 'fdp', 'caralho', 'porra', 'buceta',
+              'macaco', 'negrinho', 'veado', 'bicha', 'retardado',
+              'vai se matar', 'corno', 'idiota', 'burro'
             ];
             
-            // Padrões regex para termos mais complexos
-            const regexPatterns = [
-              /n[e3]gr[o0]/i,
-              /[ck]retin[o0]/i,
-              /v[i1][a@]d[o0]/i,
-              /b[i1]ch[a@]/i
-            ];
+            // Obtém o comentário
+            const comment = context.payload.comment;
+            const commentText = comment.body.toLowerCase();
+            const author = comment.user.login;
+            const discussionTitle = context.payload.discussion.title;
+            const discussionNumber = context.payload.discussion.number;
             
-            // Obtém o texto do comentário
-            const commentText = context.payload.comment.body;
-            const commentTextLower = commentText.toLowerCase();
+            console.log(`🔍 Verificando comentário de @${author}`);
+            console.log(`📝 Texto: "${comment.body}"`);
             
-            console.log('Verificando comentário:', commentText);
-            
-            let hasProhibitedContent = false;
-            let matchedWord = '';
-            
-            // Verifica palavras proibidas (strings)
+            // Verifica se contém palavras proibidas
+            let foundBadWords = [];
             for (const word of badWords) {
-              if (commentTextLower.includes(word.toLowerCase())) {
-                hasProhibitedContent = true;
-                matchedWord = word;
-                break;
+              if (commentText.includes(word.toLowerCase())) {
+                foundBadWords.push(word);
               }
             }
             
-            // Verifica padrões regex
-            if (!hasProhibitedContent) {
-              for (const pattern of regexPatterns) {
-                if (pattern.test(commentText)) {
-                  hasProhibitedContent = true;
-                  matchedWord = pattern.toString();
-                  break;
-                }
-              }
-            }
-            
-            if (hasProhibitedContent) {
-              console.log('Conteúdo proibido encontrado:', matchedWord);
+            if (foundBadWords.length > 0) {
+              console.log(`🚨 CONTEÚDO INADEQUADO DETECTADO!`);
+              console.log(`📍 Palavras encontradas: ${foundBadWords.join(', ')}`);
               
+              // Cria uma issue para moderação manual
               try {
-                // Obtém o node_id do comentário para usar com GraphQL
-                const commentNodeId = context.payload.comment.node_id;
+                const issueBody = `## 🚨 Comentário Inadequado Detectado
                 
-                // Deleta o comentário usando GraphQL
-                const deleteResult = await github.graphql(`
-                  mutation deleteDiscussionComment($commentId: ID!) {
-                    deleteDiscussionComment(input: {id: $commentId}) {
-                      clientMutationId
-                    }
-                  }
-                `, {
-                  commentId: commentNodeId
+**Detalhes:**
+- **Autor:** @${author}
+- **Discussion:** [${discussionTitle}](${context.payload.discussion.html_url}) (#${discussionNumber})
+- **Data:** ${new Date().toLocaleString('pt-BR')}
+- **Palavras detectadas:** \`${foundBadWords.join(', ')}\`
+
+**Comentário original:**
+> ${comment.body}
+
+**Links úteis:**
+- [Ver comentário](${comment.html_url})
+- [Ver discussion completa](${context.payload.discussion.html_url})
+
+---
+**Ações sugeridas:**
+- [ ] Revisar o comentário
+- [ ] Deletar se necessário
+- [ ] Avisar o usuário sobre as regras
+- [ ] Adicionar o usuário à lista de observação
+
+*Esta issue foi criada automaticamente pelo sistema de moderação.*`;
+
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: `🚨 Moderação: Comentário de @${author}`,
+                  body: issueBody,
+                  labels: ['moderação', 'urgente', 'comentário-inadequado'],
+                  assignees: ['Mikaelssilva'] // Coloque seu username aqui
                 });
                 
-                console.log('Comentário deletado com sucesso via GraphQL');
+                console.log('✅ Issue de moderação criada com sucesso!');
                 
-                // Cria um novo comentário informativo usando GraphQL  
-                const discussionNodeId = context.payload.discussion.node_id;
-                
-                await github.graphql(`
-                  mutation addDiscussionComment($discussionId: ID!, $body: String!) {
-                    addDiscussionComment(input: {
-                      discussionId: $discussionId,
-                      body: $body
-                    }) {
-                      comment {
-                        id
-                      }
-                    }
-                  }
-                `, {
-                  discussionId: discussionNodeId,
-                  body: '🚨 **Comentário removido automaticamente**\\n\\nUm comentário foi removido por violar nossas diretrizes da comunidade. Por favor, mantenha um ambiente respeitoso para todos.\\n\\n---\\n*Esta é uma ação automática do sistema de moderação.*'
-                });
-                
-                console.log('Comentário de notificação criado via GraphQL');
-                
-              } catch (error) {
-                console.error('Erro ao moderar comentário:', error);
-                
-                // Fallback: Pelo menos registra o problema nos logs do GitHub
-                console.log('Tentando alternativa: criar issue para revisão manual');
-                
+                // Opcional: Adiciona uma reação ao comentário para marcar
                 try {
-                  // Cria uma issue para revisão manual como fallback
-                  await github.rest.issues.create({
+                  await github.rest.reactions.createForDiscussionComment({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
-                    title: '🚨 Moderação Manual Necessária',
-                    body: `**Comentário com conteúdo proibido detectado:**
-                    
-            **Autor:** @${context.payload.comment.user.login}
-            **Discussion:** #${context.payload.discussion.number}
-            **Palavra encontrada:** ${matchedWord}
-            **Data:** ${new Date().toISOString()}
-
-            **Comentário original:**
-            \`\`\`
-            ${context.payload.comment.body}
-            \`\`\`
-
-            **Ação necessária:** Revisar e moderar manualmente.
-            **Link:** ${context.payload.comment.html_url}`,
-                    labels: ['moderation', 'automated']
+                    comment_id: comment.id,
+                    content: 'eyes' // 👀 reação para indicar que está sendo revisado
                   });
-                  
-                  console.log('Issue de moderação manual criada');
-                } catch (issueError) {
-                  console.error('Falha ao criar issue de fallback:', issueError);
+                  console.log('👀 Reação adicionada ao comentário');
+                } catch (reactionError) {
+                  console.log('⚠️ Não foi possível adicionar reação:', reactionError.message);
                 }
                 
-                // Marca como falha para alertar nos logs
-                core.setFailed(`Falha na moderação automática: ${error.message}`);
+              } catch (error) {
+                console.error('❌ Erro ao criar issue:', error.message);
+                core.setFailed(`Falha ao criar issue de moderação: ${error.message}`);
               }
+              
             } else {
-              console.log('Comentário aprovado - nenhum conteúdo proibido encontrado');
+              console.log('✅ Comentário aprovado - nenhum conteúdo inadequado encontrado');
             }
+            
+            // Log final
+            console.log(`📊 Verificação concluída para comentário #${comment.id}`);
