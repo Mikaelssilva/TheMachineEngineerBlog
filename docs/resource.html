@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Recursos e Ferramentas – The Machine Learning Engineer</title>
+<title>Recursos – The Machine Learning Engineer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -200,14 +235,14 @@ cookieconsent.run({
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Recursos e Ferramentas</h1>
-            <p class="subtitle lead">Aqui você encontra recursos e ferramentas para te ajudar</p>
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Recursos</h1>
+            <p class="subtitle lead">Ferramentas e materiais que uso e recomendo</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -218,31 +253,126 @@ cookieconsent.run({
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ferramentas-que-uso" id="toc-ferramentas-que-uso" class="nav-link active" data-scroll-target="#ferramentas-que-uso">Ferramentas que Uso</a>
+  <ul class="collapse">
+  <li><a href="#para-aprender-e-experimentar" id="toc-para-aprender-e-experimentar" class="nav-link" data-scroll-target="#para-aprender-e-experimentar">Para Aprender e Experimentar</a></li>
+  <li><a href="#para-estudar" id="toc-para-estudar" class="nav-link" data-scroll-target="#para-estudar">Para Estudar</a></li>
+  </ul></li>
+  <li><a href="#datasets-para-praticar" id="toc-datasets-para-praticar" class="nav-link" data-scroll-target="#datasets-para-praticar">Datasets para Praticar</a>
+  <ul class="collapse">
+  <li><a href="#para-iniciantes" id="toc-para-iniciantes" class="nav-link" data-scroll-target="#para-iniciantes">Para Iniciantes</a></li>
+  <li><a href="#dados-brasileiros" id="toc-dados-brasileiros" class="nav-link" data-scroll-target="#dados-brasileiros">Dados Brasileiros</a></li>
+  </ul></li>
+  <li><a href="#setup-básico" id="toc-setup-básico" class="nav-link" data-scroll-target="#setup-básico">Setup Básico</a>
+  <ul class="collapse">
+  <li><a href="#o-que-preciso-instalar" id="toc-o-que-preciso-instalar" class="nav-link" data-scroll-target="#o-que-preciso-instalar">O que preciso instalar?</a></li>
+  <li><a href="#bibliotecas-essenciais" id="toc-bibliotecas-essenciais" class="nav-link" data-scroll-target="#bibliotecas-essenciais">Bibliotecas Essenciais</a></li>
+  </ul></li>
+  <li><a href="#materiais-de-referência" id="toc-materiais-de-referência" class="nav-link" data-scroll-target="#materiais-de-referência">Materiais de Referência</a>
+  <ul class="collapse">
+  <li><a href="#livros" id="toc-livros" class="nav-link" data-scroll-target="#livros">Livros</a></li>
+  <li><a href="#sites-úteis" id="toc-sites-úteis" class="nav-link" data-scroll-target="#sites-úteis">Sites Úteis</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="ferramentas-que-uso" class="level2">
+<h2 class="anchored" data-anchor-id="ferramentas-que-uso">Ferramentas que Uso</h2>
+<section id="para-aprender-e-experimentar" class="level3">
+<h3 class="anchored" data-anchor-id="para-aprender-e-experimentar">Para Aprender e Experimentar</h3>
+<p><strong><a href="https://colab.research.google.com/">Google Colab</a></strong> - Jupyter Notebooks gratuitos na nuvem - GPU gratuita disponível - Perfeito para quem tá começando</p>
+<p><strong><a href="https://kaggle.com">Kaggle</a></strong> - Datasets gratuitos - Notebooks da comunidade - Competições para praticar - Cursos gratuitos (Kaggle Learn)</p>
+<p><strong><a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a></strong> - Treina modelos sem programar - Ótimo para entender ML na prática - Funciona direto no navegador</p>
+</section>
+<section id="para-estudar" class="level3">
+<h3 class="anchored" data-anchor-id="para-estudar">Para Estudar</h3>
+<p><strong><a href="https://coursera.org">Coursera</a></strong> - Curso do Andrew Ng sobre ML - Tem versão gratuita (sem certificado)</p>
+<p><strong><a href="https://youtube.com/@statquest">StatQuest (YouTube)</a></strong> - Explica conceitos complicados de forma simples - Animações que ajudam a entender - Em inglês, mas muito didático</p>
+<p><strong><a href="https://kaggle.com/learn">Kaggle Learn</a></strong> - Micro-cursos gratuitos - Direto ao ponto - Com certificado gratuito</p>
+</section>
+</section>
+<section id="datasets-para-praticar" class="level2">
+<h2 class="anchored" data-anchor-id="datasets-para-praticar">Datasets para Praticar</h2>
+<section id="para-iniciantes" class="level3">
+<h3 class="anchored" data-anchor-id="para-iniciantes">Para Iniciantes</h3>
+<p><strong><a href="https://kaggle.com/c/titanic">Titanic (Kaggle)</a></strong> - Clássico para começar - Problema de classificação - Muitos tutoriais disponíveis</p>
+<p><strong><a href="https://kaggle.com/c/house-prices-advanced-regression-techniques">House Prices (Kaggle)</a></strong> - Previsão de preços de casas - Problema de regressão - Dados realistas</p>
+</section>
+<section id="dados-brasileiros" class="level3">
+<h3 class="anchored" data-anchor-id="dados-brasileiros">Dados Brasileiros</h3>
+<p><strong><a href="https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos">ENEM (INEP)</a></strong> - Dados públicos da educação - Ótimo para análises sociais</p>
+<p><strong><a href="https://www.tse.jus.br/eleicoes/estatisticas">Eleições (TSE)</a></strong> - Dados eleitorais brasileiros - Análises políticas e demográficas</p>
+</section>
+</section>
+<section id="setup-básico" class="level2">
+<h2 class="anchored" data-anchor-id="setup-básico">Setup Básico</h2>
+<section id="o-que-preciso-instalar" class="level3">
+<h3 class="anchored" data-anchor-id="o-que-preciso-instalar">O que preciso instalar?</h3>
+<p><strong>Opção 1: Nada! (Recomendado)</strong> - Use Google Colab - Tudo funciona no navegador - Sem dor de cabeça com instalação</p>
+<p><strong>Opção 2: No seu computador</strong> - Instale <a href="https://anaconda.com/download">Anaconda</a> - Vem com Python + Jupyter + bibliotecas principais - Um instalador resolve tudo</p>
+</section>
+<section id="bibliotecas-essenciais" class="level3">
+<h3 class="anchored" data-anchor-id="bibliotecas-essenciais">Bibliotecas Essenciais</h3>
+<p>Se for instalar local, essas são as que mais uso:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Para manipular dados</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Para visualizar</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Para machine learning</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="materiais-de-referência" class="level2">
+<h2 class="anchored" data-anchor-id="materiais-de-referência">Materiais de Referência</h2>
+<section id="livros" class="level3">
+<h3 class="anchored" data-anchor-id="livros">Livros</h3>
+<p><strong>“Hands-On Machine Learning” - Aurélien Géron</strong> (Estou lendo) - Mais prático, menos teoria - Exemplos em Python - Atualizações constantes</p>
+<p><strong>“Python for Data Analysis” - Wes McKinney</strong> - Criador do Pandas - Foca na manipulação de dados - Fundamental para qualquer projeto</p>
+</section>
+<section id="sites-úteis" class="level3">
+<h3 class="anchored" data-anchor-id="sites-úteis">Sites Úteis</h3>
+<p><strong><a href="https://towardsdatascience.com/">Towards Data Science</a></strong> - Artigos da comunidade - Vários níveis de dificuldade - Tutoriais e cases reais</p>
+<p><strong><a href="https://scikit-learn.org/">Scikit-learn Documentation</a></strong> - Documentação oficial - Exemplos práticos - Guia de algoritmos</p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled" title="Dica importante">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Dica importante
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Já já você terá recursos e ferramentas para te ajudar na sua jornada</p>
+<p><strong>Não tente aprender tudo de uma vez!</strong></p>
+<p>Escolha <strong>uma ferramenta</strong> e <strong>um dataset</strong>, e faça <strong>um projeto simples</strong>. É melhor fazer 1 projeto completo do que começar 10 e não terminar nenhum.</p>
 </div>
 </div>
+<hr>
+<p><em>Esta página é atualizada conforme descubro novos recursos úteis. Última atualização: Agosto 2025</em></p>
+<p><strong>Tem alguma sugestão de recurso?</strong> <a href="./contato.html">Me conta!</a></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

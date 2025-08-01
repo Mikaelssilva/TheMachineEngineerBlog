@@ -1,8 +1,78 @@
 ---
-title: "Frequently Asked Questions"
+title: "FAQ - Perguntas Frequentes"
+subtitle: "Dúvidas mais comuns sobre o blog"
 comments: false
 ---
 
-:::{.callout-note}
-Ainda não temos perguntas. Envia a sua!
-:::
+## Sobre o Blog
+
+### O que vou encontrar aqui?
+
+Nesse blog eu compartilho minha jornada aprendendo **Machine Learning** e **Data Science**. Aqui você encontra:
+
+- Tutoriais
+- Projetos que estou fazendo (que você pode fazer também)
+- Recursos
+- Erros que cometi (e como resolvi!)
+- Dicas
+
+### Com que frequência posto?
+
+Sem compromisso fixo! Posto quando aprendo algo interessante ou termino algum projeto. 
+
+Pode ser uma vez por semana ou uma vez por mês - depende da minha disponibilidade e do que estou estudando.
+
+## Como Usar o Blog
+
+### Por onde começar?
+
+1. **Leia o post ["O que é Machine Learning?"](posts/ml-introduction/index.qmd)** - é uma boa introdução
+2. **Veja a seção [Recursos](resource.qmd)** - tem ferramentas úteis que uso
+3. **Acompanhe os [Projetos](projects.qmd)** - vou documentando o que faço
+
+### Posso sugerir temas?
+
+**Claro!** Se você tem alguma dúvida ou quer que eu estude algum tópico específico, pode:
+
+- Comentar em qualquer post
+- Me mandar um [email](contato.qmd)
+- Me chamar no [LinkedIn](https://linkedin.com/in/mikaelssilva)
+
+### Tem os códigos dos projetos?
+
+Sim! Tudo que faço está no meu [GitHub](https://github.com/Mikaelssilva). Sempre coloco o link nos posts dos projetos(ou tento).
+
+## Dúvidas Técnicas
+
+### Preciso saber programar para acompanhar?
+
+**Não!** Muitos posts são conceituais e explicam as ideias por trás das técnicas.
+
+Quando tem código, sempre explico o que cada parte faz. Se você programa um pouco em Python, melhor ainda!
+
+### Que ferramentas você usa?
+
+- **Python** - linguagem principal
+- **Jupyter Notebooks** - para experimentar
+- **Google Colab** - quando preciso de mais poder computacional
+- **GitHub** - para guardar os códigos
+- **Kaggle** - para datasets e competições
+
+### Tem algum curso que recomenda?
+
+Estou sempre testando cursos diferentes! Quando acho algo bom, compartilho aqui no blog.
+
+Por enquanto, estou curtindo:
+- **Kaggle Learn** - cursos gratuitos e práticos
+- **YouTube** - canais como StatQuest explicam muito bem
+- **Coursera** - curso do Andrew Ng (clássico)
+
+---
+
+## Contato
+
+**Tem alguma pergunta que não está aqui?**
+
+[Me manda um email](contato.qmd) ou deixa um comentário em qualquer post - eu respondo!
+
+*Última atualização: Agosto 2025*

@@ -93,9 +93,37 @@
   {
     "objectID": "faq.html",
     "href": "faq.html",
-    "title": "Frequently Asked Questions",
+    "title": "FAQ - Perguntas Frequentes",
     "section": "",
-    "text": "Note\n\n\n\nAinda não temos perguntas. Envia a sua!"
+    "text": "Nesse blog eu compartilho minha jornada aprendendo Machine Learning e Data Science. Aqui você encontra:\n\nTutoriais\nProjetos que estou fazendo (que você pode fazer também)\nRecursos\nErros que cometi (e como resolvi!)\nDicas\n\n\n\n\nSem compromisso fixo! Posto quando aprendo algo interessante ou termino algum projeto.\nPode ser uma vez por semana ou uma vez por mês - depende da minha disponibilidade e do que estou estudando."
+  },
+  {
+    "objectID": "faq.html#sobre-o-blog",
+    "href": "faq.html#sobre-o-blog",
+    "title": "FAQ - Perguntas Frequentes",
+    "section": "",
+    "text": "Nesse blog eu compartilho minha jornada aprendendo Machine Learning e Data Science. Aqui você encontra:\n\nTutoriais\nProjetos que estou fazendo (que você pode fazer também)\nRecursos\nErros que cometi (e como resolvi!)\nDicas\n\n\n\n\nSem compromisso fixo! Posto quando aprendo algo interessante ou termino algum projeto.\nPode ser uma vez por semana ou uma vez por mês - depende da minha disponibilidade e do que estou estudando."
+  },
+  {
+    "objectID": "faq.html#como-usar-o-blog",
+    "href": "faq.html#como-usar-o-blog",
+    "title": "FAQ - Perguntas Frequentes",
+    "section": "Como Usar o Blog",
+    "text": "Como Usar o Blog\n\nPor onde começar?\n\nLeia o post “O que é Machine Learning?” - é uma boa introdução\nVeja a seção Recursos - tem ferramentas úteis que uso\nAcompanhe os Projetos - vou documentando o que faço\n\n\n\nPosso sugerir temas?\nClaro! Se você tem alguma dúvida ou quer que eu estude algum tópico específico, pode:\n\nComentar em qualquer post\nMe mandar um email\nMe chamar no LinkedIn\n\n\n\nTem os códigos dos projetos?\nSim! Tudo que faço está no meu GitHub. Sempre coloco o link nos posts dos projetos(ou tento)."
+  },
+  {
+    "objectID": "faq.html#dúvidas-técnicas",
+    "href": "faq.html#dúvidas-técnicas",
+    "title": "FAQ - Perguntas Frequentes",
+    "section": "Dúvidas Técnicas",
+    "text": "Dúvidas Técnicas\n\nPreciso saber programar para acompanhar?\nNão! Muitos posts são conceituais e explicam as ideias por trás das técnicas.\nQuando tem código, sempre explico o que cada parte faz. Se você programa um pouco em Python, melhor ainda!\n\n\nQue ferramentas você usa?\n\nPython - linguagem principal\nJupyter Notebooks - para experimentar\nGoogle Colab - quando preciso de mais poder computacional\nGitHub - para guardar os códigos\nKaggle - para datasets e competições\n\n\n\nTem algum curso que recomenda?\nEstou sempre testando cursos diferentes! Quando acho algo bom, compartilho aqui no blog.\nPor enquanto, estou curtindo: - Kaggle Learn - cursos gratuitos e práticos - YouTube - canais como StatQuest explicam muito bem - Coursera - curso do Andrew Ng (clássico)"
+  },
+  {
+    "objectID": "faq.html#contato",
+    "href": "faq.html#contato",
+    "title": "FAQ - Perguntas Frequentes",
+    "section": "Contato",
+    "text": "Contato\nTem alguma pergunta que não está aqui?\nMe manda um email ou deixa um comentário em qualquer post - eu respondo!\nÚltima atualização: Agosto 2025"
   },
   {
     "objectID": "all_posts.html",
@@ -191,8 +219,36 @@
   {
     "objectID": "resource.html",
     "href": "resource.html",
-    "title": "Recursos e Ferramentas",
+    "title": "Recursos",
     "section": "",
-    "text": "Note\n\n\n\nJá já você terá recursos e ferramentas para te ajudar na sua jornada"
+    "text": "Google Colab - Jupyter Notebooks gratuitos na nuvem - GPU gratuita disponível - Perfeito para quem tá começando\nKaggle - Datasets gratuitos - Notebooks da comunidade - Competições para praticar - Cursos gratuitos (Kaggle Learn)\nTeachable Machine - Treina modelos sem programar - Ótimo para entender ML na prática - Funciona direto no navegador\n\n\n\nCoursera - Curso do Andrew Ng sobre ML - Tem versão gratuita (sem certificado)\nStatQuest (YouTube) - Explica conceitos complicados de forma simples - Animações que ajudam a entender - Em inglês, mas muito didático\nKaggle Learn - Micro-cursos gratuitos - Direto ao ponto - Com certificado gratuito"
+  },
+  {
+    "objectID": "resource.html#ferramentas-que-uso",
+    "href": "resource.html#ferramentas-que-uso",
+    "title": "Recursos",
+    "section": "",
+    "text": "Google Colab - Jupyter Notebooks gratuitos na nuvem - GPU gratuita disponível - Perfeito para quem tá começando\nKaggle - Datasets gratuitos - Notebooks da comunidade - Competições para praticar - Cursos gratuitos (Kaggle Learn)\nTeachable Machine - Treina modelos sem programar - Ótimo para entender ML na prática - Funciona direto no navegador\n\n\n\nCoursera - Curso do Andrew Ng sobre ML - Tem versão gratuita (sem certificado)\nStatQuest (YouTube) - Explica conceitos complicados de forma simples - Animações que ajudam a entender - Em inglês, mas muito didático\nKaggle Learn - Micro-cursos gratuitos - Direto ao ponto - Com certificado gratuito"
+  },
+  {
+    "objectID": "resource.html#datasets-para-praticar",
+    "href": "resource.html#datasets-para-praticar",
+    "title": "Recursos",
+    "section": "Datasets para Praticar",
+    "text": "Datasets para Praticar\n\nPara Iniciantes\nTitanic (Kaggle) - Clássico para começar - Problema de classificação - Muitos tutoriais disponíveis\nHouse Prices (Kaggle) - Previsão de preços de casas - Problema de regressão - Dados realistas\n\n\nDados Brasileiros\nENEM (INEP) - Dados públicos da educação - Ótimo para análises sociais\nEleições (TSE) - Dados eleitorais brasileiros - Análises políticas e demográficas"
+  },
+  {
+    "objectID": "resource.html#setup-básico",
+    "href": "resource.html#setup-básico",
+    "title": "Recursos",
+    "section": "Setup Básico",
+    "text": "Setup Básico\n\nO que preciso instalar?\nOpção 1: Nada! (Recomendado) - Use Google Colab - Tudo funciona no navegador - Sem dor de cabeça com instalação\nOpção 2: No seu computador - Instale Anaconda - Vem com Python + Jupyter + bibliotecas principais - Um instalador resolve tudo\n\n\nBibliotecas Essenciais\nSe for instalar local, essas são as que mais uso:\n# Para manipular dados\nimport pandas as pd\nimport numpy as np\n\n# Para visualizar\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Para machine learning\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.linear_model import LinearRegression"
+  },
+  {
+    "objectID": "resource.html#materiais-de-referência",
+    "href": "resource.html#materiais-de-referência",
+    "title": "Recursos",
+    "section": "Materiais de Referência",
+    "text": "Materiais de Referência\n\nLivros\n“Hands-On Machine Learning” - Aurélien Géron (Estou lendo) - Mais prático, menos teoria - Exemplos em Python - Atualizações constantes\n“Python for Data Analysis” - Wes McKinney - Criador do Pandas - Foca na manipulação de dados - Fundamental para qualquer projeto\n\n\nSites Úteis\nTowards Data Science - Artigos da comunidade - Vários níveis de dificuldade - Tutoriais e cases reais\nScikit-learn Documentation - Documentação oficial - Exemplos práticos - Guia de algoritmos\n\n\n\n\n\n\n\nDica importante\n\n\n\nNão tente aprender tudo de uma vez!\nEscolha uma ferramenta e um dataset, e faça um projeto simples. É melhor fazer 1 projeto completo do que começar 10 e não terminar nenhum.\n\n\n\nEsta página é atualizada conforme descubro novos recursos úteis. Última atualização: Agosto 2025\nTem alguma sugestão de recurso? Me conta!"
   }
 ]

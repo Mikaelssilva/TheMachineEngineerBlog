@@ -1,10 +1,137 @@
 ---
-title: "Recursos e Ferramentas"
-subtitle: "Aqui você encontra recursos e ferramentas para te ajudar"
+title: "Recursos"
+subtitle: "Ferramentas e materiais que uso e recomendo"
 comments: false
 ---
 
-:::{.callout-note}
-Já já você terá recursos e ferramentas para te
-ajudar na sua jornada
+## Ferramentas que Uso
+
+### Para Aprender e Experimentar
+
+**[Google Colab](https://colab.research.google.com/)**
+- Jupyter Notebooks gratuitos na nuvem
+- GPU gratuita disponível
+- Perfeito para quem tá começando
+
+**[Kaggle](https://kaggle.com)**
+- Datasets gratuitos
+- Notebooks da comunidade
+- Competições para praticar
+- Cursos gratuitos (Kaggle Learn)
+
+**[Teachable Machine](https://teachablemachine.withgoogle.com/)**
+- Treina modelos sem programar
+- Ótimo para entender ML na prática
+- Funciona direto no navegador
+
+### Para Estudar
+
+**[Coursera](https://coursera.org)**
+- Curso do Andrew Ng sobre ML
+- Tem versão gratuita (sem certificado)
+
+**[StatQuest (YouTube)](https://youtube.com/@statquest)**
+- Explica conceitos complicados de forma simples
+- Animações que ajudam a entender
+- Em inglês, mas muito didático
+
+**[Kaggle Learn](https://kaggle.com/learn)**
+- Micro-cursos gratuitos
+- Direto ao ponto
+- Com certificado gratuito
+
+##  Datasets para Praticar
+
+### Para Iniciantes
+
+**[Titanic (Kaggle)](https://kaggle.com/c/titanic)**
+- Clássico para começar
+- Problema de classificação
+- Muitos tutoriais disponíveis
+
+**[House Prices (Kaggle)](https://kaggle.com/c/house-prices-advanced-regression-techniques)**
+- Previsão de preços de casas
+- Problema de regressão
+- Dados realistas
+
+### Dados Brasileiros
+
+**[ENEM (INEP)](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos)**
+- Dados públicos da educação
+- Ótimo para análises sociais
+
+**[Eleições (TSE)](https://www.tse.jus.br/eleicoes/estatisticas)**
+- Dados eleitorais brasileiros
+- Análises políticas e demográficas
+
+## Setup Básico
+
+### O que preciso instalar?
+
+**Opção 1: Nada! (Recomendado)**
+- Use Google Colab
+- Tudo funciona no navegador
+- Sem dor de cabeça com instalação
+
+**Opção 2: No seu computador**
+- Instale [Anaconda](https://anaconda.com/download)
+- Vem com Python + Jupyter + bibliotecas principais
+- Um instalador resolve tudo
+
+### Bibliotecas Essenciais
+
+Se for instalar local, essas são as que mais uso:
+
+```python
+# Para manipular dados
+import pandas as pd
+import numpy as np
+
+# Para visualizar
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Para machine learning
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LinearRegression
+```
+
+## Materiais de Referência
+
+### Livros
+
+**"Hands-On Machine Learning" - Aurélien Géron** (Estou lendo)
+- Mais prático, menos teoria
+- Exemplos em Python
+- Atualizações constantes
+
+**"Python for Data Analysis" - Wes McKinney**
+- Criador do Pandas
+- Foca na manipulação de dados
+- Fundamental para qualquer projeto
+
+### Sites Úteis
+
+**[Towards Data Science](https://towardsdatascience.com/)**
+- Artigos da comunidade
+- Vários níveis de dificuldade
+- Tutoriais e cases reais
+
+**[Scikit-learn Documentation](https://scikit-learn.org/)**
+- Documentação oficial
+- Exemplos práticos
+- Guia de algoritmos
+
+---
+
+:::{.callout-tip title="Dica importante"}
+**Não tente aprender tudo de uma vez!** 
+
+Escolha **uma ferramenta** e **um dataset**, e faça **um projeto simples**. É melhor fazer 1 projeto completo do que começar 10 e não terminar nenhum.
 :::
+---
+
+*Esta página é atualizada conforme descubro novos recursos úteis. Última atualização: Agosto 2025*
+
+**Tem alguma sugestão de recurso?** [Me conta!](contato.qmd)
