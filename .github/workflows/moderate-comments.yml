@@ -1,4 +1,5 @@
-name: Moderate Giscus Comments
+name: Simple Comment Moderation
+
 on:
   discussion_comment:
     types: [created]
@@ -7,45 +8,92 @@ jobs:
   moderate:
     runs-on: ubuntu-latest
     steps:
-      - name: Check for bad words
+      - name: Moderação automática com resposta em thread
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            // Palavras proibidas (adicione as suas)
             const badWords = [
-                    // Racismo
-                    'macaco', 'negrinho', 'branquelo', 'judeu doente', 'cabelo de bombril', 'serviço de preto',
-                    
-                    // LGBTfobia
-                    'veado', 'bicha', 'sapatão', 'viadinho', 'aidético', 'frutinha', 'boiola',
-                    
-                    // Machismo
-                    'vai lavar louça', 'lugar de mulher é', 'feminazi', 'puta', 'cadê o sanduíche',
-                    
-                    // Outros
-                    'deficiente mental', 'retardado', 'vai se matar', 'corno', 'gordo nojento',
-                    
-                    // Termos disfarçados (regex)
-                    'v3@d0', 'b1ch4', 'm@c4c0', /n[e3]gr[o0]/i, /[ck]retin[o0]/i];
-            
-            // Converte comentário para minúsculas para checagem
-            const commentText = context.payload.comment.body.toLowerCase();
-            
-            // Verifica palavras proibidas
-            if (badWords.some(word => commentText.includes(word.toLowerCase()))) {
-              // Deleta o comentário
-              await github.rest.discussions.deleteComment({
+              'puta', 'merda', 'fdp', 'caralho', 'porra', 'buceta',
+              'macaco', 'negrinho', 'veado', 'bicha', 'retardado',
+              'vai se matar', 'corno', 'idiota', 'burro'
+            ];
+
+            const comment = context.payload.comment;
+            const commentText = comment.body.toLowerCase();
+            const author = comment.user.login;
+            const discussion = context.payload.discussion;
+            const discussionNumber = discussion.number;
+
+            console.log(`🔍 Verificando comentário de @${author}...`);
+            const foundBadWords = badWords.filter(word =>
+              commentText.includes(word.toLowerCase())
+            );
+
+            if (foundBadWords.length > 0) {
+              console.log(`🚨 Linguagem ofensiva detectada: ${foundBadWords.join(', ')}`);
+
+              const issueBody = `## 🚨 Comentário Inadequado Detectado
+
+**Autor:** @${author}  
+**Discussão:** [${discussion.title}](${discussion.html_url})  
+**Data:** ${new Date().toLocaleString('pt-BR')}  
+**Palavras detectadas:** \`${foundBadWords.join(', ')}\`
+
+**Comentário original:**
+> ${comment.body}
+
+🔗 [Ver comentário](${comment.html_url})  
+🔗 [Ver discussão completa](${discussion.html_url})
+
+---
+
+**Ações sugeridas:**
+- [ ] Revisar o comentário
+- [ ] Remover se necessário
+- [ ] Alertar o usuário
+- [ ] Tomar medidas administrativas
+
+*Issue gerada automaticamente pelo sistema de moderação.*`;
+
+              // Cria uma issue de moderação
+              await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                discussion_number: context.payload.discussion.number,
-                comment_number: context.payload.comment.number
+                title: `🚨 Moderação: Comentário de @${author}`,
+                body: issueBody,
+                labels: ['moderação', 'urgente'],
+                assignees: ['Mikaelssilva']
               });
-              
-              // Opcional: Notifica no GitHub
+
+              // Adiciona reação 👀
+              await github.rest.reactions.createForDiscussionComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: comment.id,
+                content: 'eyes'
+              });
+
+              // Adiciona reação ⚠️
+              await github.rest.reactions.createForDiscussionComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: comment.id,
+                content: 'warning'
+              });
+
+              // Responde diretamente ao comentário
+              const reply = `Olá @${author}, este comentário foi marcado automaticamente por conter termos considerados ofensivos.  
+Pedimos que mantenha o respeito nas interações. A moderação será feita conforme as regras do blog.`;
+
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: context.payload.discussion.number,
-                body: '🚨 Comentário removido por violar as regras.'
+                issue_number: discussionNumber,
+                body: `> _Comentário de @${author}_\n\n⚠️ ${reply}`
               });
+
+              console.log("✅ Moderação concluída: Issue + resposta enviada.");
+            } else {
+              console.log('✅ Nenhum termo ofensivo detectado.');
             }
