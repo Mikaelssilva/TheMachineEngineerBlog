@@ -14,3 +14,71 @@ Aproveita e já se inscreve no canal
 :::
 
 {{< video https://www.youtube.com/watch?v=Sd6Qa6uKn3s >}}
+
+
+### Materiais utilizados
+
+Para esse projeto utilizei os seguintes componentes:
+
+- Arduino Uno
+- Buzzer
+- Fios jumper
+- Protoboard
+
+### Código fonte (C/C++)
+
+---
+```{C}
+int buzzer = 8;
+
+void setup() {
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  parabensOitavaAcima();
+  delay(5000); // espera antes de repetir
+}
+
+void play(int freq, int duracao) {
+  tone(buzzer, freq, duracao);
+  delay(duracao * 1.30); // pausa entre notas
+  noTone(buzzer);
+}
+
+void parabensOitavaAcima() {
+  // Parabéns pra você
+  play(528, 250);  // Dó#5
+  play(528, 250);
+  play(594, 500);  // Ré#5
+  play(528, 500);
+  play(704, 500);  // Fá5
+  play(660, 1000); // Mi5
+
+  // Nesta data querida
+  play(528, 250);
+  play(528, 250);
+  play(594, 500);
+  play(528, 500);
+  play(792, 500);  // Sol5
+  play(704, 1000);
+
+  // Muitas felicidades
+  play(528, 250);
+  play(528, 250);
+  play(1056, 500); // Dó6
+  play(880, 500);  // Lá5
+  play(704, 500);
+  play(660, 500);
+  play(594, 1000);
+
+  // Muitos anos de vida
+  play(932, 250);  // Lá#5
+  play(932, 250);
+  play(880, 500);
+  play(704, 500);
+  play(792, 500);
+  play(704, 1000);
+}
+```
+

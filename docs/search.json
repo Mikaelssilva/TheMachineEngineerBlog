@@ -11,14 +11,14 @@
     "href": "projects.html",
     "title": "Projetos",
     "section": "",
-    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal EngMikael!"
+    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal EngMikael!\n\n\n\n\n\nPara esse projeto utilizei os seguintes componentes:\n\nArduino Uno\nBuzzer\nFios jumper\nProtoboard\n\n\n\n\n\nint buzzer = 8;\n\nvoid setup() {\n  pinMode(buzzer, OUTPUT);\n}\n\nvoid loop() {\n  parabensOitavaAcima();\n  delay(5000); // espera antes de repetir\n}\n\nvoid play(int freq, int duracao) {\n  tone(buzzer, freq, duracao);\n  delay(duracao * 1.30); // pausa entre notas\n  noTone(buzzer);\n}\n\nvoid parabensOitavaAcima() {\n  // Parabéns pra você\n  play(528, 250);  // Dó#5\n  play(528, 250);\n  play(594, 500);  // Ré#5\n  play(528, 500);\n  play(704, 500);  // Fá5\n  play(660, 1000); // Mi5\n\n  // Nesta data querida\n  play(528, 250);\n  play(528, 250);\n  play(594, 500);\n  play(528, 500);\n  play(792, 500);  // Sol5\n  play(704, 1000);\n\n  // Muitas felicidades\n  play(528, 250);\n  play(528, 250);\n  play(1056, 500); // Dó6\n  play(880, 500);  // Lá5\n  play(704, 500);\n  play(660, 500);\n  play(594, 1000);\n\n  // Muitos anos de vida\n  play(932, 250);  // Lá#5\n  play(932, 250);\n  play(880, 500);\n  play(704, 500);\n  play(792, 500);\n  play(704, 1000);\n}"
   },
   {
     "objectID": "projects.html#parabéns-para-você-com-arduino",
     "href": "projects.html#parabéns-para-você-com-arduino",
     "title": "Projetos",
     "section": "",
-    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal EngMikael!"
+    "text": "Nesse projeto eu programei o arduino para tocar a clássica música parabéns para você.\n\n\n\n\n\n\nDica\n\n\n\nAproveita e já se inscreve no canal EngMikael!\n\n\n\n\n\nPara esse projeto utilizei os seguintes componentes:\n\nArduino Uno\nBuzzer\nFios jumper\nProtoboard\n\n\n\n\n\nint buzzer = 8;\n\nvoid setup() {\n  pinMode(buzzer, OUTPUT);\n}\n\nvoid loop() {\n  parabensOitavaAcima();\n  delay(5000); // espera antes de repetir\n}\n\nvoid play(int freq, int duracao) {\n  tone(buzzer, freq, duracao);\n  delay(duracao * 1.30); // pausa entre notas\n  noTone(buzzer);\n}\n\nvoid parabensOitavaAcima() {\n  // Parabéns pra você\n  play(528, 250);  // Dó#5\n  play(528, 250);\n  play(594, 500);  // Ré#5\n  play(528, 500);\n  play(704, 500);  // Fá5\n  play(660, 1000); // Mi5\n\n  // Nesta data querida\n  play(528, 250);\n  play(528, 250);\n  play(594, 500);\n  play(528, 500);\n  play(792, 500);  // Sol5\n  play(704, 1000);\n\n  // Muitas felicidades\n  play(528, 250);\n  play(528, 250);\n  play(1056, 500); // Dó6\n  play(880, 500);  // Lá5\n  play(704, 500);\n  play(660, 500);\n  play(594, 1000);\n\n  // Muitos anos de vida\n  play(932, 250);  // Lá#5\n  play(932, 250);\n  play(880, 500);\n  play(704, 500);\n  play(792, 500);\n  play(704, 1000);\n}"
   },
   {
     "objectID": "posts/welcome/index.html#propósito-do-blog",
@@ -33,6 +33,118 @@
     "title": "Perdido? Comece por aqui!",
     "section": "O que você vai encontrar aqui",
     "text": "O que você vai encontrar aqui\n\nTutorias práticos\nCódigos comentados\nAnálise de casos reais\n\nAgora que você chegou, que tal explorar nossos primeiros artigos? E para não perder nenhuma atualização e receber notificações sobre novos posts, não deixe de se inscrever na newsletter!\nDeixe suas dúvidas e sugestões nos comentários abaixo! Abraço!"
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#o-que-é-aprendizado-de-máquina",
+    "href": "posts/ml-introduction/index.html#o-que-é-aprendizado-de-máquina",
+    "title": "O que é Machine Learning?",
+    "section": "O que é aprendizado de máquina?",
+    "text": "O que é aprendizado de máquina?\nJá se perguntou como o YouTube e a Netflix recomendam conteúdo personalizado para você? Como o ChatGPT, Google Gemini, DeepSeek, Claude e outros grandes modelos de linguagem funcionam? Como seu banco detecta fraudes e como carros autônomos dirigem sozinhos?\nSe sim, a resposta é simples: machine learning. Mas o que exatamente é essa tecnologia que está revolucionando nosso mundo? No post de hoje, vou te explicar de forma clara e prática!\nMachine learning (ML), ou aprendizado de máquina em português, é o ramo da inteligência artificial focado em desenvolver sistemas e algoritmos capazes de aprender com dados e usar o que aprenderam para fazer previsões em dados ainda não vistos.\nPode parecer complexo, mas na prática é mais simples do que parece. Em vez de programar o computador com regras específicas para cada tarefa, você utiliza um algoritmo de ML e o treina com dados.\n\nUm exemplo prático\nImagine que você quer criar um programa para reconhecer fotos de gatos. Com programação tradicional, você teria que escrever regras como “se tiver orelhas pontudas, bigodes e formato específico, então é um gato”. Mas e se o gato estiver de perfil? E se for um gato sem pelo? As regras se tornariam muito complexas!\nCom machine learning, você simplesmente mostra ao algoritmo milhares de imagens rotuladas de gatos e não-gatos. O algoritmo aprende os padrões por conta própria — formas, cores, texturas, proporções — e desenvolve a capacidade de identificar gatos em novas imagens que nunca viu antes.\nEssa capacidade de generalização é o que torna o ML tão poderoso para aplicações que vão desde algoritmos de recomendação até veículos autônomos."
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#história-do-aprendizado-de-máquina",
+    "href": "posts/ml-introduction/index.html#história-do-aprendizado-de-máquina",
+    "title": "O que é Machine Learning?",
+    "section": "História do Aprendizado de Máquina",
+    "text": "História do Aprendizado de Máquina\nA jornada do machine learning começou muito antes dos computadores modernos. Vamos fazer uma viagem no tempo:\n\nOs Primórdios (1940-1950)\nEm 1943, Warren McCulloch e Walter Pitts criaram o primeiro modelo matemático de uma rede neural artificial, inspirado no funcionamento dos neurônios do cérebro humano. Foi o primeiro passo para máquinas que pudessem “pensar”.\nEm 1950, Alan Turing propôs o famoso “Teste de Turing” e questionou: “As máquinas podem pensar?”. No mesmo período, Arthur Samuel da IBM cunhou o termo “machine learning” enquanto desenvolvia um programa para jogar damas que melhorava jogando contra si mesmo.\n\n\nA Era dos Algoritmos (1960-1980)\nOs anos 60 e 70 viram o desenvolvimento de algoritmos fundamentais que ainda usamos hoje, como k-means para agrupamento e árvores de decisão. Foi uma época de muito otimismo, mas também de expectativas irreais sobre o que a IA poderia alcançar rapidamente.\n\n\nO Renascimento (1980-2000)\nEm 1986, Geoffrey Hinton (hoje conhecido como um dos “padrinhos da IA”) desenvolveu o algoritmo de backpropagation, que revolucionou o treinamento de redes neurais. Esse trabalho foi fundamental para o que conhecemos hoje como deep learning.\nOs anos 90 trouxeram algoritmos práticos como Support Vector Machines e Random Forest, que provaram ser extremamente eficazes em problemas reais.\n\n\nA Era Big Data (2000-presente)\nCom a explosão da internet e dispositivos móveis, tivemos acesso a quantidades massivas de dados. Empresas como Google, Facebook e Amazon começaram a aplicar ML em escala industrial.\nEm 2012, a rede neural AlexNet venceu uma competição de reconhecimento de imagens com uma margem impressionante, marcando o início da era moderna do deep learning.\nHoje, temos assistentes virtuais, carros autônomos, tradutores instantâneos e modelos de linguagem como o GPT que podem conversar naturalmente conosco."
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#por-que-utilizar-machine-learning",
+    "href": "posts/ml-introduction/index.html#por-que-utilizar-machine-learning",
+    "title": "O que é Machine Learning?",
+    "section": "Por que utilizar Machine Learning?",
+    "text": "Por que utilizar Machine Learning?\n\nVantagens principais:\n1. Excelente para problemas complexos ML brilha em tarefas onde regras explícitas são difíceis ou impossíveis de definir. Já pensou em escrever um programa para reconhecer emoções em expressões faciais? Ou detectar spam considerando todas as possíveis variações? Seria praticamente impossível!\n2. Adaptação automática Imagine que você programou um sistema para detectar fraudes bancárias. Com o tempo, os fraudadores mudam suas táticas. Um sistema tradicional precisaria ser reprogramado constantemente. Um sistema de ML, por outro lado, pode ser retreinado com novos dados e se adaptar automaticamente às novas ameaças.\n3. Melhoria contínua Quanto mais dados um sistema de ML recebe, melhor ele se torna. É como uma pessoa que fica mais experiente com a prática.\n4. Descoberta de padrões ocultos ML pode encontrar relações nos dados que humanos nunca perceberiam, revelando insights valiosos para negócios e pesquisas.\n\n\n\n\n\n\nQuando NÃO usar Machine Learning\n\n\n\nApesar das vantagens, ML não é a melhor solução para tudo. A programação tradicional pode ser mais eficiente quando:\n\nO problema é bem definido com regras claras (ex: calculadora, sistema de estoque simples)\nVocê precisa de controle total do comportamento (ex: sistemas embarcados críticos)\nO sistema não precisa se adaptar ao longo do tempo\nVocê tem poucos dados disponíveis\nA explicabilidade é crucial (ex: sistemas médicos ou jurídicos)"
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#diferença-entre-machine-learning-deep-learning-e-inteligência-artificial",
+    "href": "posts/ml-introduction/index.html#diferença-entre-machine-learning-deep-learning-e-inteligência-artificial",
+    "title": "O que é Machine Learning?",
+    "section": "Diferença entre Machine Learning, Deep Learning e Inteligência Artificial",
+    "text": "Diferença entre Machine Learning, Deep Learning e Inteligência Artificial\nEssa é uma confusão comum, então vamos esclarecer de vez!\nInteligência Artificial (IA) é o campo mais amplo. Segundo Ribeiro (2010), “a inteligência artificial é uma ciência multidisciplinar que busca desenvolver e aplicar técnicas computacionais que simulem o comportamento humano em atividades específicas”. Para os engenheiros de plantão, IA é como o conjunto universo de fazer máquinas inteligentes.\nMachine Learning é um subcampo da IA. É uma das estratégias para conseguir inteligência artificial, baseada na ideia de que máquinas podem aprender com dados.\nDeep Learning é um subcampo do ML que usa redes neurais (teremos posts sobre) com muitas camadas (daí o nome “profundo”). É especialmente eficaz para reconhecimento de imagens, processamento de linguagem natural e outras tarefas complexas.\n\n\n\n\n\n\nFigure 1: Subconjuntos da IA\n\n\n\n\nUm exemplo prático da diferença:\nVocê consegue distinguir facilmente um gato de uma onça, mesmo nunca tendo visto uma onça de perto. Computadores não têm essa intuição natural e precisam usar estratégias específicas:\n\nIA/programação tradicional: Criar regras programadas (“se tem manchas redondas, é onça”)\nMachine Learning: Treinar com milhares de fotos de gatos e onças\nDeep Learning: Usar redes neurais profundas que aprendem características complexas automaticamente"
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#o-futuro-do-machine-learning",
+    "href": "posts/ml-introduction/index.html#o-futuro-do-machine-learning",
+    "title": "O que é Machine Learning?",
+    "section": "O Futuro do Machine Learning",
+    "text": "O Futuro do Machine Learning\nO futuro promete avanços fascinantes que vão transformar ainda mais nossa realidade:\n\nTendências principais:\n1. Hardware Especializado Estamos desenvolvendo chips neuromorphic que imitam o funcionamento do cérebro humano e chips próprios para treinamento de sistemas inteligentes, prometendo IA muito mais eficiente energeticamente.\n2. IA Explicável Sistemas de ML que conseguem explicar suas decisões de forma clara, crucial para áreas como medicina e justiça.\n3. Aprendizado com Poucos Dados Algoritmos que conseguem aprender eficientemente com apenas alguns exemplos, como fazem as crianças.\n4. Integração Ubíqua ML incorporado em todos os dispositivos, desde geladeiras até óculos, tornando nossa interação com tecnologia mais natural e intuitiva.\n5. Inteligência Artificial Geral (AGI) O Santo Graal da IA: sistemas que não apenas executam tarefas específicas muito bem, mas que possuem inteligência generalizada comparável ou superior à humana. Ainda é um objetivo distante, mas avanços em modelos como GPT e Claude nos aproximam dessa realidade. Quando (e se) conseguirmos AGI, será um marco na história da humanidade."
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#recursos-para-começar-hoje",
+    "href": "posts/ml-introduction/index.html#recursos-para-começar-hoje",
+    "title": "O que é Machine Learning?",
+    "section": "Recursos para Começar Hoje",
+    "text": "Recursos para Começar Hoje\n\nPara Iniciantes Absolutos:\nTeachable Machine\nUma ferramenta gratuita do Google que permite treinar modelos de machine learning de forma visual e intuitiva, sem precisar programar. Você pode usar sua câmera, microfone ou fazer upload de imagens para ensinar o computador a reconhecer sons, imagens ou poses. É perfeito para entender na prática como o aprendizado de máquina funciona!\n\n\nPara Quem Quer Ver “Por Dentro”:\nTensorFlow Playground\nUma plataforma interativa onde você pode visualizar como redes neurais funcionam em tempo real. Ajuste parâmetros como número de camadas e neurônios, escolha diferentes tipos de dados e veja como o modelo aprende a separar ou classificar informações."
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#conclusão",
+    "href": "posts/ml-introduction/index.html#conclusão",
+    "title": "O que é Machine Learning?",
+    "section": "Conclusão",
+    "text": "Conclusão\nMachine learning não é mais ficção científica - é a realidade que nos cerca todos os dias. Desde as recomendações do Spotify que descobrem sua próxima música favorita até sistemas de saúde que auxiliam médicos em diagnósticos precisos, essa tecnologia está silenciosamente transformando nossas vidas.\nSe você chegou até aqui, parabéns! Você já tem uma base sólida sobre o que é ML e por que ele é tão revolucionário. O mais importante é entender que machine learning é uma ferramenta poderosa, mas como qualquer ferramenta, o segredo está em saber quando e como usá-la.\nNos próximos posts, vamos mergulhar mais fundo neste universo fascinante. Vou te mostrar os diferentes tipos de algoritmos, como treinar seu primeiro modelo e aplicações práticas que você pode implementar, mesmo sem ser um expert em programação.\n\nGostou do conteúdo? Compartilhe com alguém que também se interessa por tecnologia e inovação! E não se esqueça de se inscrever na newsletter para receber os próximos posts direto no seu email."
+  },
+  {
+    "objectID": "posts/ml-introduction/index.html#fontes",
+    "href": "posts/ml-introduction/index.html#fontes",
+    "title": "O que é Machine Learning?",
+    "section": "Fontes",
+    "text": "Fontes\nRIBEIRO, R. Uma Introdução à Inteligência Computacional: Fundamentos, Ferramentas e Aplicações. Rio de Janeiro: IST-Rio, 2010."
+  },
+  {
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequently Asked Questions",
+    "section": "",
+    "text": "Note\n\n\n\nAinda não temos perguntas. Envia a sua!"
+  },
+  {
+    "objectID": "all_posts.html",
+    "href": "all_posts.html",
+    "title": "Todos os Posts",
+    "section": "",
+    "text": "Explore nossos conteúdos abaixo:\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ninteligência artificial\n\niniciantes\n\n\n\nUma introdução ao aprendizado de máquina: conceitos, história e aplicações práticas\n\n\n\n\n\nAug 1, 2025\n\n\nMikael Silva\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nCode example\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n2 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "all_posts.html#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning",
+    "href": "all_posts.html#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning",
+    "title": "Todos os Posts",
+    "section": "",
+    "text": "Explore nossos conteúdos abaixo:\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ninteligência artificial\n\niniciantes\n\n\n\nUma introdução ao aprendizado de máquina: conceitos, história e aplicações práticas\n\n\n\n\n\nAug 1, 2025\n\n\nMikael Silva\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nCode example\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n2 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre o autor",
+    "section": "",
+    "text": "Mikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada."
+  },
+  {
+    "objectID": "contato.html",
+    "href": "contato.html",
+    "title": "Contato",
+    "section": "",
+    "text": "Você pode entrar em contato com o autor pelos seguintes meios:\nEmail: mikael38225@gmail.com\nInstagram: @mikael.ssilva20\nFico feliz em receber sugestões, dúvidas ou propostas de colaboração!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Machine Learning Engineer",
+    "section": "",
+    "text": "Olá! Sou Mikael, engenheiro da computação e entusiasta de Machine Learning. Aqui você encontrará tutoriais práticos, análises de dados reais, projetos e insights sobre as tecnologias que estão transformando o mundo."
+  },
+  {
+    "objectID": "index.html#bem-vindo-ao-mundo-da-inteligência-artificial",
+    "href": "index.html#bem-vindo-ao-mundo-da-inteligência-artificial",
+    "title": "The Machine Learning Engineer",
+    "section": "",
+    "text": "Olá! Sou Mikael, engenheiro da computação e entusiasta de Machine Learning. Aqui você encontrará tutoriais práticos, análises de dados reais, projetos e insights sobre as tecnologias que estão transformando o mundo."
+  },
+  {
+    "objectID": "index.html#posts-recentes",
+    "href": "index.html#posts-recentes",
+    "title": "The Machine Learning Engineer",
+    "section": "Posts recentes",
+    "text": "Posts recentes\n\n\n\n\n\n\n\n\n\n\nO que é Machine Learning?\n\n\nUma introdução ao aprendizado de máquina: conceitos, história e aplicações práticas\n\n\n\n\n\nAug 1, 2025\n\n\nMikael Silva\n\n7 min\n\n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n2 min\n\n\n\n\nNo matching items\n\n\nTodos os posts"
   },
   {
     "objectID": "posts/mapeamento/index.html",
@@ -61,62 +173,6 @@
     "title": "Mapeamento de Dados",
     "section": "Exemplo dois",
     "text": "Exemplo dois\n\ndados = {\n    \"idade\": [19, 22, 20, 25, 21, 24, 23, 20, 22, 26],\n    \"genero\": [\"Mulher\", \"Homem\", \"Homem\", \"Mulher\", \"Não-binário\", \"Homem\", \"Mulher\", \"Prefiro não dizer\", \"Mulher\", \"Outro\"],\n    \"curso\": [\"Engenharia\", \"Psicologia\", \"Direito\", \"Medicina\", \"Ciência da Computação\", \"Administração\", \"Arquitetura\", \"Física\", \"História\", \"Design\"],\n    \"periodo\": [1, 3, 5, 7, 2, 10, 6, 4, 8, 9],\n    \"trabalha_ou_estagia\": [\"Sim\", \"Não\", \"Sim\", \"Sim\", \"Não\", \"Sim\", \"Não\", \"Não\", \"Sim\", \"Sim\"],\n    \"horas_trabalho\": [20, None, 15, 30, None, 40, None, None, 25, 20],\n    \"moradia\": [\"Com a família\", \"Sozinho(a)\", \"Com amigos\", \"Moradia estudantil\", \"Com a família\", \"Sozinho(a)\", \"Com a família\", \"Outro\", \"Moradia estudantil\", \"Com amigos\"],\n    \n    # Seção 2 - sentimentos (valores de 1 a 5 para facilitar)\n    \"depressao\": [3, 2, 4, 5, 3, 2, 1, 2, 3, 4],\n    \"prazer\": [2, 3, 2, 4, 3, 4, 5, 3, 2, 1],\n    \"ansiedade\": [3, 4, 5, 5, 2, 3, 2, 2, 4, 5],\n    \"preocupacao\": [3, 3, 4, 5, 2, 3, 1, 2, 3, 5],\n    \"sono_ruim\": [4, 2, 5, 5, 3, 2, 1, 3, 4, 4],\n    \"cansaco\": [4, 3, 5, 4, 3, 3, 2, 3, 4, 5],\n    \"alimentacao_ruim\": [3, 1, 4, 5, 2, 2, 1, 2, 3, 4],\n    \"autoimagem_negativa\": [4, 2, 5, 4, 3, 3, 1, 2, 3, 4],\n    \"concentracao_ruim\": [3, 2, 4, 5, 3, 2, 1, 2, 3, 4],\n    \"agitacao\": [2, 1, 4, 5, 3, 2, 1, 1, 3, 5],\n    \"pensamentos_suicidas\": [\"Não\", \"Não\", \"Sim\", \"Sim\", \"Não\", \"Não\", \"Não\", \"Não\", \"Sim\", \"Sim\"],\n\n    # Seção 3 - vida acadêmica\n    \"impacto_academico\": [\"Moderado\", \"Pequeno\", \"Grande\", \"Muito grave\", \"Pequeno\", \"Moderado\", \"Nenhum\", \"Pequeno\", \"Grande\", \"Muito grave\"],\n    \"motivacao_estudos\": [3, 2, 1, 1, 3, 2, 4, 3, 2, 1],\n    \"faltou_aula\": [\"Algumas vezes\", \"Uma ou duas vezes\", \"Frequentemente\", \"Muito frequentemente\", \"Uma ou duas vezes\", \"Algumas vezes\", \"Nunca\", \"Nunca\", \"Algumas vezes\", \"Muito frequentemente\"],\n\n    # Seção 4 - apoio\n    \"isolamento\": [\"Às vezes\", \"Frequentemente\", \"Sempre\", \"Sempre\", \"Raramente\", \"Às vezes\", \"Nunca\", \"Às vezes\", \"Frequentemente\", \"Sempre\"],\n    \"rede_apoio\": [\"Tenho poucas\", \"Sim, tenho algumas\", \"Não tenho ninguém\", \"Tenho poucas\", \"Sim, tenho muitas\", \"Tenho poucas\", \"Sim, tenho muitas\", \"Sim, tenho algumas\", \"Não tenho ninguém\", \"Sim, tenho algumas\"],\n    \"apoio_familiar\": [\"Pouco\", \"Moderado\", \"Nenhum\", \"Pouco\", \"Muito\", \"Pouco\", \"Total\", \"Moderado\", \"Nenhum\", \"Moderado\"],\n    \"atividades_sociais\": [\"Sinto-me um pouco à vontade\", \"Não me sinto à vontade\", \"Não me sinto à vontade\", \"Sinto-me um pouco à vontade\", \"Sinto-me à vontade na maioria das vezes\", \"Sinto-me um pouco à vontade\", \"Sinto-me totalmente à vontade\", \"Sinto-me à vontade na maioria das vezes\", \"Não me sinto à vontade\", \"Sinto-me um pouco à vontade\"],\n\n    # Seção 5 - hábitos\n    \"qualidade_sono\": [\"Regular\", \"Boa\", \"Ruim\", \"Muito ruim\", \"Boa\", \"Regular\", \"Muito boa\", \"Regular\", \"Ruim\", \"Muito ruim\"],\n    \"alimentacao\": [\"Razoável\", \"Saudável\", \"Pouco saudável\", \"Muito pouco saudável\", \"Saudável\", \"Razoável\", \"Muito saudável\", \"Razoável\", \"Pouco saudável\", \"Muito pouco saudável\"],\n    \"atividade_fisica\": [\"1-2 vezes por semana\", \"3-4 vezes por semana\", \"Nunca ou quase nunca\", \"1-2 vezes por semana\", \"5 ou mais vezes por semana\", \"3-4 vezes por semana\", \"5 ou mais vezes por semana\", \"1-2 vezes por semana\", \"Nunca ou quase nunca\", \"Nunca ou quase nunca\"],\n    \"uso_substancias\": [\"Às vezes\", \"Nunca\", \"Frequentemente\", \"Muito frequentemente\", \"Raramente\", \"Às vezes\", \"Nunca\", \"Raramente\", \"Frequentemente\", \"Muito frequentemente\"],\n\n    # Seção 6 - suporte\n    \"conhece_servico_apoio\": [\"Sim, conheço bem\", \"Conheço um pouco\", \"Não conheço\", \"Não conheço\", \"Conheço um pouco\", \"Sim, conheço bem\", \"Sim, conheço bem\", \"Conheço um pouco\", \"Não conheço\", \"Não conheço\"],\n    \"saberia_procurar_ajuda\": [\"Sim, saberia exatamente\", \"Acho que sim\", \"Não, não saberia\", \"Não, não saberia\", \"Sim, saberia exatamente\", \"Acho que sim\", \"Sim, saberia exatamente\", \"Acho que sim\", \"Não, não saberia\", \"Acho que sim\"],\n    \"ja_buscou_ajuda\": [\"Sim, já busquei\", \"Sim, pensei mas não busquei\", \"Não, nunca pensei em buscar\", \"Sim, pensei mas não busquei\", \"Não, nunca pensei em buscar\", \"Sim, já busquei\", \"Sim, já busquei\", \"Sim, pensei mas não busquei\", \"Sim, pensei mas não busquei\", \"Não, nunca pensei em buscar\"]\n}\n\n\n# Criando o DataFrame\ndf = pd.DataFrame(dados)\npd.set_option('display.max_columns', None)\ndf.head()\n\n\n\n\n\n\n\n\nidade\ngenero\ncurso\nperiodo\ntrabalha_ou_estagia\nhoras_trabalho\nmoradia\ndepressao\nprazer\nansiedade\npreocupacao\nsono_ruim\ncansaco\nalimentacao_ruim\nautoimagem_negativa\nconcentracao_ruim\nagitacao\npensamentos_suicidas\nimpacto_academico\nmotivacao_estudos\nfaltou_aula\nisolamento\nrede_apoio\napoio_familiar\natividades_sociais\nqualidade_sono\nalimentacao\natividade_fisica\nuso_substancias\nconhece_servico_apoio\nsaberia_procurar_ajuda\nja_buscou_ajuda\n\n\n\n\n0\n19\nMulher\nEngenharia\n1\nSim\n20.0\nCom a família\n3\n2\n3\n3\n4\n4\n3\n4\n3\n2\nNão\nModerado\n3\nAlgumas vezes\nÀs vezes\nTenho poucas\nPouco\nSinto-me um pouco à vontade\nRegular\nRazoável\n1-2 vezes por semana\nÀs vezes\nSim, conheço bem\nSim, saberia exatamente\nSim, já busquei\n\n\n1\n22\nHomem\nPsicologia\n3\nNão\nNaN\nSozinho(a)\n2\n3\n4\n3\n2\n3\n1\n2\n2\n1\nNão\nPequeno\n2\nUma ou duas vezes\nFrequentemente\nSim, tenho algumas\nModerado\nNão me sinto à vontade\nBoa\nSaudável\n3-4 vezes por semana\nNunca\nConheço um pouco\nAcho que sim\nSim, pensei mas não busquei\n\n\n2\n20\nHomem\nDireito\n5\nSim\n15.0\nCom amigos\n4\n2\n5\n4\n5\n5\n4\n5\n4\n4\nSim\nGrande\n1\nFrequentemente\nSempre\nNão tenho ninguém\nNenhum\nNão me sinto à vontade\nRuim\nPouco saudável\nNunca ou quase nunca\nFrequentemente\nNão conheço\nNão, não saberia\nNão, nunca pensei em buscar\n\n\n3\n25\nMulher\nMedicina\n7\nSim\n30.0\nMoradia estudantil\n5\n4\n5\n5\n5\n4\n5\n4\n5\n5\nSim\nMuito grave\n1\nMuito frequentemente\nSempre\nTenho poucas\nPouco\nSinto-me um pouco à vontade\nMuito ruim\nMuito pouco saudável\n1-2 vezes por semana\nMuito frequentemente\nNão conheço\nNão, não saberia\nSim, pensei mas não busquei\n\n\n4\n21\nNão-binário\nCiência da Computação\n2\nNão\nNaN\nCom a família\n3\n3\n2\n2\n3\n3\n2\n3\n3\n3\nNão\nPequeno\n3\nUma ou duas vezes\nRaramente\nSim, tenho muitas\nMuito\nSinto-me à vontade na maioria das vezes\nBoa\nSaudável\n5 ou mais vezes por semana\nRaramente\nConheço um pouco\nSim, saberia exatamente\nNão, nunca pensei em buscar\n\n\n\n\n\n\n\n\n# Verificando informações\ndf.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 10 entries, 0 to 9\nData columns (total 32 columns):\n #   Column                  Non-Null Count  Dtype  \n---  ------                  --------------  -----  \n 0   idade                   10 non-null     int64  \n 1   genero                  10 non-null     object \n 2   curso                   10 non-null     object \n 3   periodo                 10 non-null     int64  \n 4   trabalha_ou_estagia     10 non-null     object \n 5   horas_trabalho          6 non-null      float64\n 6   moradia                 10 non-null     object \n 7   depressao               10 non-null     int64  \n 8   prazer                  10 non-null     int64  \n 9   ansiedade               10 non-null     int64  \n 10  preocupacao             10 non-null     int64  \n 11  sono_ruim               10 non-null     int64  \n 12  cansaco                 10 non-null     int64  \n 13  alimentacao_ruim        10 non-null     int64  \n 14  autoimagem_negativa     10 non-null     int64  \n 15  concentracao_ruim       10 non-null     int64  \n 16  agitacao                10 non-null     int64  \n 17  pensamentos_suicidas    10 non-null     object \n 18  impacto_academico       10 non-null     object \n 19  motivacao_estudos       10 non-null     int64  \n 20  faltou_aula             10 non-null     object \n 21  isolamento              10 non-null     object \n 22  rede_apoio              10 non-null     object \n 23  apoio_familiar          10 non-null     object \n 24  atividades_sociais      10 non-null     object \n 25  qualidade_sono          10 non-null     object \n 26  alimentacao             10 non-null     object \n 27  atividade_fisica        10 non-null     object \n 28  uso_substancias         10 non-null     object \n 29  conhece_servico_apoio   10 non-null     object \n 30  saberia_procurar_ajuda  10 non-null     object \n 31  ja_buscou_ajuda         10 non-null     object \ndtypes: float64(1), int64(13), object(18)\nmemory usage: 2.6+ KB\n\n\n\n# Valores faltantes\ndf.isna().sum()\n\nidade                     0\ngenero                    0\ncurso                     0\nperiodo                   0\ntrabalha_ou_estagia       0\nhoras_trabalho            4\nmoradia                   0\ndepressao                 0\nprazer                    0\nansiedade                 0\npreocupacao               0\nsono_ruim                 0\ncansaco                   0\nalimentacao_ruim          0\nautoimagem_negativa       0\nconcentracao_ruim         0\nagitacao                  0\npensamentos_suicidas      0\nimpacto_academico         0\nmotivacao_estudos         0\nfaltou_aula               0\nisolamento                0\nrede_apoio                0\napoio_familiar            0\natividades_sociais        0\nqualidade_sono            0\nalimentacao               0\natividade_fisica          0\nuso_substancias           0\nconhece_servico_apoio     0\nsaberia_procurar_ajuda    0\nja_buscou_ajuda           0\ndtype: int64\n\n\n\ndf['horas_trabalho'] = df['horas_trabalho'].fillna(0)\ndf.isna().sum()\n\nidade                     0\ngenero                    0\ncurso                     0\nperiodo                   0\ntrabalha_ou_estagia       0\nhoras_trabalho            0\nmoradia                   0\ndepressao                 0\nprazer                    0\nansiedade                 0\npreocupacao               0\nsono_ruim                 0\ncansaco                   0\nalimentacao_ruim          0\nautoimagem_negativa       0\nconcentracao_ruim         0\nagitacao                  0\npensamentos_suicidas      0\nimpacto_academico         0\nmotivacao_estudos         0\nfaltou_aula               0\nisolamento                0\nrede_apoio                0\napoio_familiar            0\natividades_sociais        0\nqualidade_sono            0\nalimentacao               0\natividade_fisica          0\nuso_substancias           0\nconhece_servico_apoio     0\nsaberia_procurar_ajuda    0\nja_buscou_ajuda           0\ndtype: int64\n\n\n\nMapeamento de alguns valores não numéricos\n\nmap_trabalho = {'Sim': 1,\n               'Não': 0}\n\nmap_substancias = {'Nunca': 0,\n                  'Raramente': 1,\n                  'Às vezes': 2,\n                  'Frequentemente': 3,\n                  'Muito frequentemente': 4}\n\nmap_sono = {'Muito boa': 4,\n           'Boa': 3,\n           'Regular': 2,\n           'Ruim': 1,\n           'Muito ruim': 0}\n\nmap_alimentacao = {\n    'Muito pouco saudável': 0,\n    'Pouco saudável': 1,\n    'Razoável': 2,\n    'Saudável': 3,\n    'Muito saudável': 4}\n\nmap_suicidio = {'Sim': 1,\n               'Não': 0}\n\n\nmap_at_fisica = {'Nunca ou quase nunca': 0,\n                '1-2 vezes por semana': 1,\n                '3-4 vezes por semana': 2,\n                '5 ou mais vezes por semana':3}\n\ndf['trabalha_ou_estagia'] = df['trabalha_ou_estagia'].map(map_trabalho)\ndf['qualidade_sono'] = df['qualidade_sono'].map(map_sono)\ndf['alimentacao'] = df['alimentacao'].map(map_alimentacao)\ndf['uso_substancias'] = df['uso_substancias'].map(map_substancias)\ndf['pensamentos_suicidas'] = df['pensamentos_suicidas'].map(map_suicidio)\ndf['atividade_fisica'] = df['atividade_fisica'].map(map_at_fisica)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Machine Learning Engineer",
-    "section": "",
-    "text": "Olá! Sou Mikael, engenheiro da computação e entusiasta de Machine Learning. Aqui você encontrará tutoriais práticos, análises de dados reais, projetos e insights sobre as tecnologias que estão transformando o mundo."
-  },
-  {
-    "objectID": "index.html#bem-vindo-ao-mundo-da-inteligência-artificial",
-    "href": "index.html#bem-vindo-ao-mundo-da-inteligência-artificial",
-    "title": "The Machine Learning Engineer",
-    "section": "",
-    "text": "Olá! Sou Mikael, engenheiro da computação e entusiasta de Machine Learning. Aqui você encontrará tutoriais práticos, análises de dados reais, projetos e insights sobre as tecnologias que estão transformando o mundo."
-  },
-  {
-    "objectID": "index.html#posts-recentes",
-    "href": "index.html#posts-recentes",
-    "title": "The Machine Learning Engineer",
-    "section": "Posts recentes",
-    "text": "Posts recentes\n\n\n\n\n\n\n\n\n\n\nPerdido? Comece por aqui!\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nMapeamento de Dados\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n2 min\n\n\n\n\nNo matching items\n\n\nTodos os posts"
-  },
-  {
-    "objectID": "contato.html",
-    "href": "contato.html",
-    "title": "Contato",
-    "section": "",
-    "text": "Você pode entrar em contato com o autor pelos seguintes meios:\nEmail: mikael38225@gmail.com\nInstagram: @mikael.ssilva20\nFico feliz em receber sugestões, dúvidas ou propostas de colaboração!"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre o autor",
-    "section": "",
-    "text": "Mikael Silva é estudante de Engenharia da Computação na UPE. Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada."
-  },
-  {
-    "objectID": "all_posts.html",
-    "href": "all_posts.html",
-    "title": "Todos os Posts",
-    "section": "",
-    "text": "Explore nossos conteúdos abaixo:\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nCode example\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n2 min\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "all_posts.html#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning",
-    "href": "all_posts.html#bem-vindo-à-biblioteca-de-artigos-sobre-machine-learning",
-    "title": "Todos os Posts",
-    "section": "",
-    "text": "Explore nossos conteúdos abaixo:\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\nIntrodução\n\n\n\nBem vindos ao Blog!\n\n\n\n\n\nJul 29, 2025\n\n\nMikael Silva\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nCode example\n\n\n\n\n\nJul 28, 2025\n\n\nHarlow Malloc\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\n\nmachine learning\n\ndata science\n\n\n\nO que é mapeamento? Vem comigo entender!\n\n\n\n\n\nJul 27, 2025\n\n\nMikael Silva\n\n2 min\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "faq.html",
-    "href": "faq.html",
-    "title": "Frequently Asked Questions",
-    "section": "",
-    "text": "Note\n\n\n\nAinda não temos perguntas. Envia a sua!"
   },
   {
     "objectID": "posts/post-with-code/index.html",

@@ -4,10 +4,10 @@ author: "Mikael Silva"
 date: "2025-07-29"
 categories: [Introdução]
 description: "Bem vindos ao Blog!"
-image: "tme.png"
+image: "tme.jpg"
 ---
 
-![](tme.png)
+![](tme.jpg)
 
 # Bem-vindos ao The **Machine Learning Engineer!**
 
