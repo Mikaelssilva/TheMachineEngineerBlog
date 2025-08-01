@@ -10,6 +10,7 @@ jobs:
       - name: Check for bad words
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             // Palavras proibidas (strings simples)
             const badWords = [
@@ -102,7 +103,7 @@ jobs:
                   }
                 `, {
                   discussionId: discussionNodeId,
-                  body: '🚨 **Comentário removido automaticamente**\n\nUm comentário foi removido por violar nossas diretrizes da comunidade. Por favor, mantenha um ambiente respeitoso para todos.\n\n---\n*Esta é uma ação automática do sistema de moderação.*'
+                  body: '🚨 **Comentário removido automaticamente**\\n\\nUm comentário foi removido por violar nossas diretrizes da comunidade. Por favor, mantenha um ambiente respeitoso para todos.\\n\\n---\\n*Esta é uma ação automática do sistema de moderação.*'
                 });
                 
                 console.log('Comentário de notificação criado via GraphQL');
@@ -121,18 +122,18 @@ jobs:
                     title: '🚨 Moderação Manual Necessária',
                     body: `**Comentário com conteúdo proibido detectado:**
                     
-**Autor:** @${context.payload.comment.user.login}
-**Discussion:** #${context.payload.discussion.number}
-**Palavra encontrada:** ${matchedWord}
-**Data:** ${new Date().toISOString()}
+            **Autor:** @${context.payload.comment.user.login}
+            **Discussion:** #${context.payload.discussion.number}
+            **Palavra encontrada:** ${matchedWord}
+            **Data:** ${new Date().toISOString()}
 
-**Comentário original:**
-\`\`\`
-${context.payload.comment.body}
-\`\`\`
+            **Comentário original:**
+            \`\`\`
+            ${context.payload.comment.body}
+            \`\`\`
 
-**Ação necessária:** Revisar e moderar manualmente.
-**Link:** ${context.payload.comment.html_url}`,
+            **Ação necessária:** Revisar e moderar manualmente.
+            **Link:** ${context.payload.comment.html_url}`,
                     labels: ['moderation', 'automated']
                   });
                   
@@ -147,4 +148,3 @@ ${context.payload.comment.body}
             } else {
               console.log('Comentário aprovado - nenhum conteúdo proibido encontrado');
             }
-          github-token: ${{ secrets.GITHUB_TOKEN }}
