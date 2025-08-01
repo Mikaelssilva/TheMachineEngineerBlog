@@ -70,31 +70,79 @@ jobs:
               console.log('Conteúdo proibido encontrado:', matchedWord);
               
               try {
-                // Deleta o comentário
-                await github.rest.discussions.deleteComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  comment_number: context.payload.comment.number
+                // Obtém o node_id do comentário para usar com GraphQL
+                const commentNodeId = context.payload.comment.node_id;
+                
+                // Deleta o comentário usando GraphQL
+                const deleteResult = await github.graphql(`
+                  mutation deleteDiscussionComment($commentId: ID!) {
+                    deleteDiscussionComment(input: {id: $commentId}) {
+                      clientMutationId
+                    }
+                  }
+                `, {
+                  commentId: commentNodeId
                 });
                 
-                console.log('Comentário deletado com sucesso');
+                console.log('Comentário deletado com sucesso via GraphQL');
                 
-                // Opcional: Cria um novo comentário informativo
-                // (Note: isso criará um comentário que pode também ser moderado)
-                await github.rest.discussions.createComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  discussion_number: context.payload.discussion.number,
-                  body: '🚨 Um comentário foi removido automaticamente por violar nossas diretrizes da comunidade. Por favor, mantenha um ambiente respeitoso para todos.'
+                // Cria um novo comentário informativo usando GraphQL  
+                const discussionNodeId = context.payload.discussion.node_id;
+                
+                await github.graphql(`
+                  mutation addDiscussionComment($discussionId: ID!, $body: String!) {
+                    addDiscussionComment(input: {
+                      discussionId: $discussionId,
+                      body: $body
+                    }) {
+                      comment {
+                        id
+                      }
+                    }
+                  }
+                `, {
+                  discussionId: discussionNodeId,
+                  body: '🚨 **Comentário removido automaticamente**\n\nUm comentário foi removido por violar nossas diretrizes da comunidade. Por favor, mantenha um ambiente respeitoso para todos.\n\n---\n*Esta é uma ação automática do sistema de moderação.*'
                 });
                 
-                console.log('Comentário de notificação criado');
+                console.log('Comentário de notificação criado via GraphQL');
                 
               } catch (error) {
                 console.error('Erro ao moderar comentário:', error);
                 
-                // Se falhar, pelo menos registra o problema
-                core.setFailed(`Falha na moderação: ${error.message}`);
+                // Fallback: Pelo menos registra o problema nos logs do GitHub
+                console.log('Tentando alternativa: criar issue para revisão manual');
+                
+                try {
+                  // Cria uma issue para revisão manual como fallback
+                  await github.rest.issues.create({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    title: '🚨 Moderação Manual Necessária',
+                    body: `**Comentário com conteúdo proibido detectado:**
+                    
+**Autor:** @${context.payload.comment.user.login}
+**Discussion:** #${context.payload.discussion.number}
+**Palavra encontrada:** ${matchedWord}
+**Data:** ${new Date().toISOString()}
+
+**Comentário original:**
+\`\`\`
+${context.payload.comment.body}
+\`\`\`
+
+**Ação necessária:** Revisar e moderar manualmente.
+**Link:** ${context.payload.comment.html_url}`,
+                    labels: ['moderation', 'automated']
+                  });
+                  
+                  console.log('Issue de moderação manual criada');
+                } catch (issueError) {
+                  console.error('Falha ao criar issue de fallback:', issueError);
+                }
+                
+                // Marca como falha para alertar nos logs
+                core.setFailed(`Falha na moderação automática: ${error.message}`);
               }
             } else {
               console.log('Comentário aprovado - nenhum conteúdo proibido encontrado');
