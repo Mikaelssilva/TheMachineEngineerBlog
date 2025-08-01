@@ -6,6 +6,12 @@ comments: false
 
 ## Ferramentas que Uso
 
+:::{.callout-warning title="Note"}
+Transparência: 
+
+Este post contém links afiliados da Amazon. Se você comprar através destes links, eu recebo uma pequena comissão sem custo adicional para você. Recomendo apenas produtos que uso ou estudei pessoalmente e que acredito que podem te ajudar em sua jornada de aprendizado em machine learning.
+:::
+
 ### Para Aprender e Experimentar
 
 **[Google Colab](https://colab.research.google.com/)**
@@ -101,12 +107,14 @@ from sklearn.linear_model import LinearRegression
 
 ### Livros
 
-**"Hands-On Machine Learning" - Aurélien Géron** (Estou lendo)
+[Hands-On Machine Learning(Aurélien Géron)](https://amzn.to/3UHpDY8)
+
 - Mais prático, menos teoria
 - Exemplos em Python
 - Atualizações constantes
 
-**"Python for Data Analysis" - Wes McKinney**
+[Python for Data Analysis(Wes McKinney)](https://amzn.to/3UNn8Dz)
+
 - Criador do Pandas
 - Foca na manipulação de dados
 - Fundamental para qualquer projeto

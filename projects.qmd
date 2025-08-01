@@ -18,12 +18,20 @@ Aproveita e já se inscreve no canal
 
 ### Materiais utilizados
 
+:::{.callout-warning title="Note"}
+Transparência: 
+
+Este post contém links afiliados da Amazon. Se você comprar através destes links, eu recebo uma pequena comissão sem custo adicional para você. Recomendo apenas produtos que uso ou estudei pessoalmente e que acredito que podem te ajudar em sua jornada de aprendizado em machine learning.
+:::
+
 Para esse projeto utilizei os seguintes componentes:
 
 - Arduino Uno
 - Buzzer
 - Fios jumper
 - Protoboard
+
+Arduino que usei: [Arduino](https://amzn.to/3IVCJOW)
 
 ### Código fonte (C/C++)
 

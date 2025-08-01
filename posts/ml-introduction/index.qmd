@@ -133,6 +133,15 @@ Uma ferramenta gratuita do Google que permite treinar modelos de machine learnin
 
 Uma plataforma interativa onde você pode visualizar como redes neurais funcionam em tempo real. Ajuste parâmetros como número de camadas e neurônios, escolha diferentes tipos de dados e veja como o modelo aprende a separar ou classificar informações.
 
+### **Por fim um livro**: 
+[Hands-On Machine Learning(Aurélien Géron)](https://amzn.to/3UHpDY8)
+
+:::{.callout-warning title="Note"}
+Sobre as Recomendações:
+
+Os livros listados são afiliados da Amazon. Já li todos e uso como referência nos meus projetos. Se você comprar através dos meus links, ganho uma pequena comissão que me ajuda a continuar criando conteúdo gratuito.
+:::
+
 ## Conclusão
 
 Machine learning não é mais ficção científica - é a realidade que nos cerca todos os dias. Desde as recomendações do Spotify que descobrem sua próxima música favorita até sistemas de saúde que auxiliam médicos em diagnósticos precisos, essa tecnologia está silenciosamente transformando nossas vidas.
