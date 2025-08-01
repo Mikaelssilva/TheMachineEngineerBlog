@@ -62,17 +62,18 @@ Quando tem código, sempre explico o que cada parte faz. Se você programa um po
 
 Estou sempre testando cursos diferentes! Quando acho algo bom, compartilho aqui no blog.
 
-Por enquanto, estou curtindo:
+Por enquanto:
+
 - **Kaggle Learn** - cursos gratuitos e práticos
 - **YouTube** - canais como StatQuest explicam muito bem
 - **Coursera** - curso do Andrew Ng (clássico)
 
 ---
 
-## Contato
-
 **Tem alguma pergunta que não está aqui?**
 
-[Me manda um email](contato.qmd) ou deixa um comentário em qualquer post - eu respondo!
+*[Me manda um email](contato.qmd) ou deixa um comentário em qualquer post - eu respondo!*
 
+:::{.text-right}
 *Última atualização: Agosto 2025*
+:::

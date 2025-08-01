@@ -132,6 +132,8 @@ Escolha **uma ferramenta** e **um dataset**, e faça **um projeto simples**. É 
 :::
 ---
 
-*Esta página é atualizada conforme descubro novos recursos úteis. Última atualização: Agosto 2025*
-
 **Tem alguma sugestão de recurso?** [Me conta!](contato.qmd)
+
+:::{.text-right}
+*Última atualização: Agosto 2025*
+:::

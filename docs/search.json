@@ -116,14 +116,7 @@
     "href": "faq.html#dúvidas-técnicas",
     "title": "FAQ - Perguntas Frequentes",
     "section": "Dúvidas Técnicas",
-    "text": "Dúvidas Técnicas\n\nPreciso saber programar para acompanhar?\nNão! Muitos posts são conceituais e explicam as ideias por trás das técnicas.\nQuando tem código, sempre explico o que cada parte faz. Se você programa um pouco em Python, melhor ainda!\n\n\nQue ferramentas você usa?\n\nPython - linguagem principal\nJupyter Notebooks - para experimentar\nGoogle Colab - quando preciso de mais poder computacional\nGitHub - para guardar os códigos\nKaggle - para datasets e competições\n\n\n\nTem algum curso que recomenda?\nEstou sempre testando cursos diferentes! Quando acho algo bom, compartilho aqui no blog.\nPor enquanto, estou curtindo: - Kaggle Learn - cursos gratuitos e práticos - YouTube - canais como StatQuest explicam muito bem - Coursera - curso do Andrew Ng (clássico)"
-  },
-  {
-    "objectID": "faq.html#contato",
-    "href": "faq.html#contato",
-    "title": "FAQ - Perguntas Frequentes",
-    "section": "Contato",
-    "text": "Contato\nTem alguma pergunta que não está aqui?\nMe manda um email ou deixa um comentário em qualquer post - eu respondo!\nÚltima atualização: Agosto 2025"
+    "text": "Dúvidas Técnicas\n\nPreciso saber programar para acompanhar?\nNão! Muitos posts são conceituais e explicam as ideias por trás das técnicas.\nQuando tem código, sempre explico o que cada parte faz. Se você programa um pouco em Python, melhor ainda!\n\n\nQue ferramentas você usa?\n\nPython - linguagem principal\nJupyter Notebooks - para experimentar\nGoogle Colab - quando preciso de mais poder computacional\nGitHub - para guardar os códigos\nKaggle - para datasets e competições\n\n\n\nTem algum curso que recomenda?\nEstou sempre testando cursos diferentes! Quando acho algo bom, compartilho aqui no blog.\nPor enquanto:\n\nKaggle Learn - cursos gratuitos e práticos\nYouTube - canais como StatQuest explicam muito bem\nCoursera - curso do Andrew Ng (clássico)\n\n\nTem alguma pergunta que não está aqui?\nMe manda um email ou deixa um comentário em qualquer post - eu respondo!\n\nÚltima atualização: Agosto 2025"
   },
   {
     "objectID": "all_posts.html",
@@ -249,6 +242,6 @@
     "href": "resource.html#materiais-de-referência",
     "title": "Recursos",
     "section": "Materiais de Referência",
-    "text": "Materiais de Referência\n\nLivros\n“Hands-On Machine Learning” - Aurélien Géron (Estou lendo) - Mais prático, menos teoria - Exemplos em Python - Atualizações constantes\n“Python for Data Analysis” - Wes McKinney - Criador do Pandas - Foca na manipulação de dados - Fundamental para qualquer projeto\n\n\nSites Úteis\nTowards Data Science - Artigos da comunidade - Vários níveis de dificuldade - Tutoriais e cases reais\nScikit-learn Documentation - Documentação oficial - Exemplos práticos - Guia de algoritmos\n\n\n\n\n\n\n\nDica importante\n\n\n\nNão tente aprender tudo de uma vez!\nEscolha uma ferramenta e um dataset, e faça um projeto simples. É melhor fazer 1 projeto completo do que começar 10 e não terminar nenhum.\n\n\n\nEsta página é atualizada conforme descubro novos recursos úteis. Última atualização: Agosto 2025\nTem alguma sugestão de recurso? Me conta!"
+    "text": "Materiais de Referência\n\nLivros\n“Hands-On Machine Learning” - Aurélien Géron (Estou lendo) - Mais prático, menos teoria - Exemplos em Python - Atualizações constantes\n“Python for Data Analysis” - Wes McKinney - Criador do Pandas - Foca na manipulação de dados - Fundamental para qualquer projeto\n\n\nSites Úteis\nTowards Data Science - Artigos da comunidade - Vários níveis de dificuldade - Tutoriais e cases reais\nScikit-learn Documentation - Documentação oficial - Exemplos práticos - Guia de algoritmos\n\n\n\n\n\n\n\nDica importante\n\n\n\nNão tente aprender tudo de uma vez!\nEscolha uma ferramenta e um dataset, e faça um projeto simples. É melhor fazer 1 projeto completo do que começar 10 e não terminar nenhum.\n\n\n\nTem alguma sugestão de recurso? Me conta!\n\nÚltima atualização: Agosto 2025"
   }
 ]
