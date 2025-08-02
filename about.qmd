@@ -1,10 +1,11 @@
 ---
-title: "Sobre o autor"
+title: "Mikael Silva"
 comments: false
 title-block-banner: false
 image: perfil_foto.jpg
 about:
-  template: jolla
+  id: heading
+  template: solana
   links:
     - icon: instagram
       text: Instagram
@@ -15,10 +16,152 @@ about:
     - icon: github
       text: Github
       href: https://github.com/Mikaelssilva
+    - icon: envelope
+      text: Email
+      href: mailto:mikael38225@gmail.com
+toc: false
 ---
 
+:::{#heading}
+:::
 
+Sou **Mikael Silva**, estudante de **Engenharia da Computação** e apaixonado por **Machine Learning** e **Inteligência Artificial**. Estou na jornada de aprender e dominar essas tecnologias que estão transformando o mundo - e compartilho tudo que aprendo aqui no blog.
 
-Mikael Silva é estudante de Engenharia da Computação na UPE.
-Tem interesse em Machine Learning e IA aplicada. Nesse blog, ele compartilha projetos, dicas e te ajuda a entender Machine Learning de uma forma descomplicada. 
+## 🎓 Minha Jornada de Aprendizado
 
+### Formação Atual
+- **Graduando:** Engenharia da Computação - UPE (5º período)
+- **Foco:** Machine Learning, Deep Learning e Data Science
+
+### Como Tudo Começou
+Meu interesse por IA começou quando eu ainda era criança. Sempre gostei de entender como as coisas funcionam, especialmente sistemas inteligentes. Lembro que ficava fascinado ao ver filmes como *CHAPPIE* e *Alita: Anjo de Combate*. 
+
+Desde então, dedico meu tempo livre a **estudar, praticar e implementar** algoritmos de ML, sempre com foco na aplicação prática.
+
+### Por que Criei Este Blog?
+Como estudante, sei como é **difícil encontrar tutoriais que realmente funcionam** e que explicam o "porquê" por trás do código. A maioria dos recursos ou é muito teórica ou pula etapas importantes.
+
+Este blog nasceu da minha vontade de **documentar minha jornada de aprendizado** e ajudar outros estudantes a navegarem pelo fascinante mundo do Machine Learning sem as frustrações que eu passei.
+
+## 🚀 Como Posso Te Ajudar
+
+### Para Outros Estudantes
+- **Tutoriais honestos** - sem assumir conhecimento prévio
+- **Projetos do zero** - que você pode fazer em casa
+- **Dicas de estudo** baseadas no que funcionou comigo
+- **Recursos gratuitos** ou baratos que realmente valem a pena
+
+### Para Quem Está Começando
+- **Roadmaps práticos** baseados na minha experiência
+- **Erros para evitar** - aprenda com os meus!
+- **Motivação** - porque essa jornada vale muito a pena
+
+### Para Veteranos
+- **Perspectiva fresca** de quem está aprendendo agora
+- **Implementações simples** de conceitos complexos
+- **Feedback honesto** sobre recursos educacionais
+
+## 🛠️ Meu Setup de Estudante
+
+### Hardware Testado
+
+:::{.callout-tip title="💡 Hardware que Realmente Uso"}
+Estes são os equipamentos que uso diariamente nos meus projetos. Os links são afiliados da Amazon - se você comprar, me ajuda a continuar criando conteúdo!
+:::
+
+- **Notebook:** [Lenovo IdeaPad 3i](https://amzn.to/4m0zDrF) - Ótimo custo-benefício para ML
+- **Arduino:** [Uno R3 Original](https://amzn.to/3IVCJOW) - Para projetos IoT
+- **Orçamento limitado?** Sim! E mostro como fazer ML funcionar mesmo assim
+
+### Software que uso
+- **Python** - Linguagem principal
+- **Jupyter Notebooks** - Para experimentação e protótipos
+- **VS Code** - IDE para desenvolvimento
+- **Google Colab** - Quando preciso de GPU gratuita
+
+## 📚 Recursos que Transformaram Meu Aprendizado
+
+:::{.callout-tip title="📖 Livros que Recomendo"}
+Já li todos estes livros e uso como referência constante. Os links são afiliados - comprando através deles, você me ajuda a continuar estudando e criando conteúdo!
+:::
+
+**[Mãos à Obra: Aprendizado de Máquina](https://amzn.to/3UHpDY8)** - Minha bíblia de ML  
+
+[Ver todos os recursos →](resource.qmd)
+
+## 📬 Vamos Conversar?
+
+Adoro conversar com outros estudantes e entusiastas de ML!
+
+**Contato Rápido:**
+
+- **Email:** mikael38225@gmail.com
+- **LinkedIn:** [Mikael Silva](https://www.linkedin.com/in/mikaelssilva)
+- **GitHub:** [Mikaelssilva](https://github.com/Mikaelssilva)
+
+**Newsletter Exclusiva:**  
+Receba projetos, dicas de estudo e recursos que descobri:
+
+[**📩 Inscreva-se Aqui**](http://eepurl.com/jj-mXo)
+
+*Só conteúdo que realmente vai te ajudar!*
+
+## 🎯 Meus Objetivos
+
+### Curto Prazo (2025)
+- [x] Criar o blog e primeiros tutoriais
+- [ ] Conseguir um estágio em ML/Data Science
+- [ ] Completar 50 tutoriais no blog
+- [ ] Implementar 10 projetos end-to-end
+- [ ] Crescer a comunidade para 100 seguidores
+
+### Longo Prazo (2026-2030)
+- [ ] Contribuir com projetos open-source relevantes
+- [ ] Trabalhar em uma empresa de IA
+- [ ] Ajudar 500+ estudantes na jornada de ML
+- [ ] Criar um curso próprio para estudantes
+
+## 🔗 Links Úteis
+
+:::{.grid}
+
+:::{.g-col-4}
+[📚 **Recursos que Uso**](resource.qmd)  
+Livros, cursos e ferramentas testadas
+:::
+
+:::{.g-col-4}
+[🚀 **Meus Projetos**](projects.qmd)  
+Portfolio em construção
+:::
+
+:::{.g-col-4}
+[📧 **Contato**](contato.qmd)  
+Vamos trocar uma ideia!
+:::
+
+:::
+
+---
+
+## 💡 Transparência Total
+
+:::{.callout-important title="🔗 Sobre Links Afiliados"}
+Alguns links neste site são afiliados (principalmente da Amazon). Se você comprar algo através deles, eu ganho uma pequena comissão sem custo adicional para você. 
+
+Como estudante, essa renda me ajuda a:
+
+- Comprar mais livros e componentes para testar
+- Manter o blog funcionando  
+- Continuar criando conteúdo gratuito
+
+**Só recomendo produtos que realmente uso e funcionam!**
+:::
+
+---
+
+:::{.text-center}
+*Estudante ajudando estudante desde 2025* 
+
+*Última atualização: Agosto de 2025*
+:::
