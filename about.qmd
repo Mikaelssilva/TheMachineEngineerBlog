@@ -158,6 +158,35 @@ Como estudante, essa renda me ajuda a:
 **Só recomendo produtos que realmente uso e funcionam!**
 :::
 
+## ☕Apoie o Blog - Support the Blog
+Gostou do conteúdo? Apoie com um café e me ajude a manter este projeto vivo.
+
+Enjoying the content? Support me with a coffee and help keep this project alive.
+
+:::{.grid .mt-4}
+
+:::{.g-col-12 .g-col-md-6 .p-4 .border .rounded .shadow-sm .text-center}
+### 🌍 For those coming from abroad
+
+[![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/mikaelssilva)
+
+**Accepted Methods:**  
+<i class="bi bi-paypal"></i> PayPal  
+<i class="bi bi-credit-card"></i> Credit/Debit Cards  
+<i class="bi bi-apple"></i> Apple Pay  
+<i class="bi bi-google"></i> Google Pay  
+:::
+
+:::{.g-col-12 .g-col-md-6 .p-4 .border .rounded .shadow-sm .text-center}
+### 🇧🇷 Para brasileiros
+
+![](qr-code.png){width="55%"}
+
+*Chave Pix: `mikael38225@gmail.com`*
+:::
+
+:::
+
 ---
 
 :::{.text-center}
