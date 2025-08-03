@@ -76,6 +76,7 @@ website:
  
 format:
   html:
+    include-in-header: bootstrap-icons.html
     theme:
       - journal
     css: styles.css

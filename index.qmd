@@ -38,3 +38,6 @@ Olá! Sou **Mikael**, engenheiro da computação e entusiasta de Machine Learnin
 **[Todos os posts](all_posts.qmd)**
 :::
 
+:::{.text-center}
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Apoie o blog!', '#030003', 'R6R01J2Q8I');kofiwidget2.draw();</script> 
+:::

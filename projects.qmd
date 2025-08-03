@@ -33,6 +33,8 @@ Para esse projeto utilizei os seguintes componentes:
 
 Arduino que usei: [Arduino](https://amzn.to/3IVCJOW)
 
+Meu notebook: [Lenovo IdeaPad 3i](https://amzn.to/4m0zDrF)
+
 ### Código fonte (C/C++)
 
 ---

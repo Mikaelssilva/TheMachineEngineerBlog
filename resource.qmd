@@ -119,6 +119,14 @@ from sklearn.linear_model import LinearRegression
 - Foca na manipulação de dados
 - Fundamental para qualquer projeto
 
+:::{.callout-tip title="Dica"}
+Apesar de não ser obrigatório, ter um bom conhecimento do inglês vai
+te ajudar bastante. O livro abaixo ainda é uma referência para mim
+depois de anos:
+
+[Gramática Prática da Língua Inglesa](https://amzn.to/47e3rw9)
+:::
+
 ### Sites Úteis
 
 **[Towards Data Science](https://towardsdatascience.com/)**

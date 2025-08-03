@@ -1,9 +1,10 @@
 ---
-title: "Perdido? Comece por aqui!"
+title: "Perdido(a)? Comece por aqui!"
 author: "Mikael Silva"
 date: "2025-07-29"
 categories: [Introdução]
-description: "Bem vindos ao Blog!"
+description: "Bem vindos ao The Machine Learning Engineer Blog"
+date-modified: "2025-08-02"
 image: "tme.jpg"
 ---
 
