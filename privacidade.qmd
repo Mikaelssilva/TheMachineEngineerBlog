@@ -10,7 +10,7 @@ Sua privacidade é importante. Esta política explica como informações pessoai
 
 Este site pode coletar as seguintes informações:
 
-- Endereço de e-mail, nome e data de nascimento se você se inscrever na newsletter.
+- Endereço de e-mail, nome e data de nascimentos se você se inscrever na newsletter.
 - Informações sobre o navegador e dispositivo, através do Google Analytics
 
 ### Uso das Informações

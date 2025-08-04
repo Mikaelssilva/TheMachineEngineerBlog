@@ -1,0 +1,247 @@
+---
+title: "Projeto Prático: Previsão de Preços de Casas com Machine Learning"
+author: "Mikael Silva"
+date: 2025-08-04
+description: "Aprenda Machine Learning na prática construindo um modelo que prevê preços de imóveis. Tutorial passo a passo para iniciantes."
+tags: [regressao, california-housing, tutorial-pratico, projeto-portfolio]
+reading-time: true
+image: house.png
+categories: [Machine Learning, Projeto, Python, Scikit-Learn]
+code-copy: true
+toc: true
+toc-title: "Neste Tutorial"
+number-sections: false
+---
+
+![California Housing](house.png)
+
+##  Seu Primeiro Projeto de Machine Learning
+
+**Objetivo:** Construir um modelo que prevê preços de casas  
+**Tempo:** 30-45 minutos  
+**Nível:** Iniciante (Python básico)  
+**Resultado:** Modelo com 80% de precisão!
+
+## Neste projeto, você vai aprender:
+
+:::{.grid}
+
+:::{.g-col-6}
+### **Análise de Dados**
+Aprenda a interpretar dados, encontrar padrões e entender as métricas que influenciam o modelo.
+:::
+
+:::{.g-col-6}
+### **Manipulação de Dados**  
+Use bibliotecas como **Pandas** e **Numpy** para limpar, transformar e preparar seus dados para modelagem.
+:::
+
+:::{.g-col-12}
+### **Seleção de Modelos**
+Descubra como escolher o melhor modelo para o seu problema, diferenciando entre modelos de **regressão** e **classificação**.
+:::
+
+:::
+
+## 1. Preparando o Ambiente
+
+### Bibliotecas que iremos usar
+
+```{python}
+import pandas as pd
+import numpy as np
+```
+
+:::{.callout-tip title="💡 Dica"}
+Se você não tem essas bibliotecas instaladas, use:
+`pip install pandas numpy scikit-learn`. Uma outra opção para quem não quer instalar nada é utilizar o `Goolge Colab`.
+:::
+
+## 2. Carregando os Dados
+
+### Obtendo o dataset
+
+```{python}
+from sklearn.datasets import fetch_california_housing
+dados_brutos = fetch_california_housing()
+```
+
+```{python}
+#| code-fold: true
+#| code-summary: 'Ver estrutura dos dados'
+print(dados_brutos)
+```
+
+:::{.callout-note title="Sobre o Dataset"}
+O **California Housing Dataset** contém informações sobre preços de casas na Califórnia dos anos 90. É perfeito para aprender regressão!
+:::
+
+### Transformando em DataFrame
+
+Observe que os dados estão em um formato não mutio convenciaonal. Vamos transformá-los em um DataFrame para melhorar a visualização:
+
+```{python}
+dados = pd.DataFrame(dados_brutos['data'], columns=dados_brutos['feature_names'])
+dados['target'] = dados_brutos['target']
+```
+
+```{python}
+#| code-fold: true  
+#| code-summary: 'Ver primeiras linhas'
+dados.head(10)
+```
+
+:::{.callout-important title="Entendendo as Variáveis"}
+- **MedInc:** Renda mediana por lar
+- **HouseAge:** Idade mediana das casas  
+- **AveRooms:** Número médio de cômodos
+- **AveBedrms:** Número médio de quartos
+- **Population:** População da região
+- **AveOccup:** Ocupação média  
+- **Latitude/Longitude:** Coordenadas geográficas
+- **Target:** Preço da casa (em $100k)
+:::
+
+## 3. Preparando os Dados
+
+### Separando características e alvo
+
+Agora que os dados estão carregados, vamos separá-los em características (X) e alvo (y). As características são as variáveis que o nosso modelo usará para aprender, e o alvo é o que queremos prever.
+
+```{python}
+x = dados.drop('target', axis=1)
+y = dados['target']
+```
+
+### Dividindo em treino e teste
+
+O próximo passo é dividir os dados em conjuntos de treino e teste. O modelo vai aprender usando os dados de treino e será avaliado usando os dados de teste. Isso garante que ele consiga generalizar para novos dados que ele nunca viu antes.
+
+```{python}
+np.random.seed(42)
+
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+```
+
+:::{.callout-warning title="Divisão dos Dados"}
+O parâmetro `test_size` serve para determinar o tamanho da nossa amostra de teste. É convenção deixar **80% dos dados para treinar** e os demais **20% para teste**.
+:::
+
+## 4. Selecionando o Modelo
+
+```{python}
+from sklearn.ensemble import RandomForestRegressor
+
+# Instanciar o modelo
+modelo = RandomForestRegressor(random_state=42)
+```
+
+:::{.callout-tip title="Regressão vs Classificação"}
+- **Regressão:** Quando você quer prever um **número** (preço, idade, temperatura)
+- **Classificação:** Quando você quer prever uma **categoria** (spam/não spam, gato/cachorro)
+
+Como queremos prever preços (números), nosso problema é de **regressão**!
+:::
+
+## 5. Treinando o Modelo
+
+Treinar nosso modelo é super simples. Basta usar a função `fit()`:
+
+```{python}
+modelo.fit(x_train, y_train)
+```
+
+:::{.callout-important title='O que aconteceu aqui?'} 
+O algoritmo Random Forest analisou os 16.512 exemplos de treino e aprendeu os padrões que relacionam as características das casas com seus preços!
+:::
+
+## 6. Fazendo Previsões
+
+É super simples também. Vamos usar a função `predict()`:
+
+```{python}
+y_preds = modelo.predict(x_test)
+
+# Vamos ver as 10 primeiras previsões do nosso modelo
+print("Primeiras 10 previsões:")
+for i in range(10):
+    print(f"   Casa {i+1}: ${y_preds[i]:.2f} (${y_preds[i]*100:.0f}k)")
+```
+
+### Testando com uma casa nova
+
+Vamos criar dados de uma casa hipotética para ver como o modelo se comporta.
+
+:::{.callout-important title="Formato dos Dados"}
+Os dados que você passar para o modelo terão que estar no **mesmo formato** que você usou para treinar. No nosso caso, utilizamos um DataFrame do Pandas.
+:::
+
+```{python}
+# Dados de uma casa hipotética
+dados_nova_casa = {
+    'MedInc': [5.0],      # Renda mediana: $50k
+    'HouseAge': [30.0],   # Casa com 30 anos
+    'AveRooms': [6.0],    # 6 cômodos em média
+    'AveBedrms': [1.0],   # 1 quarto por casa
+    'Population': [1000.0], # População da região
+    'AveOccup': [3.0],    # 3 pessoas por casa
+    'Latitude': [34.0],   # Localização
+    'Longitude': [-118.0]
+}
+
+nova_casa = pd.DataFrame(dados_nova_casa)
+preco_previsto = modelo.predict(nova_casa)
+
+print(f"O preço previsto para a nova casa é: ${preco_previsto[0]:.2f}")
+print(f"Isso equivale a aproximadamente: ${preco_previsto[0]*100:.0f}k")
+```
+
+## 7. Avaliando o Modelo
+
+Para avaliar nosso modelo usaremos a função `score()`:
+
+```{python}
+precisao = modelo.score(x_test, y_test)
+print(f" Precisão do modelo: {precisao:.3f}")
+print(f"Isso significa: {precisao*100:.1f}% de acerto!")
+```
+
+## O que Você Conseguiu
+
+:::{.grid}
+
+:::{.g-col-6}
+### **Habilidades Desenvolvidas**
+- Carregar e preparar dados reais
+- Treinar um modelo de Machine Learning  
+- Fazer previsões com novos dados
+- Avaliar a performance do modelo
+:::
+
+:::{.g-col-6}
+### **Resultados Alcançados**  
+- Modelo funcional com 80%+ precisão
+- Código completo e comentado
+- Projeto pronto para portfolio
+- Base sólida para projetos futuros
+:::
+
+:::
+
+## Próximos Passos
+
+### Quer continuar aprendendo?
+
+Este tutorial cobriu o **essencial** de Machine Learning. No mundo real, projetos profissionais incluem:
+
+- **Análise exploratória visual** - Gráficos profissionais e insights
+-  **Múltiplos algoritmos** - Comparação entre Linear, XGBoost, etc.
+- **Feature Engineering** - Técnicas para aumentar precisão para 90%+
+-  **Deploy na web** - Transformar em aplicação funcionando
+-  **Interface profissional** - Dashboard completo para usar o modelo
+
+Em breve teremos mais posts sobre machine learning e IA assim como outros projetos legais. Então, aproveita e se iscreve na [Newsletter](http://eepurl.com/jj-mXo) para não perder nada! Até a próxima!
+
+---
+**Gostou do tutorial?** Compartilhe com os amigos e considere [apoiar](/about.qmd) o projeto | **Encontrou algum erro?** [Me avise](/contato.qmd)

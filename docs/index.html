@@ -101,6 +101,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-author','listing-date','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GQLHV05X7L"></script>
 
@@ -263,14 +291,14 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
+    <div class="quarto-title column-page">
       <h1 class="title">The Machine Learning Engineer</h1>
             <p class="subtitle lead">Explorando o mundo da IA e Machine Learning</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       <div>
       <div class="quarto-title-meta-heading">Author</div>
@@ -287,18 +315,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#bem-vindo-ao-mundo-da-inteligência-artificial" id="toc-bem-vindo-ao-mundo-da-inteligência-artificial" class="nav-link active" data-scroll-target="#bem-vindo-ao-mundo-da-inteligência-artificial">Bem-vindo ao mundo da Inteligência Artificial!</a></li>
-  <li><a href="#posts-recentes" id="toc-posts-recentes" class="nav-link" data-scroll-target="#posts-recentes">Posts recentes</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -364,7 +383,7 @@ Mikael Silva
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDZGF0YSUyMHNjaWVuY2U=" data-listing-date-sort="1753585200000" data-listing-file-modified-sort="1753731609233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
+<div class="quarto-post image-right" data-index="2" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDZGF0YSUyMHNjaWVuY2U=" data-listing-date-sort="1753585200000" data-listing-file-modified-sort="1754326421613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
 <div class="thumbnail"><a href="./posts/mapeamento/index.html" class="no-external">
 
 <p class="card-img-top"><img src="posts\mapeamento\mapeamento.png"  class="thumbnail-image card-img"/></p>
@@ -393,6 +412,40 @@ Mikael Silva
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+</section>
+<section id="projetos-para-fazer-hoje" class="level2">
+<h2 class="anchored" data-anchor-id="projetos-para-fazer-hoje">Projetos para fazer hoje!</h2>
+<div id="listing-projects" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="TWFjaGluZSUyMExlYXJuaW5nJTJDUHJvamV0byUyQ1B5dGhvbiUyQ1NjaWtpdC1MZWFybg==" data-listing-date-sort="1754276400000" data-listing-file-modified-sort="1754349106687" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="839">
+<a href="./projetos/housing-prediction-project/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./projetos/housing-prediction-project/house.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Projeto Prático: Previsão de Preços de Casas com Machine Learning
+</h5>
+<div class="listing-reading-time card-text text-muted">5 min</div>
+<div class="card-text listing-description delink">
+<p>Aprenda Machine Learning na prática construindo um modelo que prevê preços de imóveis. Tutorial passo a passo para iniciantes.</p>
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Mikael Silva
+</div>
+<div class="listing-date">
+Aug 4, 2025
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<hr>
 <div class="text-center">
 <p><strong><a href="./all_posts.html">Todos os posts</a></strong></p>
 </div>

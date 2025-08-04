@@ -4,24 +4,39 @@ subtitle: "Explorando o mundo da IA e Machine Learning"
 author: "Mikael Silva"
 comments: false
 listing: 
-  id: recent-posts
-  contents: posts
-  sort: "date desc"
-  type: default
-  max-items: 5
-  filter-ui: false
-  sort-ui: false
-  fields: 
-    - image
-    - title
-    - author
-    - date
-    - description
-    - reading-time
-  exclude: 
-    author: "{Harlow,Tristan}*"
+  - id: recent-posts
+    contents: posts
+    sort: "date desc"
+    type: default
+    max-items: 5
+    filter-ui: false
+    sort-ui: false
+    fields: 
+      - image
+      - title
+      - author
+      - date
+      - description
+      - reading-time
+    exclude: 
+      author: "{Harlow,Tristan}*"
+
+  - id: projects
+    contents: projetos
+    type: grid
+    max-items: 3
+    filter-ui: false
+    sort-ui: false
+    fields: 
+      - image
+      - title
+      - author
+      - date
+      - description
+      - reading-time
 page-layout: full
 title-block-banner: true
+toc: false
 ---
 ::: {.hero-section}
 ## Bem-vindo ao mundo da Inteligência Artificial!
@@ -33,6 +48,13 @@ Olá! Sou **Mikael**, engenheiro da computação e entusiasta de Machine Learnin
 
 :::{#recent-posts}
 :::
+
+## Projetos para fazer hoje!
+
+:::{#projects}
+:::
+
+---
 
 ::: {.text-center}
 **[Todos os posts](all_posts.qmd)**

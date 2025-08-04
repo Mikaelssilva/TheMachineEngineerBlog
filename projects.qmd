@@ -2,6 +2,20 @@
 title: "Projetos"
 subtitle: "Aqui você encontra os projetos do autor"
 page-layout: article
+listing:
+  id: projetos
+  contents: projetos
+  type: table
+  filter-ui: false
+  sort-ui: false
+  fields: 
+    - image
+    - title
+    - date
+    - author
+    - description
+    - reading-time
+format: html
 --- 
 
 ## Parabéns para você com arduino
@@ -38,7 +52,11 @@ Meu notebook: [Lenovo IdeaPad 3i](https://amzn.to/4m0zDrF)
 ### Código fonte (C/C++)
 
 ---
-```{C}
+
+```{c}
+#| code-fold: true
+#| code-summary: "Show the code"
+
 int buzzer = 8;
 
 void setup() {
@@ -92,3 +110,6 @@ void parabensOitavaAcima() {
 }
 ```
 
+---
+:::{#projetos}
+:::

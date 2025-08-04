@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/all_posts.html",
     "items": [
       "/posts/ml-introduction/index.html",
       "/posts/welcome/index.html",
@@ -8,11 +8,18 @@
     ]
   },
   {
-    "listing": "/all_posts.html",
+    "listing": "/index.html",
     "items": [
       "/posts/ml-introduction/index.html",
       "/posts/welcome/index.html",
-      "/posts/mapeamento/index.html"
+      "/posts/mapeamento/index.html",
+      "/projetos/housing-prediction-project/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projetos/housing-prediction-project/index.html"
     ]
   }
 ]
