@@ -2,7 +2,7 @@
 title: "Mikael Silva"
 comments: false
 title-block-banner: false
-image: perfil_foto.jpg
+image: tme.png
 about:
   id: heading
   template: solana

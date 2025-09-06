@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mikael Silva">
+<meta name="dcterms.date" content="2025-08-02">
+<meta name="keywords" content="pré-requisitos machine learning, matemática para ML, Python ML, como começar ML">
+<meta name="description" content="Guia completo sobre pré-requisitos para Machine Learning. Matemática, Python, estatística, álgebra linear e ferramentas essenciais.">
+
+<title>Pré-requisitos para Machine Learning: Guia Completo – The Machine Learning Engineer</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favcon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0348920b7671f696dc9078d39bff215e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c141ab9d6beddbf3f4f7151ae61dd5a2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GQLHV05X7L"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GQLHV05X7L', { 'anonymize_ip': false});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"headline",
+  "consent_type":"implied",
+  "palette":"dark",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Machine Learning Engineer</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-menu" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Menu</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-menu">    
+        <li>
+    <a class="dropdown-item" href="../../all_posts.html"><i class="bi bi-archive" role="img">
+</i> 
+ <span class="dropdown-text">Todos os posts</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../projects.html"><i class="bi bi-box-seam" role="img">
+</i> 
+ <span class="dropdown-text">Projetos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../resource.html"><i class="bi bi-tools" role="img">
+</i> 
+ <span class="dropdown-text">Recursos</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Help</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-help">    
+        <li>
+    <a class="dropdown-item" href="../../faq.html"><i class="bi bi-question-octagon" role="img">
+</i> 
+ <span class="dropdown-text">FAQ</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../contato.html"><i class="bi bi-bug" role="img">
+</i> 
+ <span class="dropdown-text">Reportar problema</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="http://eepurl.com/jj-mXo"> <i class="bi bi-envelope" role="img">
+</i> 
+<span class="menu-text">Subscribe</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/Mikaelssilva"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/mikaelssilva"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text">Linkedin</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Pré-requisitos para Machine Learning: Guia Completo</h1>
+                  <div>
+        <div class="description">
+          Guia completo sobre pré-requisitos para Machine Learning. Matemática, Python, estatística, álgebra linear e ferramentas essenciais.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Machine Learning</div>
+                <div class="quarto-category">Tutorial</div>
+                <div class="quarto-category">Matemática</div>
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Mikael Silva </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 2, 2025</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">August 2, 2025</p>
+      </div>
+    </div>
+      
+    </div>
+    
+
+  <div>
+    <div class="keywords">
+      <div class="block-title">Keywords</div>
+      <p>pré-requisitos machine learning, matemática para ML, Python ML, como começar ML</p>
+    </div>
+  </div>
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sumário</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução"><span class="header-section-number">1</span> Introdução</a></li>
+  <li><a href="#fundamentos-matemáticos" id="toc-fundamentos-matemáticos" class="nav-link" data-scroll-target="#fundamentos-matemáticos"><span class="header-section-number">2</span> Fundamentos Matemáticos</a>
+  <ul class="collapse">
+  <li><a href="#álgebra-linear" id="toc-álgebra-linear" class="nav-link" data-scroll-target="#álgebra-linear"><span class="header-section-number">2.1</span> Álgebra Linear</a></li>
+  <li><a href="#cálculo" id="toc-cálculo" class="nav-link" data-scroll-target="#cálculo"><span class="header-section-number">2.2</span> Cálculo</a></li>
+  <li><a href="#estatística-e-probabilidade" id="toc-estatística-e-probabilidade" class="nav-link" data-scroll-target="#estatística-e-probabilidade"><span class="header-section-number">2.3</span> Estatística e Probabilidade</a></li>
+  </ul></li>
+  <li><a href="#python-a-linguagem-do-ml" id="toc-python-a-linguagem-do-ml" class="nav-link" data-scroll-target="#python-a-linguagem-do-ml"><span class="header-section-number">3</span> Python: A Linguagem do ML</a>
+  <ul class="collapse">
+  <li><a href="#python-básico" id="toc-python-básico" class="nav-link" data-scroll-target="#python-básico"><span class="header-section-number">3.1</span> Python Básico</a></li>
+  <li><a href="#bibliotecas-essenciais" id="toc-bibliotecas-essenciais" class="nav-link" data-scroll-target="#bibliotecas-essenciais"><span class="header-section-number">3.2</span> Bibliotecas Essenciais</a></li>
+  </ul></li>
+  <li><a href="#ferramentas-e-bibliotecas-de-ml" id="toc-ferramentas-e-bibliotecas-de-ml" class="nav-link" data-scroll-target="#ferramentas-e-bibliotecas-de-ml"><span class="header-section-number">4</span> Ferramentas e Bibliotecas de ML</a>
+  <ul class="collapse">
+  <li><a href="#scikit-learn" id="toc-scikit-learn" class="nav-link" data-scroll-target="#scikit-learn"><span class="header-section-number">4.1</span> Scikit-learn</a></li>
+  <li><a href="#tensorflowkeras-ou-pytorch" id="toc-tensorflowkeras-ou-pytorch" class="nav-link" data-scroll-target="#tensorflowkeras-ou-pytorch"><span class="header-section-number">4.2</span> TensorFlow/Keras ou PyTorch</a></li>
+  <li><a href="#jupyter-notebook" id="toc-jupyter-notebook" class="nav-link" data-scroll-target="#jupyter-notebook"><span class="header-section-number">4.3</span> Jupyter Notebook</a></li>
+  </ul></li>
+  <li><a href="#habilidades-não-técnicas-importantes" id="toc-habilidades-não-técnicas-importantes" class="nav-link" data-scroll-target="#habilidades-não-técnicas-importantes"><span class="header-section-number">5</span> Habilidades Não-Técnicas Importantes</a>
+  <ul class="collapse">
+  <li><a href="#inglês" id="toc-inglês" class="nav-link" data-scroll-target="#inglês"><span class="header-section-number">5.1</span> Inglês</a></li>
+  <li><a href="#pensamento-analítico" id="toc-pensamento-analítico" class="nav-link" data-scroll-target="#pensamento-analítico"><span class="header-section-number">5.2</span> Pensamento Analítico</a></li>
+  <li><a href="#curiosidade-e-paciência" id="toc-curiosidade-e-paciência" class="nav-link" data-scroll-target="#curiosidade-e-paciência"><span class="header-section-number">5.3</span> Curiosidade e Paciência</a></li>
+  </ul></li>
+  <li><a href="#recursos-recomendados" id="toc-recursos-recomendados" class="nav-link" data-scroll-target="#recursos-recomendados"><span class="header-section-number">6</span> Recursos Recomendados</a>
+  <ul class="collapse">
+  <li><a href="#livros" id="toc-livros" class="nav-link" data-scroll-target="#livros"><span class="header-section-number">6.1</span> Livros</a></li>
+  <li><a href="#cursos-online" id="toc-cursos-online" class="nav-link" data-scroll-target="#cursos-online"><span class="header-section-number">6.2</span> Cursos Online</a></li>
+  <li><a href="#plataformas-de-prática" id="toc-plataformas-de-prática" class="nav-link" data-scroll-target="#plataformas-de-prática"><span class="header-section-number">6.3</span> Plataformas de Prática</a></li>
+  </ul></li>
+  <li><a href="#erros-comuns-a-evitar" id="toc-erros-comuns-a-evitar" class="nav-link" data-scroll-target="#erros-comuns-a-evitar"><span class="header-section-number">7</span> Erros Comuns a Evitar</a>
+  <ul class="collapse">
+  <li><a href="#tentar-aprender-tudo-ao-mesmo-tempo" id="toc-tentar-aprender-tudo-ao-mesmo-tempo" class="nav-link" data-scroll-target="#tentar-aprender-tudo-ao-mesmo-tempo"><span class="header-section-number">7.1</span> Tentar Aprender Tudo ao Mesmo Tempo</a></li>
+  <li><a href="#pular-a-teoria" id="toc-pular-a-teoria" class="nav-link" data-scroll-target="#pular-a-teoria"><span class="header-section-number">7.2</span> Pular a Teoria</a></li>
+  <li><a href="#não-praticar-suficiente" id="toc-não-praticar-suficiente" class="nav-link" data-scroll-target="#não-praticar-suficiente"><span class="header-section-number">7.3</span> Não Praticar Suficiente</a></li>
+  <li><a href="#ignorar-a-qualidade-dos-dados" id="toc-ignorar-a-qualidade-dos-dados" class="nav-link" data-scroll-target="#ignorar-a-qualidade-dos-dados"><span class="header-section-number">7.4</span> Ignorar a Qualidade dos Dados</a></li>
+  </ul></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão"><span class="header-section-number">8</span> Conclusão</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<p><img src="pre-requisitos.jpg" class="img-fluid"></p>
+<section id="introdução" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">1</span> Introdução</h2>
+<p>Começar no mundo de Machine Learning e Inteligência Artificial pode parecer intimidante no início. Com tantos conceitos, linguagens e ferramentas disponíveis, é natural se perguntar: “Por onde começar?”. Este guia apresenta os pré-requisitos essenciais organizados de forma clara e prática, desde o básico até o avançado.</p>
+<p>Não se preocupe se você não domina todos estes tópicos ainda. Machine Learning é uma jornada, e você pode ir aprendendo conforme avança. O importante é ter uma visão geral do que será necessário e criar um plano de estudos adequado ao seu perfil.</p>
+</section>
+<section id="fundamentos-matemáticos" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="fundamentos-matemáticos"><span class="header-section-number">2</span> Fundamentos Matemáticos</h2>
+<section id="álgebra-linear" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="álgebra-linear"><span class="header-section-number">2.1</span> Álgebra Linear</h3>
+<p>A álgebra linear é o coração do Machine Learning. Praticamente todos os algoritmos trabalham com vetores, matrizes e operações lineares.</p>
+<p><strong>Conceitos essenciais:</strong></p>
+<ul>
+<li>Vetores e operações vetoriais (soma, multiplicação escalar, produto escalar)</li>
+<li>Matrizes e operações matriciais (multiplicação, transposição, inversão)</li>
+<li>Sistemas de equações lineares</li>
+<li>Autovalores e autovetores</li>
+<li>Decomposição de matrizes (SVD, PCA)</li>
+</ul>
+<p><strong>Por que é importante:</strong> Redes neurais são essencialmente operações matriciais em cascata. Algoritmos como PCA usam decomposição de matrizes. Entender esses conceitos ajuda a otimizar modelos e debugar problemas.</p>
+</section>
+<section id="cálculo" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="cálculo"><span class="header-section-number">2.2</span> Cálculo</h3>
+<p>O cálculo é fundamental para entender como os algoritmos de ML “aprendem” através da otimização.</p>
+<p><strong>Conceitos essenciais:</strong></p>
+<ul>
+<li>Derivadas e derivadas parciais</li>
+<li>Gradientes e direções de crescimento</li>
+<li>Otimização de funções (máximos e mínimos)</li>
+<li>Regra da cadeia (crucial para backpropagation)</li>
+<li>Integrais básicas</li>
+</ul>
+<p><strong>Por que é importante:</strong> O gradient descent, base de muitos algoritmos de ML, é puro cálculo. Entender derivadas ajuda a compreender como os modelos ajustam seus parâmetros.</p>
+</section>
+<section id="estatística-e-probabilidade" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="estatística-e-probabilidade"><span class="header-section-number">2.3</span> Estatística e Probabilidade</h3>
+<p>A estatística fornece as ferramentas para entender dados e fazer inferências.</p>
+<p><strong>Conceitos essenciais:</strong></p>
+<ul>
+<li>Distribuições de probabilidade (normal, binomial, Poisson)</li>
+<li>Teorema de Bayes</li>
+<li>Teste de hipóteses</li>
+<li>Intervalos de confiança</li>
+<li>Correlação vs causalidade</li>
+<li>Amostragem e viés amostral</li>
+</ul>
+<p><strong>Por que é importante:</strong> ML lida com incerteza. Entender probabilidade ajuda na interpretação de resultados, avaliação de modelos e tomada de decisões baseadas em dados.</p>
+</section>
+</section>
+<section id="python-a-linguagem-do-ml" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="python-a-linguagem-do-ml"><span class="header-section-number">3</span> Python: A Linguagem do ML</h2>
+<section id="python-básico" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="python-básico"><span class="header-section-number">3.1</span> Python Básico</h3>
+<p>Antes de mergulhar nas bibliotecas específicas, você precisa dominar o Python.</p>
+<p><strong>Fundamentos necessários:</strong></p>
+<ul>
+<li>Sintaxe básica (variáveis, tipos de dados, operadores)</li>
+<li>Estruturas de controle (if/else, loops)</li>
+<li>Funções e classes</li>
+<li>Manipulação de strings e listas</li>
+<li>Tratamento de exceções</li>
+<li>Comprehensions (list, dict)</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemplo de comprehension útil em ML</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>squared_numbers <span class="op">=</span> [x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>filtered_data <span class="op">=</span> [item <span class="cf">for</span> item <span class="kw">in</span> dataset <span class="cf">if</span> item <span class="op">&gt;</span> threshold]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bibliotecas-essenciais" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="bibliotecas-essenciais"><span class="header-section-number">3.2</span> Bibliotecas Essenciais</h3>
+<section id="pandas" class="level4">
+<h4 class="anchored" data-anchor-id="pandas">Pandas</h4>
+<p>Pandas é a biblioteca para análise e manipulação de dados em Python. É praticamente impossível fazer ML sem ela.</p>
+<p><strong>Funcionalidades principais:</strong></p>
+<ul>
+<li>Leitura de dados (CSV, Excel, JSON, bancos de dados)</li>
+<li>DataFrames e Series para estruturar dados</li>
+<li>Limpeza de dados (valores faltantes, duplicatas)</li>
+<li>Transformações e agregações</li>
+<li>Operações de merge e join</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar dados</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'dados.csv'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Exploração inicial</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df.info()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>df.describe()</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Limpeza</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>df.dropna()  <span class="co"># Remove valores faltantes</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>df.fillna(df.mean())  <span class="co"># Preenche com média</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Por que é essencial:</strong> 80% do trabalho em ML é preparação de dados. Pandas torna isso possível e eficiente.</p>
+</section>
+<section id="numpy" class="level4">
+<h4 class="anchored" data-anchor-id="numpy">NumPy</h4>
+<p>NumPy é a base matemática do ecossistema Python para ciência de dados.</p>
+<p><strong>Funcionalidades principais:</strong></p>
+<ul>
+<li>Arrays N-dimensionais eficientes</li>
+<li>Operações matemáticas vetorizadas</li>
+<li>Broadcasting (operações entre arrays de diferentes tamanhos)</li>
+<li>Funções matemáticas avançadas</li>
+<li>Integração com outras bibliotecas</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Criação de arrays</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Operações vetorizadas (muito mais rápidas que loops Python)</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> arr <span class="op">*</span> <span class="dv">2</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>dot_product <span class="op">=</span> np.dot(matrix, vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Por que é essencial:</strong> Performance. Operações NumPy são até 100x mais rápidas que Python puro. Todas as bibliotecas de ML usam NumPy internamente.</p>
+</section>
+<section id="matplotlib" class="level4">
+<h4 class="anchored" data-anchor-id="matplotlib">Matplotlib</h4>
+<p>Visualização de dados é crucial para entender padrões e comunicar resultados.</p>
+<p><strong>Funcionalidades principais:</strong></p>
+<ul>
+<li>Gráficos básicos (linha, barra, scatter, histograma)</li>
+<li>Customização completa (cores, estilos, anotações)</li>
+<li>Subplots para múltiplas visualizações</li>
+<li>Integração com Pandas</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico simples</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Variável X'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Variável Y'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Meu Gráfico'</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Histograma para entender distribuições</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>plt.hist(data, bins<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Por que é essencial:</strong> Dados sem visualização são apenas números. Gráficos revelam padrões, outliers e insights que números sozinhos não mostram.</p>
+</section>
+</section>
+</section>
+<section id="ferramentas-e-bibliotecas-de-ml" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="ferramentas-e-bibliotecas-de-ml"><span class="header-section-number">4</span> Ferramentas e Bibliotecas de ML</h2>
+<section id="scikit-learn" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="scikit-learn"><span class="header-section-number">4.1</span> Scikit-learn</h3>
+<p>A biblioteca mais popular para ML tradicional em Python.</p>
+<p><strong>Funcionalidades:</strong></p>
+<ul>
+<li>Algoritmos de classificação, regressão e clustering</li>
+<li>Pré-processamento de dados (normalização, encoding)</li>
+<li>Validação cruzada e métricas de avaliação</li>
+<li>Pipelines para automatizar workflows</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Divisão dos dados</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Treinamento</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression()</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>model.fit(X_train, y_train)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Avaliação</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> model.predict(X_test)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>mse <span class="op">=</span> mean_squared_error(y_test, predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tensorflowkeras-ou-pytorch" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="tensorflowkeras-ou-pytorch"><span class="header-section-number">4.2</span> TensorFlow/Keras ou PyTorch</h3>
+<p>Para Deep Learning, você precisará de uma dessas frameworks.</p>
+<p><strong>TensorFlow/Keras</strong> - Mais beginner-friendly:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras <span class="im">import</span> layers</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> tf.keras.Sequential([</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">64</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    layers.Dense(<span class="dv">10</span>, activation<span class="op">=</span><span class="st">'softmax'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>PyTorch</strong> - Mais flexível para pesquisa:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SimpleNet(nn.Module):</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>()</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc1 <span class="op">=</span> nn.Linear(<span class="dv">784</span>, <span class="dv">64</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.fc2 <span class="op">=</span> nn.Linear(<span class="dv">64</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="jupyter-notebook" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="jupyter-notebook"><span class="header-section-number">4.3</span> Jupyter Notebook</h3>
+<p>Ambiente interativo essencial para experimentação e prototipagem.</p>
+<p><strong>Vantagens:</strong></p>
+<ul>
+<li>Execução célula por célula</li>
+<li>Visualizações inline</li>
+<li>Documentação com Markdown</li>
+<li>Fácil compartilhamento</li>
+<li>Integração com Git</li>
+</ul>
+</section>
+</section>
+<section id="habilidades-não-técnicas-importantes" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="habilidades-não-técnicas-importantes"><span class="header-section-number">5</span> Habilidades Não-Técnicas Importantes</h2>
+<section id="inglês" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="inglês"><span class="header-section-number">5.1</span> Inglês</h3>
+<p>Embora não seja obrigatório, o inglês é extremamente útil no mundo do ML.</p>
+<p><strong>Por que é importante:</strong></p>
+<ul>
+<li>Documentação técnica está majoritariamente em inglês</li>
+<li>Artigos de pesquisa são publicados em inglês</li>
+<li>Comunidades online (Stack Overflow, Reddit, Discord) são predominantemente em inglês</li>
+<li>Cursos e tutoriais de qualidade estão frequentemente em inglês</li>
+<li>Conferências e palestras importantes são em inglês</li>
+</ul>
+<p><strong>Dica prática:</strong> Comece lendo documentação em inglês. É uma forma natural de melhorar o vocabulário técnico.</p>
+</section>
+<section id="pensamento-analítico" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="pensamento-analítico"><span class="header-section-number">5.2</span> Pensamento Analítico</h3>
+<p>ML não é apenas sobre código - é sobre resolver problemas.</p>
+<p><strong>Habilidades importantes:</strong></p>
+<ul>
+<li>Formulação de problemas (transformar problemas de negócio em problemas de ML)</li>
+<li>Interpretação de resultados</li>
+<li>Pensamento crítico sobre dados e modelos</li>
+<li>Capacidade de fazer perguntas certas aos dados</li>
+</ul>
+</section>
+<section id="curiosidade-e-paciência" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="curiosidade-e-paciência"><span class="header-section-number">5.3</span> Curiosidade e Paciência</h3>
+<p>O ML é um campo em constante evolução que exige aprendizado contínuo.</p>
+<p><strong>Características importantes:</strong></p>
+<ul>
+<li>Disposição para experimentar e falhar</li>
+<li>Paciência para debuggar modelos que não funcionam</li>
+<li>Curiosidade para entender o “porquê” por trás dos resultados</li>
+<li>Humildade para reconhecer limitações dos modelos</li>
+</ul>
+</section>
+</section>
+<section id="recursos-recomendados" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="recursos-recomendados"><span class="header-section-number">6</span> Recursos Recomendados</h2>
+<section id="livros" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="livros"><span class="header-section-number">6.1</span> Livros</h3>
+<ul>
+<li><a href="https://amzn.to/3JNNof2"><strong>Hands-On Machine Learning</strong> - Aurélien Géron</a></li>
+<li><a href="https://amzn.to/4nb8sKE"><strong>Python for Data Analysis</strong> - Wes McKinney</a></li>
+<li><a href="https://amzn.to/3JRszPO"><strong>The Elements of Statistical Learning</strong> - Hastie, Tibshirani, Friedman</a></li>
+</ul>
+</section>
+<section id="cursos-online" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="cursos-online"><span class="header-section-number">6.2</span> Cursos Online</h3>
+<ul>
+<li><strong>Fast.ai</strong> - Prático e direto ao ponto</li>
+<li><strong>Coursera ML Course</strong> - Andrew Ng (clássico)</li>
+<li><strong>Kaggle Learn</strong> - Módulos gratuitos e práticos</li>
+</ul>
+</section>
+<section id="plataformas-de-prática" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="plataformas-de-prática"><span class="header-section-number">6.3</span> Plataformas de Prática</h3>
+<ul>
+<li><strong>Kaggle</strong> - Competições e datasets</li>
+<li><strong>Google Colab</strong> - Jupyter gratuito na nuvem</li>
+<li><strong>GitHub</strong> - Versionamento e portfolio</li>
+</ul>
+</section>
+</section>
+<section id="erros-comuns-a-evitar" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="erros-comuns-a-evitar"><span class="header-section-number">7</span> Erros Comuns a Evitar</h2>
+<section id="tentar-aprender-tudo-ao-mesmo-tempo" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="tentar-aprender-tudo-ao-mesmo-tempo"><span class="header-section-number">7.1</span> Tentar Aprender Tudo ao Mesmo Tempo</h3>
+<p>ML é vasto. Foque em um tópico por vez e pratique bastante antes de avançar.</p>
+</section>
+<section id="pular-a-teoria" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="pular-a-teoria"><span class="header-section-number">7.2</span> Pular a Teoria</h3>
+<p>Entender o “porquê” é tão importante quanto o “como”. Não seja apenas um desenvolvesor “copia e cola” .</p>
+</section>
+<section id="não-praticar-suficiente" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="não-praticar-suficiente"><span class="header-section-number">7.3</span> Não Praticar Suficiente</h3>
+<p>Leia menos, codifique mais. A prática é fundamental para consolidar o conhecimento.</p>
+</section>
+<section id="ignorar-a-qualidade-dos-dados" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="ignorar-a-qualidade-dos-dados"><span class="header-section-number">7.4</span> Ignorar a Qualidade dos Dados</h3>
+<p>“Garbage in, garbage out (lixo entra, lixo sai)”. Gaste tempo entendendo e limpando seus dados.</p>
+</section>
+</section>
+<section id="conclusão" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="conclusão"><span class="header-section-number">8</span> Conclusão</h2>
+<p>Machine Learning é uma jornada emocionante, mas exige dedicação e estudo consistente. Não se intimide com a quantidade de pré-requisitos - todos os experts começaram do zero um dia.</p>
+<p>O mais importante é começar. Escolha um tópico, estude, pratique e vá avançando gradualmente. Com o tempo e prática, você dominará essas ferramentas e conceitos.</p>
+<p>Lembre-se: o objetivo não é ser perfeito em tudo antes de começar, mas sim ter uma base sólida para continuar aprendendo. Machine Learning é um campo em constante evolução, e mesmo os experts estão sempre aprendendo coisas novas.</p>
+<p>Comece hoje, seja paciente consigo mesmo e aproveite a jornada. O futuro do ML está nas suas mãos!</p>
+<hr>
+<p><em>Quer saber mais sobre Machine Learning? Confira outros <a href="all_posts.qmd">posts</a> do blog e acompanhe as novidades do mundo da IA!</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_theme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_theme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Mikaelssilva/TheMachineEngineerBlog";
+    script.dataset.repoId = "R_kgDOPUVqWg";
+    script.dataset.category = "Comments";
+    script.dataset.categoryId = "DIC_kwDOPUVqWs4Ctjjy";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 The Machine Learning Engineer - Todos os direitos reservados.</p>
+</div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../contato.html">
+<p>Contato</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../privacidade.html">
+<p>Política de Privacidade</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../termo_de_uso.html">
+<p>Termos de uso</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/mikaelssilva">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/mikael.ssilva20/">
+      <i class="bi bi-instagram" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@Engmikaelsilva">
+      <i class="bi bi-youtube" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

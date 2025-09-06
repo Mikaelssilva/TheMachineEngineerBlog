@@ -3,6 +3,7 @@
     "listing": "/all_posts.html",
     "items": [
       "/posts/ia-2027/index.html",
+      "/posts/pre-requisitos/index.html",
       "/posts/ml-introduction/index.html",
       "/posts/welcome/index.html",
       "/posts/mapeamento/index.html"
@@ -12,6 +13,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/ia-2027/index.html",
+      "/posts/pre-requisitos/index.html",
       "/posts/ml-introduction/index.html",
       "/posts/welcome/index.html",
       "/posts/mapeamento/index.html",
