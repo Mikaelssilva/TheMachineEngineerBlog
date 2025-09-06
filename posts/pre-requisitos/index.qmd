@@ -316,4 +316,4 @@ Comece hoje, seja paciente consigo mesmo e aproveite a jornada. O futuro do ML e
 
 ---
 
-*Quer saber mais sobre Machine Learning? Confira outros [posts](all_posts.qmd) do blog e acompanhe as novidades do mundo da IA!*
+*Quer saber mais sobre Machine Learning? Confira outros [posts](/all_posts.qmd) do blog e acompanhe as novidades do mundo da IA!*
